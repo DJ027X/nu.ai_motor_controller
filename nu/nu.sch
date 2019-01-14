@@ -32,7 +32,7 @@ F 3 "~" H 9150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_3_mm J?
+L nu-rescue:PTH_3_mm-custom J?
 U 1 1 5C162A1D
 P 1250 4200
 F 0 "J?" H 1400 4200 50  0000 C CNN
@@ -43,7 +43,7 @@ F 3 "" H 1250 4200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_3_mm J?
+L nu-rescue:PTH_3_mm-custom J?
 U 1 1 5C162B98
 P 1250 3950
 F 0 "J?" H 1400 3950 50  0000 C CNN
@@ -59,8 +59,8 @@ Wire Wire Line
 	1400 4200 1750 4200
 Text Notes 9500 1000 2    67   ~ 0
 INDICATE POS AND NEG\nON SILKSCREEN
-Text Notes 750  4500 0    67   ~ 0
-ADD 4 mm STRAIN RELIEF HOLES
+Text Notes 800  4600 0    67   ~ 0
+XT60 MALE CABLE ASSEMBLY\nADD 4 mm STRAIN RELIEF HOLES
 Wire Wire Line
 	8950 1250 8200 1250
 Wire Wire Line
@@ -92,7 +92,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 2700 10100 2700
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C14202A
 P 10550 2200
 F 0 "J?" H 10650 2200 50  0000 C CNN
@@ -103,7 +103,7 @@ F 3 "" H 10550 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C1420FB
 P 10550 2400
 F 0 "J?" H 10650 2400 50  0000 C CNN
@@ -114,7 +114,7 @@ F 3 "" H 10550 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C142269
 P 10550 2700
 F 0 "J?" H 10650 2700 50  0000 C CNN
@@ -125,7 +125,7 @@ F 3 "" H 10550 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C14226F
 P 10550 2900
 F 0 "J?" H 10650 2900 50  0000 C CNN
@@ -136,7 +136,7 @@ F 3 "" H 10550 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C1426F8
 P 10550 3200
 F 0 "J?" H 10650 3200 50  0000 C CNN
@@ -147,7 +147,7 @@ F 3 "" H 10550 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C1426FE
 P 10550 3400
 F 0 "J?" H 10650 3400 50  0000 C CNN
@@ -158,7 +158,7 @@ F 3 "" H 10550 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C142704
 P 10550 3700
 F 0 "J?" H 10650 3700 50  0000 C CNN
@@ -169,7 +169,7 @@ F 3 "" H 10550 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:PTH_1_mm J?
+L nu-rescue:PTH_1_mm-custom J?
 U 1 1 5C14270A
 P 10550 3900
 F 0 "J?" H 10650 3900 50  0000 C CNN
