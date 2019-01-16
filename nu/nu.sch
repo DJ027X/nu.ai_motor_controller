@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -225,4 +225,10 @@ Wire Wire Line
 	9950 3100 10250 3100
 Text Notes 9050 4350 0    67   ~ 0
 ADD 2 mm STRAIN RELIEF HOLES
+$Sheet
+S 2050 2025 1300 1175
+U 5C3EC885
+F0 "microcontroller" 50
+F1 "microcontroller.sch" 50
+$EndSheet
 $EndSCHEMATC
