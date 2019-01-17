@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name nu-rescue)(type Legacy)(uri ${KIPRJMOD}/nu-rescue.lib)(options "")(descr ""))
-)

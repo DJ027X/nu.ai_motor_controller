@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:nu-cache
+LIBS:nu.ai_motor_controller-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L nu-rescue:S4B-XH-A-custom J?
+L custom:S4B-XH-A J?
 U 1 1 5C34712D
 P 6025 3000
 AR Path="/5C34712D" Ref="J?"  Part="1" 
@@ -30,7 +30,7 @@ $EndComp
 Text Notes 6050 3100 0    50   ~ 0
 BATTERY\nTAPS
 $Comp
-L nu-rescue:S4B-XH-A-custom J?
+L custom:S4B-XH-A J?
 U 1 1 5C36BCF1
 P 6025 3700
 AR Path="/5C36BCF1" Ref="J?"  Part="1" 
@@ -43,7 +43,7 @@ F 3 "eXH.pdf" H 6025 3200 50  0001 L BNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:S4B-XH-A-custom J?
+L custom:S4B-XH-A J?
 U 1 1 5C36BD2D
 P 6025 2300
 AR Path="/5C36BD2D" Ref="J?"  Part="1" 

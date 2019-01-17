@@ -140,6 +140,53 @@ X Shield 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# custom_MP6513
+#
+DEF custom_MP6513 U 0 40 Y Y 1 F N
+F0 "U" -50 450 50 H V C CNN
+F1 "custom_MP6513" 0 -250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TSOT23-6
+$ENDFPLIST
+DRAW
+S -250 400 250 -200 0 1 0 N
+X IN1 1 -350 100 100 R 50 50 1 1 I
+X GND 2 350 -100 100 L 50 50 1 1 W
+X IN2 3 -350 -100 100 R 50 50 1 1 I
+X OUT2 4 350 100 100 L 50 50 1 1 w
+X VDD 5 -350 300 100 R 50 50 1 1 W
+X OUT1 6 350 300 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# custom_PTH_1_mm
+#
+DEF custom_PTH_1_mm J 0 40 N N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "custom_PTH_1_mm" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 50 0 1 0 N
+X 1 1 -150 0 100 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# custom_PTH_3_mm
+#
+DEF custom_PTH_3_mm J 0 40 N N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "custom_PTH_3_mm" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 50 0 1 0 N
+X 1 1 -150 0 100 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
 # custom_RC0603JR-071KL
 #
 DEF ~custom_RC0603JR-071KL R 0 0 N Y 1 F N
@@ -158,58 +205,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# nu-rescue_MP6513-custom
+# custom_S4B-XH-A
 #
-DEF nu-rescue_MP6513-custom U 0 40 Y Y 1 F N
-F0 "U" -50 450 50 H V C CNN
-F1 "nu-rescue_MP6513-custom" 0 -250 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- TSOT23-6
-$ENDFPLIST
-DRAW
-S -250 400 250 -200 0 1 0 N
-X IN1 1 -350 100 100 R 50 50 1 1 I
-X GND 2 350 -100 100 L 50 50 1 1 W
-X IN2 3 -350 -100 100 R 50 50 1 1 I
-X OUT2 4 350 100 100 L 50 50 1 1 w
-X VDD 5 -350 300 100 R 50 50 1 1 W
-X OUT1 6 350 300 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
-# nu-rescue_PTH_1_mm-custom
-#
-DEF nu-rescue_PTH_1_mm-custom J 0 40 N N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "nu-rescue_PTH_1_mm-custom" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-C 0 0 50 0 1 0 N
-X 1 1 -150 0 100 R 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
-# nu-rescue_PTH_3_mm-custom
-#
-DEF nu-rescue_PTH_3_mm-custom J 0 40 N N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "nu-rescue_PTH_3_mm-custom" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-C 0 0 50 0 1 0 N
-X 1 1 -150 0 100 R 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
-# nu-rescue_S4B-XH-A-custom
-#
-DEF nu-rescue_S4B-XH-A-custom J 0 40 Y N 1 F N
+DEF custom_S4B-XH-A J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V L BNN
-F1 "nu-rescue_S4B-XH-A-custom" 0 -300 50 H V L BNN
+F1 "custom_S4B-XH-A" 0 -300 50 H V L BNN
 F2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" 0 -400 50 H I L BNN
 F3 "eXH.pdf" 0 -500 50 H I L BNN
 DRAW

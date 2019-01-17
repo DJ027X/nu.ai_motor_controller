@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:nu-cache
+LIBS:nu.ai_motor_controller-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -32,7 +32,7 @@ F 3 "~" H 9150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_3_mm-custom J?
+L custom:PTH_3_mm J?
 U 1 1 5C162A1D
 P 1250 4200
 F 0 "J?" H 1400 4200 50  0000 C CNN
@@ -43,7 +43,7 @@ F 3 "" H 1250 4200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_3_mm-custom J?
+L custom:PTH_3_mm J?
 U 1 1 5C162B98
 P 1250 3950
 F 0 "J?" H 1400 3950 50  0000 C CNN
@@ -53,8 +53,6 @@ F 3 "" H 1250 3950 50  0001 C CNN
 	1    1250 3950
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 3950 1850 3950
 Wire Wire Line
 	1400 4200 1750 4200
 Text Notes 9500 1000 2    67   ~ 0
@@ -92,7 +90,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 2700 10100 2700
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C14202A
 P 10550 2200
 F 0 "J?" H 10650 2200 50  0000 C CNN
@@ -103,7 +101,7 @@ F 3 "" H 10550 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C1420FB
 P 10550 2400
 F 0 "J?" H 10650 2400 50  0000 C CNN
@@ -114,7 +112,7 @@ F 3 "" H 10550 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C142269
 P 10550 2700
 F 0 "J?" H 10650 2700 50  0000 C CNN
@@ -125,7 +123,7 @@ F 3 "" H 10550 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C14226F
 P 10550 2900
 F 0 "J?" H 10650 2900 50  0000 C CNN
@@ -136,7 +134,7 @@ F 3 "" H 10550 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C1426F8
 P 10550 3200
 F 0 "J?" H 10650 3200 50  0000 C CNN
@@ -147,7 +145,7 @@ F 3 "" H 10550 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C1426FE
 P 10550 3400
 F 0 "J?" H 10650 3400 50  0000 C CNN
@@ -158,7 +156,7 @@ F 3 "" H 10550 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C142704
 P 10550 3700
 F 0 "J?" H 10650 3700 50  0000 C CNN
@@ -169,7 +167,7 @@ F 3 "" H 10550 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:PTH_1_mm-custom J?
+L custom:PTH_1_mm J?
 U 1 1 5C14270A
 P 10550 3900
 F 0 "J?" H 10650 3900 50  0000 C CNN
@@ -231,4 +229,6 @@ U 5C3EC885
 F0 "microcontroller" 50
 F1 "microcontroller.sch" 50
 $EndSheet
+Wire Wire Line
+	1400 3950 1850 3950
 $EndSCHEMATC

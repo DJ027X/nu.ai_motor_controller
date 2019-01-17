@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:nu-cache
+LIBS:nu.ai_motor_controller-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L nu-rescue:MP6513-custom U?
+L custom:MP6513 U?
 U 1 1 5C101246
 P 4950 2650
 AR Path="/5C101246" Ref="U?"  Part="1" 
@@ -28,7 +28,7 @@ F 3 "MP6513.pdf" H 4950 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:MP6513-custom U?
+L custom:MP6513 U?
 U 1 1 5C10124D
 P 4950 3700
 AR Path="/5C10124D" Ref="U?"  Part="1" 
@@ -41,7 +41,7 @@ F 3 "MP6513.pdf" H 4950 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:MP6513-custom U?
+L custom:MP6513 U?
 U 1 1 5C101254
 P 4950 4750
 AR Path="/5C101254" Ref="U?"  Part="1" 
@@ -54,7 +54,7 @@ F 3 "MP6513.pdf" H 4950 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nu-rescue:MP6513-custom U?
+L custom:MP6513 U?
 U 1 1 5C10125B
 P 4950 5800
 AR Path="/5C10125B" Ref="U?"  Part="1" 
