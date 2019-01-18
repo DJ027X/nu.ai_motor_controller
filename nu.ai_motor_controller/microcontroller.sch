@@ -183,14 +183,7 @@ $EndComp
 Wire Wire Line
 	4650 1450 4650 1600
 Wire Wire Line
-	5350 1450 5350 1500
-Wire Wire Line
-	5450 1550 5450 1500
-Wire Wire Line
 	5450 1500 5350 1500
-Connection ~ 5350 1500
-Wire Wire Line
-	5350 1500 5350 1900
 $Comp
 L power:GND #PWR?
 U 1 1 5C417D83
@@ -204,4 +197,20 @@ F 3 "" H 5350 5600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 5600 5350 5500
+Wire Wire Line
+	5250 1900 5250 1800
+Wire Wire Line
+	5250 1800 5350 1800
+Connection ~ 5350 1800
+Wire Wire Line
+	5350 1800 5350 1900
+Wire Wire Line
+	5350 1500 5350 1800
+Connection ~ 5350 1500
+Wire Wire Line
+	5350 1450 5350 1500
+Wire Wire Line
+	5450 1550 5450 1500
+Text Notes 2900 2950 0    50   ~ 0
+put .5A resettable fuse on vbus\n
 $EndSCHEMATC
