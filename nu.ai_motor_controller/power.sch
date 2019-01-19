@@ -164,4 +164,6 @@ Connection ~ 5550 3200
 Connection ~ 5450 3100
 Connection ~ 5350 3000
 Connection ~ 5250 2900
+Text Notes 3450 2325 0    50   ~ 0
+TO ADCs
 $EndSCHEMATC
