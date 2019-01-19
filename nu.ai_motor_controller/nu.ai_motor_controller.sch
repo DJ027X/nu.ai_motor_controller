@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 4350 2200 1300 1000
+S 5500 2250 1300 1000
 U 5C100B31
 F0 "power" 50
 F1 "power.sch" 50
@@ -224,7 +224,7 @@ Wire Wire Line
 Text Notes 9050 4350 0    67   ~ 0
 ADD 2 mm STRAIN RELIEF HOLES
 $Sheet
-S 2050 2025 1300 1175
+S 3200 2075 1300 1175
 U 5C3EC885
 F0 "microcontroller" 50
 F1 "microcontroller.sch" 50
