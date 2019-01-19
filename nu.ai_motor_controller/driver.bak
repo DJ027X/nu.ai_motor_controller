@@ -23,7 +23,7 @@ AR Path="/5C10107F/5C101246" Ref="U?"  Part="1"
 F 0 "U?" H 4900 3100 50  0000 C CNN
 F 1 "MP6513" H 4950 2400 50  0000 C CNN
 F 2 "" H 4950 2650 50  0001 C CNN
-F 3 "MP6513.pdf" H 4950 2650 50  0001 C CNN
+F 3 "/home/dj/datasheet/MP6513.pdf" H 4950 2650 50  0001 C CNN
 	1    4950 2650
 	1    0    0    -1  
 $EndComp
@@ -126,38 +126,24 @@ F 3 "" H 5350 6000 50  0001 C CNN
 	1    5350 6000
 	1    0    0    -1  
 $EndComp
-Text HLabel 4400 2550 0    50   Input ~ 0
-IN_1_A
-Text HLabel 4400 2750 0    50   Input ~ 0
-IN_2_A
+Text HLabel 3850 2550 0    50   Input ~ 0
+IN_1_L
+Text HLabel 3850 2750 0    50   Input ~ 0
+IN_2_L
 Wire Wire Line
-	4600 2550 4400 2550
+	4600 2550 4350 2550
 Wire Wire Line
-	4400 2750 4600 2750
-Text HLabel 4400 3600 0    50   Input ~ 0
-IN_1_B
-Text HLabel 4400 3800 0    50   Input ~ 0
-IN_2_B
+	3850 2750 4150 2750
 Wire Wire Line
-	4600 3600 4400 3600
+	4600 3600 4350 3600
+Text HLabel 3850 4650 0    50   Input ~ 0
+IN_1_R
+Text HLabel 3850 4850 0    50   Input ~ 0
+IN_2_R
 Wire Wire Line
-	4400 3800 4600 3800
-Text HLabel 4400 4650 0    50   Input ~ 0
-IN_1_C
-Text HLabel 4400 4850 0    50   Input ~ 0
-IN_2_C
+	4600 4650 4350 4650
 Wire Wire Line
-	4600 4650 4400 4650
-Wire Wire Line
-	4400 4850 4600 4850
-Text HLabel 4400 5700 0    50   Input ~ 0
-IN_1_D
-Text HLabel 4400 5900 0    50   Input ~ 0
-IN_2_D
-Wire Wire Line
-	4600 5700 4400 5700
-Wire Wire Line
-	4400 5900 4600 5900
+	3850 4850 4150 4850
 Text HLabel 5500 2350 2    50   Output ~ 0
 OUT_1_A
 Wire Wire Line
@@ -302,4 +288,30 @@ $EndComp
 Wire Wire Line
 	5700 1450 5700 1400
 Connection ~ 5700 1400
+Wire Wire Line
+	4350 3600 4350 2550
+Connection ~ 4350 2550
+Wire Wire Line
+	4350 2550 3850 2550
+Wire Wire Line
+	4150 3800 4150 2750
+Wire Wire Line
+	4150 3800 4600 3800
+Connection ~ 4150 2750
+Wire Wire Line
+	4150 2750 4600 2750
+Wire Wire Line
+	4350 5700 4350 4650
+Wire Wire Line
+	4150 5900 4150 4850
+Wire Wire Line
+	4350 5700 4600 5700
+Wire Wire Line
+	4150 5900 4600 5900
+Connection ~ 4350 4650
+Wire Wire Line
+	4350 4650 3850 4650
+Connection ~ 4150 4850
+Wire Wire Line
+	4150 4850 4600 4850
 $EndSCHEMATC
