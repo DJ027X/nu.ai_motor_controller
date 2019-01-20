@@ -780,10 +780,6 @@ Text GLabel 5200 2400 2    50   Input ~ 0
 SPI_MISO
 Text GLabel 5200 2500 2    50   Input ~ 0
 BAT_2
-Text GLabel 5200 2600 2    50   Input ~ 0
-MOTOR_L
-Text GLabel 5200 2700 2    50   Input ~ 0
-MOTOR_R
 Text GLabel 5200 2800 2    50   Input ~ 0
 PWM_0A
 Text GLabel 5200 3000 2    50   Input ~ 0
@@ -800,14 +796,10 @@ Text GLabel 5200 3600 2    50   Input ~ 0
 USART_TX
 Text GLabel 5200 3700 2    50   Input ~ 0
 BAT_0
-Text GLabel 5200 3800 2    50   Input ~ 0
-L_DIR
 Text GLabel 5200 3900 2    50   Input ~ 0
 BAT_1
 Text GLabel 5200 4000 2    50   Input ~ 0
 PWM_4D
-Text GLabel 5200 4500 2    50   Input ~ 0
-R_DIR
 Text GLabel 5200 4600 2    50   Input ~ 0
 BAT_TESTn
 Text GLabel 5200 4700 2    50   Input ~ 0
@@ -826,4 +818,108 @@ Text Notes 5100 4900 2    50   ~ 0
 ADC_6
 Text Notes 5100 5000 2    50   ~ 0
 ADC_7
+Text GLabel 8525 2725 0    50   Input ~ 0
+SPI_SSn
+Text GLabel 8525 2825 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 9250 2725 2    50   Input ~ 0
+SPI_MOSI
+Text GLabel 9250 2825 2    50   Input ~ 0
+SPI_MISO
+Wire Wire Line
+	9250 2825 9150 2825
+Wire Wire Line
+	9150 2725 9250 2725
+Wire Wire Line
+	8525 2725 8650 2725
+Wire Wire Line
+	8650 2825 8525 2825
+Text GLabel 9225 3325 2    50   Input ~ 0
+JTAG_TMS
+Text GLabel 9225 3425 2    50   Input ~ 0
+JTAG_TCK
+Text GLabel 9225 3525 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 9225 3625 2    50   Input ~ 0
+JTAG_TDI
+$Comp
+L power:GND #PWR?
+U 1 1 5C4A6E4A
+P 8100 4075
+F 0 "#PWR?" H 8100 3825 50  0001 C CNN
+F 1 "GND" H 8100 3925 50  0000 C CNN
+F 2 "" H 8100 4075 50  0001 C CNN
+F 3 "" H 8100 4075 50  0001 C CNN
+	1    8100 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3425 8650 3425
+Wire Wire Line
+	8650 3525 8100 3525
+Wire Wire Line
+	8100 3425 8100 3525
+Connection ~ 8100 3525
+Wire Wire Line
+	8100 3525 8100 3725
+$Comp
+L power:+5V #PWR?
+U 1 1 5C4B092D
+P 8275 3200
+F 0 "#PWR?" H 8275 3050 50  0001 C CNN
+F 1 "+5V" H 8275 3340 50  0000 C CNN
+F 2 "" H 8275 3200 50  0001 C CNN
+F 3 "" H 8275 3200 50  0001 C CNN
+	1    8275 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8275 3200 8275 3325
+Wire Wire Line
+	8275 3325 8650 3325
+NoConn ~ 8650 3625
+Wire Wire Line
+	9225 3325 9150 3325
+Wire Wire Line
+	9225 3425 9150 3425
+Wire Wire Line
+	9225 3525 9150 3525
+Wire Wire Line
+	9225 3625 9150 3625
+Text HLabel 8650 3825 0    50   Output ~ 0
+MOTOR_L
+Text HLabel 8650 3925 0    50   Output ~ 0
+MOTOR_R
+Text HLabel 5200 2600 2    50   Output ~ 0
+MOTOR_L
+Text HLabel 5200 2700 2    50   Output ~ 0
+MOTOR_R
+Text HLabel 9150 3825 2    50   Output ~ 0
+L_DIR
+Text HLabel 9150 3925 2    50   Output ~ 0
+R_DIR
+Text HLabel 5200 3800 2    50   Output ~ 0
+L_DIR
+Text HLabel 5200 4500 2    50   Output ~ 0
+R_DIR
+Wire Wire Line
+	8650 3725 8100 3725
+Connection ~ 8100 3725
+Wire Wire Line
+	8100 3725 8100 4075
+$Comp
+L power:GND #PWR?
+U 1 1 5C536053
+P 9775 4075
+F 0 "#PWR?" H 9775 3825 50  0001 C CNN
+F 1 "GND" H 9775 3925 50  0000 C CNN
+F 2 "" H 9775 4075 50  0001 C CNN
+F 3 "" H 9775 4075 50  0001 C CNN
+	1    9775 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9775 3725 9775 4075
+Wire Wire Line
+	9775 3725 9150 3725
 $EndSCHEMATC
