@@ -800,4 +800,28 @@ Connection ~ 4075 1350
 Connection ~ 4075 1725
 Text Notes 6000 3800 2    50   ~ 0
 L_DIRECTION?\n
+Text HLabel 5750 2100 2    50   Input ~ 0
+SPI_SSn
+Text HLabel 5750 2200 2    50   Input ~ 0
+SPI_SCK
+Text HLabel 5750 2300 2    50   Input ~ 0
+SPI_MOSI
+Text HLabel 5750 2400 2    50   Input ~ 0
+SPI_MISO
+Text HLabel 5750 2900 2    50   Input ~ 0
+PWM_0A
+Text HLabel 5750 3000 2    50   Input ~ 0
+PWM_3A
+Text HLabel 5750 3100 2    50   Input ~ 0
+PWM_4A
+Text HLabel 5750 3200 2    50   Input ~ 0
+PWM_4D
+Text HLabel 6000 3300 2    50   Input ~ 0
+I2C_SCL
+Text HLabel 6000 3400 2    50   Input ~ 0
+I2C_SDA
+Text HLabel 5750 3500 2    50   Input ~ 0
+USART_RX
+Text HLabel 5750 3600 2    50   Input ~ 0
+USART_TX
 $EndSCHEMATC

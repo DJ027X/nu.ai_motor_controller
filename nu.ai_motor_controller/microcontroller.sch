@@ -19,7 +19,7 @@ L custom:ATmega32U4-AU U?
 U 1 1 5C3ED06E
 P 4025 3600
 F 0 "U?" H 3525 5350 50  0000 L BNN
-F 1 "ATmega32U4-AU" H 4125 1850 50  0000 L TNN
+F 1 "ATmega32U4-AU" H 4050 1850 50  0000 L TNN
 F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 4025 3600 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 4025 3600 50  0001 C CNN
 	1    4025 3600
@@ -164,16 +164,16 @@ $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5C416CFF
-P 3275 1350
-F 0 "#PWR?" H 3275 1200 50  0001 C CNN
-F 1 "+5V" H 3275 1490 50  0000 C CNN
-F 2 "" H 3275 1350 50  0001 C CNN
-F 3 "" H 3275 1350 50  0001 C CNN
-	1    3275 1350
+P 3275 1300
+F 0 "#PWR?" H 3275 1150 50  0001 C CNN
+F 1 "+5V" H 3275 1440 50  0000 C CNN
+F 2 "" H 3275 1300 50  0001 C CNN
+F 3 "" H 3275 1300 50  0001 C CNN
+	1    3275 1300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3275 1350 3275 1500
+	3275 1300 3275 1500
 $Comp
 L power:GND #PWR?
 U 1 1 5C417D83
@@ -188,7 +188,7 @@ $EndComp
 Wire Wire Line
 	3675 6125 3675 6075
 Wire Wire Line
-	3875 1800 3875 1725
+	3875 1800 3875 1750
 Wire Wire Line
 	4075 1300 4075 1350
 Wire Wire Line
@@ -637,126 +637,42 @@ Wire Wire Line
 Connection ~ 2175 1750
 Wire Wire Line
 	2175 1750 1625 1750
-Text Label 5100 2100 2    50   ~ 0
-SPI_SSn
-Text Label 5100 2200 2    50   ~ 0
-SPI_SCK
-Text Label 5100 2300 2    50   ~ 0
-SPI_MOSI
-Text Label 5100 2400 2    50   ~ 0
-SPI_MISO
-Text Label 5100 2500 2    50   ~ 0
-ADC_11
-Text Label 5100 2600 2    50   ~ 0
-PWM_1A
-Text Label 5100 2700 2    50   ~ 0
-PWM_1B
-Text Label 5100 2800 2    50   ~ 0
-PWM_0A
 Wire Wire Line
-	5100 2500 4675 2500
-Text Notes 7325 3425 0    50   ~ 0
-}\n} BAT MONITOR?\n}
-Text Label 5100 3100 2    50   ~ 0
-PWM_4A
-Text Label 5100 3000 2    50   ~ 0
-PWM_3A
-Text Label 5100 3300 2    50   ~ 0
-I2C_SCL
-Text Label 5100 3400 2    50   ~ 0
-I2C_SDA
-Text Label 5100 3500 2    50   ~ 0
-USART_RX
-Text Label 5100 3600 2    50   ~ 0
-USART_TX
-Text Label 5100 3700 2    50   ~ 0
-ADC_8
-Text Label 5100 3900 2    50   ~ 0
-ADC_9
-Text Label 5100 4300 2    50   ~ 0
-AIN0
-Text Label 5100 4200 2    50   ~ 0
-HWBn
-Text Label 5100 4500 2    50   ~ 0
-ADC_0
-Text Label 5100 4600 2    50   ~ 0
-ADC_1
-Text Label 5100 4700 2    50   ~ 0
-ADC_4
-Text Label 5100 4800 2    50   ~ 0
-ADC_5
-Text Label 5100 4900 2    50   ~ 0
-ADC_6
-Text Label 5100 5000 2    50   ~ 0
-ADC_7
+	5200 2500 4675 2500
 Wire Wire Line
-	4675 4700 5400 4700
+	4675 4700 5200 4700
 Wire Wire Line
-	4675 4800 5400 4800
+	4675 4800 5200 4800
 Wire Wire Line
-	4675 4900 5400 4900
+	4675 4900 5200 4900
 Wire Wire Line
-	4675 5000 5400 5000
-Text Notes 5475 5000 0    50   ~ 0
-}\n} JTAG/ADC/GPIO\n}\n}
-Text Notes 5100 3800 2    50   ~ 0
-GPIO
-Text Label 5100 4000 2    50   ~ 0
-PWM_4D
+	4675 5000 5200 5000
 Wire Wire Line
-	4675 2600 6000 2600
+	4675 2600 5200 2600
 Wire Wire Line
-	4675 2700 6000 2700
-Text HLabel 6000 2600 2    50   Input ~ 0
-MOTOR_L
-Text HLabel 6000 2700 2    50   Input ~ 0
-MOTOR_R
+	4675 2700 5200 2700
 Wire Wire Line
-	5400 2800 5400 2900
+	4675 3000 5200 3000
 Wire Wire Line
-	5400 2900 5750 2900
+	4675 3100 5200 3100
 Wire Wire Line
-	4675 2800 5400 2800
+	4675 2100 5200 2100
 Wire Wire Line
-	4675 3000 5750 3000
+	4675 2200 5200 2200
 Wire Wire Line
-	4675 3100 5750 3100
+	4675 2300 5200 2300
 Wire Wire Line
-	5400 4000 5400 3200
+	4675 2400 5200 2400
 Wire Wire Line
-	5400 3200 5750 3200
+	4675 3300 5200 3300
 Wire Wire Line
-	4675 4000 5400 4000
+	5200 3400 4675 3400
 Wire Wire Line
-	4675 2100 5750 2100
+	4675 3500 5200 3500
 Wire Wire Line
-	4675 2200 5750 2200
+	5200 3600 4675 3600
 Wire Wire Line
-	4675 2300 5750 2300
-Wire Wire Line
-	4675 2400 5750 2400
-Wire Wire Line
-	4675 4500 5200 4500
-Wire Wire Line
-	5200 4500 5200 4400
-Wire Wire Line
-	5200 4400 5400 4400
-Wire Wire Line
-	5300 4600 5300 4500
-Wire Wire Line
-	5300 4500 5400 4500
-Wire Wire Line
-	4675 4600 5300 4600
-Wire Wire Line
-	4675 3300 6000 3300
-Wire Wire Line
-	6000 3400 4675 3400
-Wire Wire Line
-	4675 3500 5750 3500
-Wire Wire Line
-	5750 3600 4675 3600
-Wire Wire Line
-	4675 3800 6000 3800
+	4675 3800 5200 3800
 Wire Wire Line
 	4275 1750 4175 1750
 Wire Wire Line
@@ -765,12 +681,12 @@ Connection ~ 4175 1750
 Wire Wire Line
 	4075 1350 4175 1350
 Wire Wire Line
-	4075 1725 3975 1725
+	4075 1750 3975 1750
 Wire Wire Line
-	4075 1725 4075 1800
-Connection ~ 3975 1725
+	4075 1750 4075 1800
+Connection ~ 3975 1750
 Wire Wire Line
-	3975 1725 3975 1800
+	3975 1750 3975 1800
 Wire Wire Line
 	4175 1750 4175 1800
 Wire Wire Line
@@ -793,35 +709,121 @@ Connection ~ 3775 5500
 Wire Wire Line
 	3775 5500 3675 5500
 Wire Wire Line
-	3975 1725 3875 1725
+	3975 1750 3875 1750
 Wire Wire Line
-	4075 1350 4075 1725
+	4075 1350 4075 1750
 Connection ~ 4075 1350
-Connection ~ 4075 1725
-Text Notes 6000 3800 2    50   ~ 0
-L_DIRECTION?\n
-Text HLabel 5750 2100 2    50   Input ~ 0
+Connection ~ 4075 1750
+Wire Wire Line
+	4675 3700 5200 3700
+Wire Wire Line
+	4675 3900 5200 3900
+Wire Wire Line
+	4675 4500 5200 4500
+Wire Wire Line
+	4675 4600 5200 4600
+Wire Wire Line
+	4675 2800 5200 2800
+Wire Wire Line
+	4675 4000 5200 4000
+Text Notes 5100 2500 2    50   ~ 0
+ADC_11
+Text Notes 5100 2600 2    50   ~ 0
+PWM_1A
+Text Notes 5100 2700 2    50   ~ 0
+PWM_1B
+Text Notes 5100 3700 2    50   ~ 0
+ADC_8
+Text Notes 5100 3900 2    50   ~ 0
+ADC_9
+Text Notes 5100 4500 2    50   ~ 0
+ADC_0
+NoConn ~ 4675 4300
+Wire Wire Line
+	5425 4200 5200 4200
+Wire Wire Line
+	5425 4250 5425 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5C4CEC30
+P 5425 4250
+F 0 "#PWR?" H 5425 4000 50  0001 C CNN
+F 1 "GND" H 5425 4100 50  0000 C CNN
+F 2 "" H 5425 4250 50  0001 C CNN
+F 3 "" H 5425 4250 50  0001 C CNN
+	1    5425 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C4CE88E
+P 5050 4200
+F 0 "R?" V 4990 4160 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 5175 3875 50  0001 L BNN
+F 2 "0603" V 5250 4100 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 5350 3750 50  0001 L BNN
+F 4 "10k" V 5080 4130 50  0000 L BNN "Resistance"
+	1    5050 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4675 4200 4900 4200
+Text Notes 5100 4600 2    50   ~ 0
+ADC_1
+Text GLabel 5200 2100 2    50   Input ~ 0
 SPI_SSn
-Text HLabel 5750 2200 2    50   Input ~ 0
+Text GLabel 5200 2200 2    50   Input ~ 0
 SPI_SCK
-Text HLabel 5750 2300 2    50   Input ~ 0
+Text GLabel 5200 2300 2    50   Input ~ 0
 SPI_MOSI
-Text HLabel 5750 2400 2    50   Input ~ 0
+Text GLabel 5200 2400 2    50   Input ~ 0
 SPI_MISO
-Text HLabel 5750 2900 2    50   Input ~ 0
+Text GLabel 5200 2500 2    50   Input ~ 0
+BAT_2
+Text GLabel 5200 2600 2    50   Input ~ 0
+MOTOR_L
+Text GLabel 5200 2700 2    50   Input ~ 0
+MOTOR_R
+Text GLabel 5200 2800 2    50   Input ~ 0
 PWM_0A
-Text HLabel 5750 3000 2    50   Input ~ 0
+Text GLabel 5200 3000 2    50   Input ~ 0
 PWM_3A
-Text HLabel 5750 3100 2    50   Input ~ 0
+Text GLabel 5200 3100 2    50   Input ~ 0
 PWM_4A
-Text HLabel 5750 3200 2    50   Input ~ 0
-PWM_4D
-Text HLabel 6000 3300 2    50   Input ~ 0
+Text GLabel 5200 3300 2    50   Input ~ 0
 I2C_SCL
-Text HLabel 6000 3400 2    50   Input ~ 0
+Text GLabel 5200 3400 2    50   Input ~ 0
 I2C_SDA
-Text HLabel 5750 3500 2    50   Input ~ 0
+Text GLabel 5200 3500 2    50   Input ~ 0
 USART_RX
-Text HLabel 5750 3600 2    50   Input ~ 0
+Text GLabel 5200 3600 2    50   Input ~ 0
 USART_TX
+Text GLabel 5200 3700 2    50   Input ~ 0
+BAT_0
+Text GLabel 5200 3800 2    50   Input ~ 0
+L_DIR
+Text GLabel 5200 3900 2    50   Input ~ 0
+BAT_1
+Text GLabel 5200 4000 2    50   Input ~ 0
+PWM_4D
+Text GLabel 5200 4500 2    50   Input ~ 0
+R_DIR
+Text GLabel 5200 4600 2    50   Input ~ 0
+BAT_TESTn
+Text GLabel 5200 4700 2    50   Input ~ 0
+JTAG_TDI
+Text GLabel 5200 4800 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 5200 4900 2    50   Input ~ 0
+JTAG_TMS
+Text GLabel 5200 5000 2    50   Input ~ 0
+JTAG_TCK
+Text Notes 5100 4700 2    50   ~ 0
+ADC_4
+Text Notes 5100 4800 2    50   ~ 0
+ADC_5
+Text Notes 5100 4900 2    50   ~ 0
+ADC_6
+Text Notes 5100 5000 2    50   ~ 0
+ADC_7
 $EndSCHEMATC
