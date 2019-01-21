@@ -886,21 +886,21 @@ Wire Wire Line
 	9225 3525 9150 3525
 Wire Wire Line
 	9225 3625 9150 3625
-Text HLabel 8650 3825 0    50   Input ~ 0
+Text HLabel 8650 3825 0    50   Output ~ 0
 MOTOR_L
-Text HLabel 8650 3925 0    50   Input ~ 0
+Text HLabel 8650 3925 0    50   Output ~ 0
 MOTOR_R
-Text HLabel 5200 2600 2    50   Input ~ 0
+Text HLabel 5200 2600 2    50   Output ~ 0
 MOTOR_L
-Text HLabel 5200 2700 2    50   Input ~ 0
+Text HLabel 5200 2700 2    50   Output ~ 0
 MOTOR_R
-Text HLabel 9150 3825 2    50   Input ~ 0
+Text HLabel 9150 3825 2    50   Output ~ 0
 L_DIR
-Text HLabel 9150 3925 2    50   Input ~ 0
+Text HLabel 9150 3925 2    50   Output ~ 0
 R_DIR
-Text HLabel 5200 3800 2    50   Input ~ 0
+Text HLabel 5200 3800 2    50   Output ~ 0
 L_DIR
-Text HLabel 5200 4500 2    50   Input ~ 0
+Text HLabel 5200 4500 2    50   Output ~ 0
 R_DIR
 Wire Wire Line
 	8650 3725 8100 3725

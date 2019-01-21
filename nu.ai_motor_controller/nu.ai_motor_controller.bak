@@ -224,6 +224,10 @@ S 5075 2250 900  1375
 U 5C3EC885
 F0 "microcontroller" 50
 F1 "microcontroller.sch" 50
+F2 "MOTOR_L" O R 5975 2375 50 
+F3 "MOTOR_R" O R 5975 2925 50 
+F4 "L_DIR" O R 5975 2500 50 
+F5 "R_DIR" O R 5975 3050 50 
 $EndSheet
 Wire Wire Line
 	1400 3950 1850 3950
