@@ -726,7 +726,7 @@ BAT_1
 Text GLabel 6375 4350 2    50   Input ~ 0
 PWM_4D
 Text GLabel 6375 4950 2    50   Input ~ 0
-BAT_TESTn
+BAT_TEST
 Text GLabel 6375 5050 2    50   Input ~ 0
 JTAG_TDI
 Text GLabel 6375 5150 2    50   Input ~ 0
