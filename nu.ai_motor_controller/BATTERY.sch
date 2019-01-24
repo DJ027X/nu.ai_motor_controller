@@ -1,0 +1,880 @@
+EESchema Schematic File Version 4
+LIBS:nu.ai_motor_controller-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L custom:S4B-XH-A J?
+U 1 1 5C5B02EC
+P 5700 1975
+AR Path="/5C5B02EC" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B02EC" Ref="J?"  Part="1" 
+F 0 "J?" H 5800 2175 50  0000 L BNN
+F 1 "S4B-XH-A" H 5600 1675 50  0000 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 1575 50  0001 L BNN
+F 3 "eXH.pdf" H 5700 1475 50  0001 L BNN
+	1    5700 1975
+	-1   0    0    -1  
+$EndComp
+Text Notes 5725 2075 0    50   ~ 0
+BATTERY\nTAPS
+$Comp
+L custom:S4B-XH-A J?
+U 1 1 5C5B02F4
+P 5700 2675
+AR Path="/5C5B02F4" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B02F4" Ref="J?"  Part="1" 
+F 0 "J?" H 5800 2875 50  0000 L BNN
+F 1 "S4B-XH-A" H 5600 2375 50  0000 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 2275 50  0001 L BNN
+F 3 "eXH.pdf" H 5700 2175 50  0001 L BNN
+	1    5700 2675
+	-1   0    0    -1  
+$EndComp
+$Comp
+L custom:S4B-XH-A J?
+U 1 1 5C5B02FB
+P 5700 1275
+AR Path="/5C5B02FB" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B02FB" Ref="J?"  Part="1" 
+F 0 "J?" H 5800 1475 50  0000 L BNN
+F 1 "S4B-XH-A" H 5600 975 50  0000 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 875 50  0001 L BNN
+F 3 "eXH.pdf" H 5700 775 50  0001 L BNN
+	1    5700 1275
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2575 4925 2575
+Wire Wire Line
+	4925 2575 4925 1875
+Wire Wire Line
+	4925 1175 5500 1175
+Wire Wire Line
+	5500 1275 5025 1275
+Wire Wire Line
+	5500 1375 5125 1375
+Wire Wire Line
+	5500 1475 5225 1475
+Wire Wire Line
+	5500 1875 4925 1875
+Wire Wire Line
+	4925 1875 4925 1175
+Wire Wire Line
+	5500 2675 5025 2675
+Wire Wire Line
+	5025 2675 5025 1975
+Wire Wire Line
+	5500 2775 5125 2775
+Wire Wire Line
+	5125 2775 5125 2075
+Wire Wire Line
+	5500 2875 5225 2875
+Wire Wire Line
+	5225 2875 5225 2175
+Wire Wire Line
+	5500 1975 5025 1975
+Wire Wire Line
+	5025 1975 5025 1275
+Wire Wire Line
+	5500 2075 5125 2075
+Wire Wire Line
+	5125 2075 5125 1375
+Wire Wire Line
+	5500 2175 5225 2175
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0315
+P 5225 2950
+F 0 "#PWR?" H 5225 2700 50  0001 C CNN
+F 1 "GND" H 5225 2800 50  0000 C CNN
+F 2 "" H 5225 2950 50  0001 C CNN
+F 3 "" H 5225 2950 50  0001 C CNN
+	1    5225 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5225 2875
+Connection ~ 5225 2175
+Connection ~ 5125 2075
+Connection ~ 5025 1975
+Connection ~ 4925 1875
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C5B0320
+P 1825 1125
+AR Path="/5C5B0320" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B0320" Ref="J?"  Part="1" 
+F 0 "J?" H 1825 1225 50  0000 C CNN
+F 1 "NP_Screw_Terminal_01x02" H 2400 1075 50  0000 C CNN
+F 2 "" H 1825 1125 50  0001 C CNN
+F 3 "~" H 1825 1125 50  0001 C CNN
+	1    1825 1125
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:PTH_3_mm J?
+U 1 1 5C5B0327
+P 1575 3725
+AR Path="/5C5B0327" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B0327" Ref="J?"  Part="1" 
+F 0 "J?" H 1725 3725 50  0000 C CNN
+F 1 "PTH_3_mm" H 1575 3625 50  0000 C CNN
+F 2 "" H 1575 3725 50  0001 C CNN
+F 3 "" H 1575 3725 50  0001 C CNN
+	1    1575 3725
+	-1   0    0    -1  
+$EndComp
+$Comp
+L custom:PTH_3_mm J?
+U 1 1 5C5B032E
+P 1575 3475
+AR Path="/5C5B032E" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B032E" Ref="J?"  Part="1" 
+F 0 "J?" H 1725 3475 50  0000 C CNN
+F 1 "PTH_3_mm" H 1575 3375 50  0000 C CNN
+F 2 "" H 1575 3475 50  0001 C CNN
+F 3 "" H 1575 3475 50  0001 C CNN
+	1    1575 3475
+	-1   0    0    -1  
+$EndComp
+Text Notes 1750 1550 0    67   ~ 0
+INDICATE POS AND NEG\nON SILKSCREEN
+Text Notes 1050 4575 0    67   ~ 0
+XT60 MALE CABLE ASSEMBLY.\nADD 4 mm STRAIN RELIEF HOLES.\nINDICATE POS AND NEG\nON SILKSCREEN
+Wire Wire Line
+	1625 1225 1575 1225
+Wire Wire Line
+	1725 3475 2100 3475
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B0339
+P 4775 1175
+F 0 "TP?" V 4800 1425 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 4750 1350 50  0001 L BNN
+F 2 "" H 4975 1175 50  0001 L BNN
+F 3 "~" H 4975 1175 50  0001 C CNN
+	1    4775 1175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B0340
+P 4775 1275
+F 0 "TP?" V 4800 1525 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 4750 1450 50  0001 L BNN
+F 2 "" H 4975 1275 50  0001 L BNN
+F 3 "~" H 4975 1275 50  0001 C CNN
+	1    4775 1275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B0347
+P 4775 1375
+F 0 "TP?" V 4800 1625 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 4750 1550 50  0001 L BNN
+F 2 "" H 4975 1375 50  0001 L BNN
+F 3 "~" H 4975 1375 50  0001 C CNN
+	1    4775 1375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4775 1375 5125 1375
+Wire Wire Line
+	5025 1275 4775 1275
+Wire Wire Line
+	4775 1175 4925 1175
+Text Notes 3575 1400 0    50   ~ 0
+INDICATE VOLTAGES\nON SILKSCREEN
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B0352
+P 4775 1475
+F 0 "TP?" V 4800 1725 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 4750 1650 50  0001 L BNN
+F 2 "" H 4975 1475 50  0001 L BNN
+F 3 "~" H 4975 1475 50  0001 C CNN
+	1    4775 1475
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4775 1475 5225 1475
+Connection ~ 4925 1175
+Connection ~ 5025 1275
+Connection ~ 5125 1375
+Wire Wire Line
+	5225 2875 5225 2950
+Connection ~ 5225 1475
+Wire Wire Line
+	5225 1475 5225 2175
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B0361
+P 1550 6200
+F 0 "R?" H 1600 6225 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 1675 5875 50  0001 L BNN
+F 2 "0603" V 1750 6100 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 1850 5750 50  0001 L BNN
+F 4 "10k" V 1580 6130 50  0000 L BNN "Resistance"
+	1    1550 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6425 1550 6425
+Wire Wire Line
+	1550 6425 1550 6350
+Wire Wire Line
+	1550 6050 1550 6000
+Wire Wire Line
+	1550 6000 1900 6000
+Wire Wire Line
+	1900 6000 1900 6225
+Text Label 5200 1275 0    50   ~ 0
+TAP_1
+Text Label 5200 1375 0    50   ~ 0
+TAP_0
+Text Label 5200 1175 0    50   ~ 0
+TAP_2
+Text Label 1625 6000 0    50   ~ 0
+TAP_2
+Connection ~ 1550 6425
+Text GLabel 1000 6875 0    50   Input ~ 0
+BAT_TEST
+Wire Wire Line
+	1000 6875 1175 6875
+Wire Wire Line
+	1550 6425 1550 6675
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B0376
+P 1175 7125
+F 0 "R?" H 1225 7150 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 1300 6800 50  0001 L BNN
+F 2 "0603" V 1375 7025 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 1475 6675 50  0001 L BNN
+F 4 "10k" V 1205 7055 50  0000 L BNN "Resistance"
+	1    1175 7125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 6975 1175 6875
+Connection ~ 1175 6875
+Wire Wire Line
+	1175 6875 1250 6875
+Wire Wire Line
+	1175 7275 1175 7350
+Wire Wire Line
+	1175 7350 1550 7350
+Wire Wire Line
+	1550 7350 1550 7075
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0383
+P 1550 7425
+F 0 "#PWR?" H 1550 7175 50  0001 C CNN
+F 1 "GND" H 1550 7275 50  0000 C CNN
+F 2 "" H 1550 7425 50  0001 C CNN
+F 3 "" H 1550 7425 50  0001 C CNN
+	1    1550 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 7425 1550 7350
+Connection ~ 1550 7350
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B038C
+P 1900 6825
+F 0 "R?" V 1850 6725 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 2025 6500 50  0001 L BNN
+F 2 "0603" V 2100 6725 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 2200 6375 50  0001 L BNN
+F 4 "10k" V 1930 6755 50  0000 L BNN "Resistance"
+	1    1900 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RC0603JR-071KL R?
+U 1 1 5C5B0394
+P 1900 7250
+F 0 "R?" V 1850 7150 50  0000 L BNN
+F 1 "RC0603JR-071KL" H 1975 7175 50  0001 L BNN
+F 2 "0603" H 1975 7250 50  0001 L BNN
+F 3 "~/datasheets/PYu-RC_Group_51_RoHS_L_10.pdf" H 1840 7260 50  0001 C CNN
+F 4 "1k" V 1925 7200 50  0000 L BNN "Resistance"
+	1    1900 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:DMG6602 Q?
+U 1 1 5C5B039B
+P 1450 6875
+F 0 "Q?" H 1575 6975 50  0000 L BNN
+F 1 "DMG6602" H 1250 6425 50  0001 L BNN
+F 2 "TSOT-23-6" H 1250 6325 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 1250 6225 50  0001 L BNN
+	1    1450 6875
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:DMG6602 Q?
+U 2 1 5C5B03A2
+P 1800 6425
+F 0 "Q?" H 2000 6425 50  0000 L BNN
+F 1 "DMG6602" H 1600 5975 50  0001 L BNN
+F 2 "TSOT-23-6" H 1600 5875 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 1600 5775 50  0001 L BNN
+	2    1800 6425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6675 1900 6625
+Wire Wire Line
+	1900 6975 1900 7025
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B03AB
+P 1900 7425
+F 0 "#PWR?" H 1900 7175 50  0001 C CNN
+F 1 "GND" H 1900 7275 50  0000 C CNN
+F 2 "" H 1900 7425 50  0001 C CNN
+F 3 "" H 1900 7425 50  0001 C CNN
+	1    1900 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 7425 1900 7400
+Text GLabel 2275 7025 2    50   Input ~ 0
+BAT_2
+Wire Wire Line
+	2275 7025 2125 7025
+Connection ~ 1900 7025
+Wire Wire Line
+	1900 7025 1900 7100
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B03B6
+P 2125 7075
+F 0 "TP?" H 2050 7275 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 2100 7250 50  0001 L BNN
+F 2 "" H 2325 7075 50  0001 L BNN
+F 3 "~" H 2325 7075 50  0001 C CNN
+	1    2125 7075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2125 7075 2125 7025
+Connection ~ 2125 7025
+Wire Wire Line
+	2125 7025 1900 7025
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B03C1
+P 3725 6200
+F 0 "R?" H 3775 6225 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 3850 5875 50  0001 L BNN
+F 2 "0603" V 3925 6100 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 4025 5750 50  0001 L BNN
+F 4 "10k" V 3755 6130 50  0000 L BNN "Resistance"
+	1    3725 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3775 6425 3725 6425
+Wire Wire Line
+	3725 6425 3725 6350
+Wire Wire Line
+	3725 6050 3725 6000
+Wire Wire Line
+	3725 6000 4075 6000
+Wire Wire Line
+	4075 6000 4075 6225
+Text Label 3800 6000 0    50   ~ 0
+TAP_1
+Connection ~ 3725 6425
+Text GLabel 3175 6875 0    50   Input ~ 0
+BAT_TEST
+Wire Wire Line
+	3175 6875 3350 6875
+Wire Wire Line
+	3725 6425 3725 6675
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B03D3
+P 3350 7125
+F 0 "R?" H 3400 7150 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 3475 6800 50  0001 L BNN
+F 2 "0603" V 3550 7025 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 3650 6675 50  0001 L BNN
+F 4 "10k" V 3380 7055 50  0000 L BNN "Resistance"
+	1    3350 7125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 6975 3350 6875
+Connection ~ 3350 6875
+Wire Wire Line
+	3350 6875 3425 6875
+Wire Wire Line
+	3350 7275 3350 7350
+Wire Wire Line
+	3350 7350 3725 7350
+Wire Wire Line
+	3725 7350 3725 7075
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B03E0
+P 3725 7425
+F 0 "#PWR?" H 3725 7175 50  0001 C CNN
+F 1 "GND" H 3725 7275 50  0000 C CNN
+F 2 "" H 3725 7425 50  0001 C CNN
+F 3 "" H 3725 7425 50  0001 C CNN
+	1    3725 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3725 7425 3725 7350
+Connection ~ 3725 7350
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B03E9
+P 4075 6825
+F 0 "R?" V 4025 6725 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 4200 6500 50  0001 L BNN
+F 2 "0603" V 4275 6725 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 4375 6375 50  0001 L BNN
+F 4 "10k" V 4105 6755 50  0000 L BNN "Resistance"
+	1    4075 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RC0603JR-071KL R?
+U 1 1 5C5B03F1
+P 4075 7250
+F 0 "R?" V 4025 7150 50  0000 L BNN
+F 1 "RC0603JR-071KL" H 4150 7175 50  0001 L BNN
+F 2 "0603" H 4150 7250 50  0001 L BNN
+F 3 "~/datasheets/PYu-RC_Group_51_RoHS_L_10.pdf" H 4015 7260 50  0001 C CNN
+F 4 "1k" V 4100 7200 50  0000 L BNN "Resistance"
+	1    4075 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:DMG6602 Q?
+U 2 1 5C5B03F8
+P 3975 6425
+F 0 "Q?" H 4175 6425 50  0000 L BNN
+F 1 "DMG6602" H 3775 5975 50  0001 L BNN
+F 2 "TSOT-23-6" H 3775 5875 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 3775 5775 50  0001 L BNN
+	2    3975 6425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4075 6675 4075 6625
+Wire Wire Line
+	4075 6975 4075 7025
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0401
+P 4075 7425
+F 0 "#PWR?" H 4075 7175 50  0001 C CNN
+F 1 "GND" H 4075 7275 50  0000 C CNN
+F 2 "" H 4075 7425 50  0001 C CNN
+F 3 "" H 4075 7425 50  0001 C CNN
+	1    4075 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4075 7425 4075 7400
+Text GLabel 4450 7025 2    50   Input ~ 0
+BAT_1
+Wire Wire Line
+	4450 7025 4300 7025
+Connection ~ 4075 7025
+Wire Wire Line
+	4075 7025 4075 7100
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B040C
+P 4300 7075
+F 0 "TP?" H 4225 7275 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 4275 7250 50  0001 L BNN
+F 2 "" H 4500 7075 50  0001 L BNN
+F 3 "~" H 4500 7075 50  0001 C CNN
+	1    4300 7075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 7075 4300 7025
+Connection ~ 4300 7025
+Wire Wire Line
+	4300 7025 4075 7025
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B0417
+P 5900 6200
+F 0 "R?" H 5950 6225 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 6025 5875 50  0001 L BNN
+F 2 "0603" V 6100 6100 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 6200 5750 50  0001 L BNN
+F 4 "10k" V 5930 6130 50  0000 L BNN "Resistance"
+	1    5900 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 6425 5900 6425
+Wire Wire Line
+	5900 6425 5900 6350
+Wire Wire Line
+	5900 6050 5900 6000
+Wire Wire Line
+	5900 6000 6250 6000
+Wire Wire Line
+	6250 6000 6250 6225
+Text Label 5975 6000 0    50   ~ 0
+TAP_0
+Connection ~ 5900 6425
+Text GLabel 5350 6875 0    50   Input ~ 0
+BAT_TEST
+Wire Wire Line
+	5350 6875 5525 6875
+Wire Wire Line
+	5900 6425 5900 6675
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B0429
+P 5525 7125
+F 0 "R?" H 5575 7150 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 5650 6800 50  0001 L BNN
+F 2 "0603" V 5725 7025 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 5825 6675 50  0001 L BNN
+F 4 "10k" V 5555 7055 50  0000 L BNN "Resistance"
+	1    5525 7125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5525 6975 5525 6875
+Connection ~ 5525 6875
+Wire Wire Line
+	5525 6875 5600 6875
+Wire Wire Line
+	5525 7275 5525 7350
+Wire Wire Line
+	5525 7350 5900 7350
+Wire Wire Line
+	5900 7350 5900 7075
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0436
+P 5900 7425
+F 0 "#PWR?" H 5900 7175 50  0001 C CNN
+F 1 "GND" H 5900 7275 50  0000 C CNN
+F 2 "" H 5900 7425 50  0001 C CNN
+F 3 "" H 5900 7425 50  0001 C CNN
+	1    5900 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 7425 5900 7350
+Connection ~ 5900 7350
+$Comp
+L custom:CR0603-JW-103ELF R?
+U 1 1 5C5B043F
+P 6250 6825
+F 0 "R?" V 6200 6725 50  0000 L BNN
+F 1 "CR0603-JW-103ELF" V 6375 6500 50  0001 L BNN
+F 2 "0603" V 6450 6725 50  0001 L BNN
+F 3 "~/datasheets/chpreztr.pdf" V 6550 6375 50  0001 L BNN
+F 4 "10k" V 6280 6755 50  0000 L BNN "Resistance"
+	1    6250 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RC0603JR-071KL R?
+U 1 1 5C5B0447
+P 6250 7250
+F 0 "R?" V 6200 7150 50  0000 L BNN
+F 1 "RC0603JR-071KL" H 6325 7175 50  0001 L BNN
+F 2 "0603" H 6325 7250 50  0001 L BNN
+F 3 "~/datasheets/PYu-RC_Group_51_RoHS_L_10.pdf" H 6190 7260 50  0001 C CNN
+F 4 "1k" V 6275 7200 50  0000 L BNN "Resistance"
+	1    6250 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:DMG6602 Q?
+U 2 1 5C5B044E
+P 6150 6425
+F 0 "Q?" H 6350 6425 50  0000 L BNN
+F 1 "DMG6602" H 5950 5975 50  0001 L BNN
+F 2 "TSOT-23-6" H 5950 5875 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 5950 5775 50  0001 L BNN
+	2    6150 6425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 6675 6250 6625
+Wire Wire Line
+	6250 6975 6250 7025
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0457
+P 6250 7425
+F 0 "#PWR?" H 6250 7175 50  0001 C CNN
+F 1 "GND" H 6250 7275 50  0000 C CNN
+F 2 "" H 6250 7425 50  0001 C CNN
+F 3 "" H 6250 7425 50  0001 C CNN
+	1    6250 7425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 7425 6250 7400
+Text GLabel 6625 7025 2    50   Input ~ 0
+BAT_0
+Wire Wire Line
+	6625 7025 6475 7025
+Connection ~ 6250 7025
+Wire Wire Line
+	6250 7025 6250 7100
+$Comp
+L custom:PTH_0.5_mm TP?
+U 1 1 5C5B0462
+P 6475 7075
+F 0 "TP?" H 6400 7275 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 6450 7250 50  0001 L BNN
+F 2 "" H 6675 7075 50  0001 L BNN
+F 3 "~" H 6675 7075 50  0001 C CNN
+	1    6475 7075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6475 7075 6475 7025
+Connection ~ 6475 7025
+Wire Wire Line
+	6475 7025 6250 7025
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B046C
+P 1925 3850
+F 0 "#PWR?" H 1925 3600 50  0001 C CNN
+F 1 "GND" H 1925 3700 50  0000 C CNN
+F 2 "" H 1925 3850 50  0001 C CNN
+F 3 "" H 1925 3850 50  0001 C CNN
+	1    1925 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 3850 1925 3725
+Wire Wire Line
+	1725 3725 1925 3725
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B0474
+P 1575 1325
+F 0 "#PWR?" H 1575 1075 50  0001 C CNN
+F 1 "GND" H 1575 1175 50  0000 C CNN
+F 2 "" H 1575 1325 50  0001 C CNN
+F 3 "" H 1575 1325 50  0001 C CNN
+	1    1575 1325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1575 1325 1575 1225
+$Comp
+L custom:DMG6602 Q?
+U 1 1 5C5B047B
+P 3625 6875
+F 0 "Q?" H 3750 6975 50  0000 L BNN
+F 1 "DMG6602" H 3425 6425 50  0001 L BNN
+F 2 "TSOT-23-6" H 3425 6325 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 3425 6225 50  0001 L BNN
+	1    3625 6875
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:DMG6602 Q?
+U 1 1 5C5B0482
+P 5800 6875
+F 0 "Q?" H 5925 6975 50  0000 L BNN
+F 1 "DMG6602" H 5600 6425 50  0001 L BNN
+F 2 "TSOT-23-6" H 5600 6325 50  0001 L BIN
+F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 5600 6225 50  0001 L BNN
+	1    5800 6875
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RA_SLIDE_SWITCH_DPDT SW?
+U 1 1 5C5B0489
+P 2975 2950
+F 0 "SW?" H 2975 3120 50  0000 C CNN
+F 1 "RA_SLIDE_SWITCH_DPDT" H 2625 2600 50  0001 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2625 2500 50  0001 L BNN
+F 3 "" H 2975 2950 50  0001 C CNN
+	1    2975 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RA_SLIDE_SWITCH_DPDT SW?
+U 2 1 5C5B0490
+P 2975 3475
+F 0 "SW?" H 2975 3645 50  0000 C CNN
+F 1 "RA_SLIDE_SWITCH_DPDT" H 2625 3125 50  0001 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2625 3025 50  0001 L BNN
+F 3 "" H 2975 3475 50  0001 C CNN
+	2    2975 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2775 2950 2700 2950
+Wire Wire Line
+	2700 2950 2700 3475
+Connection ~ 2700 3475
+Wire Wire Line
+	2700 3475 2775 3475
+Wire Wire Line
+	3175 3375 3300 3375
+Wire Wire Line
+	3300 3375 3300 2850
+Wire Wire Line
+	3175 2850 3300 2850
+Connection ~ 3300 2850
+Wire Wire Line
+	3300 2850 3300 2675
+$Comp
+L custom:VDD_BAT #PWR?
+U 1 1 5C5B04A0
+P 3300 2675
+F 0 "#PWR?" H 3500 2725 50  0001 C CNN
+F 1 "VDD_BAT" H 3150 2825 50  0000 L BNN
+F 2 "" H 3300 2675 50  0001 C CNN
+F 3 "" H 3300 2675 50  0001 C CNN
+	1    3300 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:VDD_BAT #PWR?
+U 1 1 5C5B04A6
+P 1350 1025
+F 0 "#PWR?" H 1550 1075 50  0001 C CNN
+F 1 "VDD_BAT" H 1200 1175 50  0000 L BNN
+F 2 "" H 1350 1025 50  0001 C CNN
+F 3 "" H 1350 1025 50  0001 C CNN
+	1    1350 1025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1125 1350 1025
+$Comp
+L custom:PTH_3_mm J?
+U 1 1 5C5B04AD
+P 1575 2775
+AR Path="/5C5B04AD" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B04AD" Ref="J?"  Part="1" 
+F 0 "J?" H 1725 2775 50  0000 C CNN
+F 1 "PTH_3_mm" H 1575 2675 50  0000 C CNN
+F 2 "" H 1575 2775 50  0001 C CNN
+F 3 "" H 1575 2775 50  0001 C CNN
+	1    1575 2775
+	-1   0    0    -1  
+$EndComp
+$Comp
+L custom:PTH_3_mm J?
+U 1 1 5C5B04B4
+P 1575 2525
+AR Path="/5C5B04B4" Ref="J?"  Part="1" 
+AR Path="/5C100B31/5C5B04B4" Ref="J?"  Part="1" 
+F 0 "J?" H 1725 2525 50  0000 C CNN
+F 1 "PTH_3_mm" H 1575 2425 50  0000 C CNN
+F 2 "" H 1575 2525 50  0001 C CNN
+F 3 "" H 1575 2525 50  0001 C CNN
+	1    1575 2525
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 2525 2100 2525
+Wire Wire Line
+	1725 2775 1925 2775
+Wire Wire Line
+	1925 2775 1925 3725
+Connection ~ 1925 3725
+Wire Wire Line
+	2100 2525 2100 3475
+Connection ~ 2100 3475
+Wire Wire Line
+	2100 3475 2700 3475
+$Comp
+L custom:SMAJ12A D?
+U 1 1 5C5B04C2
+P 3300 3875
+F 0 "D?" H 3200 3975 50  0000 L BNN
+F 1 "SMAJ12A" H 3150 3675 50  0001 L BNN
+F 2 "" H 3300 3675 50  0000 C CNN
+F 3 "/home/dj/datasheets/SMAJ_series.pdf" H 2750 3575 50  0001 L BNN
+	1    3300 3875
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3300 3725 3300 3375
+Connection ~ 3300 3375
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B04CB
+P 3300 4125
+F 0 "#PWR?" H 3300 3875 50  0001 C CNN
+F 1 "GND" H 3300 3975 50  0000 C CNN
+F 2 "" H 3300 4125 50  0001 C CNN
+F 3 "" H 3300 4125 50  0001 C CNN
+	1    3300 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4125 3300 4025
+Text Notes 3425 3950 0    50   ~ 0
+PLACE CLOSE\nTO SWITCH
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B04D3
+P 1350 1625
+F 0 "#PWR?" H 1350 1375 50  0001 C CNN
+F 1 "GND" H 1350 1475 50  0000 C CNN
+F 2 "" H 1350 1625 50  0001 C CNN
+F 3 "" H 1350 1625 50  0001 C CNN
+	1    1350 1625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1625 1350 1525
+Text Notes 775  1625 0    50   ~ 0
+PLACE CLOSE\nTO TERMINAL
+Wire Wire Line
+	1350 1125 1350 1225
+Connection ~ 1350 1125
+Wire Wire Line
+	1350 1125 1625 1125
+$Comp
+L custom:NP_SMAJ12A D?
+U 1 1 5C5B04DF
+P 1350 1375
+F 0 "D?" V 1450 1175 50  0000 L BNN
+F 1 "NP_SMAJ12A" H 1200 1175 50  0001 L BNN
+F 2 "" H 1350 1175 50  0000 C CNN
+F 3 "/home/dj/datasheets/SMAJ_series.pdf" H 800 1075 50  0001 L BNN
+F 4 "NP" V 1350 1175 50  0000 L BNN "NP"
+	1    1350 1375
+	0    1    -1   0   
+$EndComp
+Text Notes 1250 3325 0    50   ~ 0
+Decide whether to use cable assemblies or through hole xt60 connectors
+$EndSCHEMATC
