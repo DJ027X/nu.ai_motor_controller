@@ -862,7 +862,7 @@ F 4 "NP" V 1350 1175 50  0000 L BNN "NP"
 	0    1    -1   0   
 $EndComp
 Text Notes 975  2400 0    50   ~ 0
-Decide whether to use cable assemblies or through hole xt60 connectors
+Replace PTHs with connector symbol
 $Comp
 L custom:RA_SLIDE_SWITCH_DPDT SW?
 U 1 1 5C4EF6F5
