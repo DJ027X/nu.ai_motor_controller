@@ -20,7 +20,6 @@ U 1 1 5C5B02EC
 P 5700 1975
 AR Path="/5C5B02EC" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B02EC" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B02EC" Ref="J?"  Part="1" 
 F 0 "J?" H 5800 2175 50  0000 L BNN
 F 1 "S4B-XH-A" H 5600 1675 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 1575 50  0001 L BNN
@@ -36,7 +35,6 @@ U 1 1 5C5B02F4
 P 5700 2675
 AR Path="/5C5B02F4" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B02F4" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B02F4" Ref="J?"  Part="1" 
 F 0 "J?" H 5800 2875 50  0000 L BNN
 F 1 "S4B-XH-A" H 5600 2375 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 2275 50  0001 L BNN
@@ -50,7 +48,6 @@ U 1 1 5C5B02FB
 P 5700 1275
 AR Path="/5C5B02FB" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B02FB" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B02FB" Ref="J?"  Part="1" 
 F 0 "J?" H 5800 1475 50  0000 L BNN
 F 1 "S4B-XH-A" H 5600 975 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5700 875 50  0001 L BNN
@@ -118,7 +115,6 @@ U 1 1 5C5B0320
 P 1825 1125
 AR Path="/5C5B0320" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B0320" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B0320" Ref="J?"  Part="1" 
 F 0 "J?" H 1825 1225 50  0000 C CNN
 F 1 "NP_Screw_Terminal_01x02" H 2400 1075 50  0000 C CNN
 F 2 "" H 1825 1125 50  0001 C CNN
@@ -132,7 +128,6 @@ U 1 1 5C5B0327
 P 1575 3725
 AR Path="/5C5B0327" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B0327" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B0327" Ref="J?"  Part="1" 
 F 0 "J?" H 1725 3725 50  0000 C CNN
 F 1 "PTH_3_mm" H 1575 3625 50  0000 C CNN
 F 2 "" H 1575 3725 50  0001 C CNN
@@ -146,7 +141,6 @@ U 1 1 5C5B032E
 P 1575 3475
 AR Path="/5C5B032E" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B032E" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B032E" Ref="J?"  Part="1" 
 F 0 "J?" H 1725 3475 50  0000 C CNN
 F 1 "PTH_3_mm" H 1575 3375 50  0000 C CNN
 F 2 "" H 1575 3475 50  0001 C CNN
@@ -720,31 +714,53 @@ F 3 "/home/dj/datasheets/DMG6602SVT.pdf" H 5600 6225 50  0001 L BNN
 	1    5800 6875
 	1    0    0    -1  
 $EndComp
+$Comp
+L custom:RA_SLIDE_SWITCH_DPDT SW?
+U 1 1 5C5B0489
+P 2975 2950
+F 0 "SW?" H 2975 3120 50  0000 C CNN
+F 1 "RA_SLIDE_SWITCH_DPDT" H 2625 2600 50  0001 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2625 2500 50  0001 L BNN
+F 3 "" H 2975 2950 50  0001 C CNN
+	1    2975 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RA_SLIDE_SWITCH_DPDT SW?
+U 2 1 5C5B0490
+P 2975 3475
+F 0 "SW?" H 2975 3645 50  0000 C CNN
+F 1 "RA_SLIDE_SWITCH_DPDT" H 2625 3125 50  0001 L BNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2625 3025 50  0001 L BNN
+F 3 "" H 2975 3475 50  0001 C CNN
+	2    2975 3475
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2775 3075 2700 3075
+	2775 2950 2700 2950
 Wire Wire Line
-	2700 3075 2700 3475
+	2700 2950 2700 3475
 Connection ~ 2700 3475
 Wire Wire Line
 	2700 3475 2775 3475
 Wire Wire Line
 	3175 3375 3300 3375
 Wire Wire Line
-	3300 3375 3300 2975
+	3300 3375 3300 2850
 Wire Wire Line
-	3175 2975 3300 2975
-Connection ~ 3300 2975
+	3175 2850 3300 2850
+Connection ~ 3300 2850
 Wire Wire Line
-	3300 2975 3300 2800
+	3300 2850 3300 2675
 $Comp
 L custom:VDD_BAT #PWR?
 U 1 1 5C5B04A0
-P 3300 2800
-F 0 "#PWR?" H 3500 2850 50  0001 C CNN
-F 1 "VDD_BAT" H 3150 2950 50  0000 L BNN
-F 2 "" H 3300 2800 50  0001 C CNN
-F 3 "" H 3300 2800 50  0001 C CNN
-	1    3300 2800
+P 3300 2675
+F 0 "#PWR?" H 3500 2725 50  0001 C CNN
+F 1 "VDD_BAT" H 3150 2825 50  0000 L BNN
+F 2 "" H 3300 2675 50  0001 C CNN
+F 3 "" H 3300 2675 50  0001 C CNN
+	1    3300 2675
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -766,7 +782,6 @@ U 1 1 5C5B04AD
 P 1575 2775
 AR Path="/5C5B04AD" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B04AD" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B04AD" Ref="J?"  Part="1" 
 F 0 "J?" H 1725 2775 50  0000 C CNN
 F 1 "PTH_3_mm" H 1575 2675 50  0000 C CNN
 F 2 "" H 1575 2775 50  0001 C CNN
@@ -780,7 +795,6 @@ U 1 1 5C5B04B4
 P 1575 2525
 AR Path="/5C5B04B4" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B04B4" Ref="J?"  Part="1" 
-AR Path="/5C5AE643/5C5B04B4" Ref="J?"  Part="1" 
 F 0 "J?" H 1725 2525 50  0000 C CNN
 F 1 "PTH_3_mm" H 1575 2425 50  0000 C CNN
 F 2 "" H 1575 2525 50  0001 C CNN
@@ -861,19 +875,6 @@ F 4 "NP" V 1350 1175 50  0000 L BNN "NP"
 	1    1350 1375
 	0    1    -1   0   
 $EndComp
-Text Notes 975  2400 0    50   ~ 0
+Text Notes 1250 3325 0    50   ~ 0
 Decide whether to use cable assemblies or through hole xt60 connectors
-$Comp
-L custom:RA_SLIDE_SWITCH_DPDT SW?
-U 1 1 5C4EF6F5
-P 2975 3075
-F 0 "SW?" H 2975 3245 50  0000 C CNN
-F 1 "RA_SLIDE_SWITCH_DPDT" H 2625 2125 50  0001 L BNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2625 2025 50  0001 L BNN
-F 3 "" H 2975 3075 50  0001 C CNN
-	1    2975 3075
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3175 3575
-NoConn ~ 3175 3175
 $EndSCHEMATC

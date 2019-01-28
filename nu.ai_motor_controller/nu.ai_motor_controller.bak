@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -464,4 +464,10 @@ Wire Wire Line
 Connection ~ 6000 2800
 Wire Wire Line
 	6000 2800 5575 2800
+$Sheet
+S 1525 3325 1250 1025
+U 5C5AE643
+F0 "battery" 50
+F1 "battery.sch" 50
+$EndSheet
 $EndSCHEMATC
