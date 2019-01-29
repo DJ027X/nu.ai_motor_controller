@@ -27,4 +27,6 @@ F 3 "/home/dj/datasheets/AZ2117.pdf" H 6950 1400 60  0001 L BNN
 $EndComp
 Text Notes 5825 1975 0    50   ~ 0
 add 10uf caps
+Text Notes 7575 2250 0    50   ~ 0
+For 3V3, R2=7.5k, R1=4.7k\nFor 1V8, R2=2k, R1=4.7k
 $EndSCHEMATC
