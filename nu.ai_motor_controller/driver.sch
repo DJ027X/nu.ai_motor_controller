@@ -14,58 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L custom:MP6513 U?
-U 1 1 5C101246
-P 4950 2650
-AR Path="/5C101246" Ref="U?"  Part="1" 
-AR Path="/5C10107F/5C101246" Ref="U5"  Part="1" 
-F 0 "U5" H 4900 3100 50  0000 C CNN
-F 1 "MP6513" H 4950 2400 50  0000 C CNN
-F 2 "" H 4950 2650 50  0001 C CNN
-F 3 "/home/dj/datasheet/MP6513.pdf" H 4950 2650 50  0001 C CNN
-	1    4950 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:MP6513 U?
-U 1 1 5C10124D
-P 4950 3700
-AR Path="/5C10124D" Ref="U?"  Part="1" 
-AR Path="/5C10107F/5C10124D" Ref="U6"  Part="1" 
-F 0 "U6" H 4900 4150 50  0000 C CNN
-F 1 "MP6513" H 4950 3450 50  0000 C CNN
-F 2 "" H 4950 3700 50  0001 C CNN
-F 3 "MP6513.pdf" H 4950 3700 50  0001 C CNN
-	1    4950 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:MP6513 U?
-U 1 1 5C101254
-P 4950 4750
-AR Path="/5C101254" Ref="U?"  Part="1" 
-AR Path="/5C10107F/5C101254" Ref="U7"  Part="1" 
-F 0 "U7" H 4900 5200 50  0000 C CNN
-F 1 "MP6513" H 4950 4500 50  0000 C CNN
-F 2 "" H 4950 4750 50  0001 C CNN
-F 3 "MP6513.pdf" H 4950 4750 50  0001 C CNN
-	1    4950 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:MP6513 U?
-U 1 1 5C10125B
-P 4950 5800
-AR Path="/5C10125B" Ref="U?"  Part="1" 
-AR Path="/5C10107F/5C10125B" Ref="U8"  Part="1" 
-F 0 "U8" H 4900 6250 50  0000 C CNN
-F 1 "MP6513" H 4950 5550 50  0000 C CNN
-F 2 "" H 4950 5800 50  0001 C CNN
-F 3 "MP6513.pdf" H 4950 5800 50  0001 C CNN
-	1    4950 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4600 5500 4550 5500
 Wire Wire Line
@@ -312,6 +260,50 @@ F 1 "VDD_BAT" H 4050 1100 50  0000 L BNN
 F 2 "" H 4200 950 50  0001 C CNN
 F 3 "" H 4200 950 50  0001 C CNN
 	1    4200 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:MP6513 U?
+U 1 1 5C565750
+P 4950 2650
+F 0 "U?" H 4900 3100 50  0000 C CNN
+F 1 "MP6513" H 4950 2400 50  0000 C CNN
+F 2 "" H 4950 2650 50  0001 C CNN
+F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 2650 50  0001 C CNN
+	1    4950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:MP6513 U?
+U 1 1 5C5657C3
+P 4950 3700
+F 0 "U?" H 4900 4150 50  0000 C CNN
+F 1 "MP6513" H 4950 3450 50  0000 C CNN
+F 2 "" H 4950 3700 50  0001 C CNN
+F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 3700 50  0001 C CNN
+	1    4950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:MP6513 U?
+U 1 1 5C565DC5
+P 4950 4750
+F 0 "U?" H 4900 5200 50  0000 C CNN
+F 1 "MP6513" H 4950 4500 50  0000 C CNN
+F 2 "" H 4950 4750 50  0001 C CNN
+F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 4750 50  0001 C CNN
+	1    4950 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:MP6513 U?
+U 1 1 5C565E47
+P 4950 5800
+F 0 "U?" H 4900 6250 50  0000 C CNN
+F 1 "MP6513" H 4950 5550 50  0000 C CNN
+F 2 "" H 4950 5800 50  0001 C CNN
+F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 5800 50  0001 C CNN
+	1    4950 5800
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

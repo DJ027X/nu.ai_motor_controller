@@ -1031,7 +1031,7 @@ Wire Wire Line
 Wire Wire Line
 	1725 1800 1600 1800
 Connection ~ 1725 950 
-Text Notes 1500 2575 2    50   ~ 0
+Text Notes 850  2575 0    50   ~ 0
 PLACE CLOSE TO\nTACTILE SWITCH
 $Comp
 L custom:CL10B104KO8NNNC C12
