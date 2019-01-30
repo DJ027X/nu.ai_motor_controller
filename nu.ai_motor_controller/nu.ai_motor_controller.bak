@@ -472,4 +472,8 @@ F 4 "1k0" V 7925 3700 50  0000 C CNN "Resistance"
 $EndComp
 Text Notes 2900 1050 0    50   ~ 0
 add mounting holes
+Text Notes 3050 1350 0    50   ~ 0
+add buzzer
+Text Notes 2500 1600 0    50   ~ 0
+consider power cutoff (LED high side switch?)
 $EndSCHEMATC
