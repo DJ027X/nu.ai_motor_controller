@@ -893,4 +893,6 @@ F 3 "~" H 4470 1655 50  0001 C CNN
 	1    4550 1575
 	0    1    -1   0   
 $EndComp
+Text Notes 1175 3700 0    50   ~ 0
+add poles r contacts of some kind for charging
 $EndSCHEMATC
