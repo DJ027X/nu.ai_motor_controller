@@ -330,4 +330,40 @@ F 3 "/home/dj/datasheets/AZ2117.pdf" H 8750 700 60  0001 L BNN
 	1    9000 1650
 	1    0    0    -1  
 $EndComp
+$Comp
+L custom:LMR23625CFDDAR U?
+U 1 1 5C55BD05
+P 2600 2325
+F 0 "U?" H 2300 2925 50  0000 L BNN
+F 1 "LMR23625CFDDAR" H 2300 2825 50  0000 L BNN
+F 2 "custom:8-PowerSOIC" H 2550 2375 50  0001 L BNN
+F 3 "/home/dj/datasheets/lmr23625.pdf" H 2100 1175 50  0001 L BNN
+	1    2600 2325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C55C2F7
+P 2650 2975
+F 0 "#PWR?" H 2650 2725 50  0001 C CNN
+F 1 "GND" H 2650 2825 50  0000 C CNN
+F 2 "" H 2650 2975 50  0001 C CNN
+F 3 "" H 2650 2975 50  0001 C CNN
+	1    2650 2975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2975 2650 2925
+Wire Wire Line
+	2650 2925 2550 2925
+Wire Wire Line
+	2450 2925 2450 2875
+Connection ~ 2650 2925
+Wire Wire Line
+	2650 2925 2650 2875
+Wire Wire Line
+	2550 2875 2550 2925
+Connection ~ 2550 2925
+Wire Wire Line
+	2550 2925 2450 2925
 $EndSCHEMATC
