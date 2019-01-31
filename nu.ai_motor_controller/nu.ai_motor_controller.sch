@@ -240,28 +240,6 @@ Connection ~ 7525 2875
 Connection ~ 7625 4000
 Wire Wire Line
 	7625 4000 7525 4000
-$Comp
-L custom:SGM3157YC6 U1
-U 1 1 5C556725
-P 6400 2925
-F 0 "U1" H 6150 3150 50  0000 L BNN
-F 1 "SGM3157YC6" H 6000 2575 50  0001 L BNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6000 2475 50  0001 L BNN
-F 3 "~/datahseets/SGM3157YC6.pdf" H 6000 2375 50  0001 L BNN
-	1    6400 2925
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:SGM3157YC6 U2
-U 1 1 5C55A5EE
-P 6400 3425
-F 0 "U2" H 6150 3650 50  0000 L BNN
-F 1 "SGM3157YC6" H 6000 3075 50  0001 L BNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6000 2975 50  0001 L BNN
-F 3 "~/datahseets/SGM3157YC6.pdf" H 6000 2875 50  0001 L BNN
-	1    6400 3425
-	1    0    0    -1  
-$EndComp
 Connection ~ 7725 3275
 Connection ~ 7925 3375
 $Comp
@@ -474,6 +452,28 @@ Text Notes 2900 1050 0    50   ~ 0
 add mounting holes
 Text Notes 3050 1350 0    50   ~ 0
 add buzzer
-Text Notes 2500 1600 0    50   ~ 0
-consider power cutoff (LED high side switch?)
+Text Notes 2375 1575 0    50   ~ 0
+allow uC power to be switched between 5V and 3.3V
+$Comp
+L custom:SGM3157YC6 U1
+U 1 1 5CA760BE
+P 6400 2925
+F 0 "U1" H 6150 3150 50  0000 L BNN
+F 1 "SGM3157YC6" H 6150 2750 50  0000 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6150 2625 50  0001 L BNN
+F 3 "/home/dj/datasheets/SGM3157YC6.pdf" H 6150 2525 50  0001 L BNN
+	1    6400 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:SGM3157YC6 U2
+U 1 1 5CA7613D
+P 6400 3425
+F 0 "U2" H 6150 3650 50  0000 L BNN
+F 1 "SGM3157YC6" H 6150 3250 50  0000 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6150 3125 50  0001 L BNN
+F 3 "/home/dj/datasheets/SGM3157YC6.pdf" H 6150 3025 50  0001 L BNN
+	1    6400 3425
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

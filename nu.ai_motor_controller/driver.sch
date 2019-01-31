@@ -263,10 +263,10 @@ F 3 "" H 4200 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:MP6513 U?
+L custom:MP6513 U6
 U 1 1 5C565750
 P 4950 2650
-F 0 "U?" H 4900 3100 50  0000 C CNN
+F 0 "U6" H 4900 3100 50  0000 C CNN
 F 1 "MP6513" H 4950 2400 50  0000 C CNN
 F 2 "" H 4950 2650 50  0001 C CNN
 F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 2650 50  0001 C CNN
@@ -274,10 +274,10 @@ F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:MP6513 U?
+L custom:MP6513 U7
 U 1 1 5C5657C3
 P 4950 3700
-F 0 "U?" H 4900 4150 50  0000 C CNN
+F 0 "U7" H 4900 4150 50  0000 C CNN
 F 1 "MP6513" H 4950 3450 50  0000 C CNN
 F 2 "" H 4950 3700 50  0001 C CNN
 F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 3700 50  0001 C CNN
@@ -285,10 +285,10 @@ F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:MP6513 U?
+L custom:MP6513 U8
 U 1 1 5C565DC5
 P 4950 4750
-F 0 "U?" H 4900 5200 50  0000 C CNN
+F 0 "U8" H 4900 5200 50  0000 C CNN
 F 1 "MP6513" H 4950 4500 50  0000 C CNN
 F 2 "" H 4950 4750 50  0001 C CNN
 F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 4750 50  0001 C CNN
@@ -296,10 +296,10 @@ F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:MP6513 U?
+L custom:MP6513 U10
 U 1 1 5C565E47
 P 4950 5800
-F 0 "U?" H 4900 6250 50  0000 C CNN
+F 0 "U10" H 4900 6250 50  0000 C CNN
 F 1 "MP6513" H 4950 5550 50  0000 C CNN
 F 2 "" H 4950 5800 50  0001 C CNN
 F 3 "/home/dj/datasheets/MP6513.pdf" H 4950 5800 50  0001 C CNN
