@@ -900,10 +900,8 @@ F 3 "~" H 9150 1475 50  0001 C CNN
 	1    9150 1475
 	1    0    0    -1  
 $EndComp
-Text GLabel 9525 3175 2    50   Input ~ 0
-RESET
 Wire Wire Line
-	9525 3175 9450 3175
+	10275 3175 9450 3175
 Wire Wire Line
 	4450 2150 4450 2450
 Wire Wire Line
@@ -1524,4 +1522,6 @@ Text Label 1150 1325 0    50   ~ 0
 uC_RSTn
 Wire Wire Line
 	1150 1325 1550 1325
+Text Label 10275 3175 2    50   ~ 0
+uC_RSTn
 $EndSCHEMATC
