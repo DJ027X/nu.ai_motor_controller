@@ -1,0 +1,277 @@
+EESchema Schematic File Version 4
+LIBS:nu.ai_motor_controller-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 5100 4125 2    50   Input ~ 0
+USART_RX
+Text GLabel 5100 3925 2    50   Input ~ 0
+USART_TX
+Wire Wire Line
+	6200 2875 6075 2875
+Wire Wire Line
+	6075 2775 6075 2875
+$Comp
+L power:GND #PWR?
+U 1 1 5CEA1AB0
+P 7025 3375
+AR Path="/5C3EC885/5CEA1AB0" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1AB0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7025 3125 50  0001 C CNN
+F 1 "GND" H 7025 3225 50  0000 C CNN
+F 2 "" H 7025 3375 50  0001 C CNN
+F 3 "" H 7025 3375 50  0001 C CNN
+	1    7025 3375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7025 3375 7025 3275
+Wire Wire Line
+	7025 3275 6900 3275
+Text GLabel 6975 2875 2    50   Input ~ 0
+JTAG_TMS
+Text GLabel 6975 3075 2    50   Input ~ 0
+JTAG_TCK
+Text GLabel 6125 3075 0    50   Input ~ 0
+JTAG_TDO
+Text GLabel 6125 3275 0    50   Input ~ 0
+JTAG_TDI
+Wire Wire Line
+	6975 2875 6900 2875
+Wire Wire Line
+	6975 3075 6900 3075
+Wire Wire Line
+	6125 3075 6200 3075
+Wire Wire Line
+	6125 3275 6200 3275
+Wire Wire Line
+	4325 2800 4200 2800
+Wire Wire Line
+	4200 2700 4200 2800
+$Comp
+L power:GND #PWR?
+U 1 1 5CEA1AC2
+P 5150 3300
+AR Path="/5C3EC885/5CEA1AC2" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1AC2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5150 3050 50  0001 C CNN
+F 1 "GND" H 5150 3150 50  0000 C CNN
+F 2 "" H 5150 3300 50  0001 C CNN
+F 3 "" H 5150 3300 50  0001 C CNN
+	1    5150 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3300 5150 3200
+Wire Wire Line
+	5150 3200 5025 3200
+Wire Wire Line
+	5100 2800 5025 2800
+Wire Wire Line
+	5100 3000 5025 3000
+Wire Wire Line
+	4250 3000 4325 3000
+Wire Wire Line
+	4250 3200 4325 3200
+Wire Wire Line
+	6200 4000 6075 4000
+Wire Wire Line
+	6075 3900 6075 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5CEA1AD0
+P 7025 4500
+AR Path="/5C3EC885/5CEA1AD0" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1AD0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7025 4250 50  0001 C CNN
+F 1 "GND" H 7025 4350 50  0000 C CNN
+F 2 "" H 7025 4500 50  0001 C CNN
+F 3 "" H 7025 4500 50  0001 C CNN
+	1    7025 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7025 4500 7025 4400
+Wire Wire Line
+	7025 4400 6900 4400
+Wire Wire Line
+	6975 4000 6900 4000
+Wire Wire Line
+	6975 4200 6900 4200
+Wire Wire Line
+	6125 4200 6200 4200
+Wire Wire Line
+	6125 4400 6200 4400
+Wire Wire Line
+	4325 3925 4200 3925
+Wire Wire Line
+	4200 3825 4200 3925
+$Comp
+L power:GND #PWR?
+U 1 1 5CEA1ADE
+P 5150 4425
+AR Path="/5C3EC885/5CEA1ADE" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1ADE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5150 4175 50  0001 C CNN
+F 1 "GND" H 5150 4275 50  0000 C CNN
+F 2 "" H 5150 4425 50  0001 C CNN
+F 3 "" H 5150 4425 50  0001 C CNN
+	1    5150 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4425 5150 4325
+Wire Wire Line
+	5150 4325 5025 4325
+Text Notes 4350 4675 0    50   ~ 0
+PLACE CLOSE TO\nCONNECTOR
+Wire Wire Line
+	5100 3925 5025 3925
+Wire Wire Line
+	5100 4125 5025 4125
+Wire Wire Line
+	4250 4125 4325 4125
+Wire Wire Line
+	4250 4325 4325 4325
+Text GLabel 5100 2800 2    50   Input ~ 0
+SPI_SSn
+Text GLabel 5100 3000 2    50   Input ~ 0
+SPI_SCK
+Text GLabel 4250 3000 0    50   Input ~ 0
+SPI_MOSI
+Text GLabel 4250 3200 0    50   Input ~ 0
+SPI_MISO
+Text GLabel 4250 4125 0    50   Input ~ 0
+I2C_SDA
+Text GLabel 4250 4325 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 6125 4200 0    50   Input ~ 0
+PWM_4A
+Text GLabel 6125 4400 0    50   Input ~ 0
+PWM_4D
+Text GLabel 6975 4000 2    50   Input ~ 0
+PWM_0A
+Text GLabel 6975 4200 2    50   Input ~ 0
+PWM_3A
+$Comp
+L custom:CM1293A-04SO D?
+U 1 1 5CEA1AF5
+P 4675 4125
+AR Path="/5C3EC885/5CEA1AF5" Ref="D?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1AF5" Ref="D?"  Part="1" 
+F 0 "D?" H 4425 4400 60  0000 L BNN
+F 1 "CM1293A-04SO" H 4325 3775 60  0000 L BNN
+F 2 "SOT-457" H 4425 3675 60  0001 L BNN
+F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 4425 3575 60  0001 L BNN
+	1    4675 4125
+	1    0    0    -1  
+$EndComp
+Text Notes 4350 3550 0    50   ~ 0
+PLACE CLOSE TO\nCONNECTOR
+$Comp
+L custom:CM1293A-04SO D?
+U 1 1 5CEA1AFD
+P 4675 3000
+AR Path="/5C3EC885/5CEA1AFD" Ref="D?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1AFD" Ref="D?"  Part="1" 
+F 0 "D?" H 4425 3275 60  0000 L BNN
+F 1 "CM1293A-04SO" H 4325 2650 60  0000 L BNN
+F 2 "SOT-457" H 4425 2550 60  0001 L BNN
+F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 4425 2450 60  0001 L BNN
+	1    4675 3000
+	1    0    0    -1  
+$EndComp
+Text Notes 6225 3625 0    50   ~ 0
+PLACE CLOSE TO\nCONNECTOR
+$Comp
+L custom:CM1293A-04SO D?
+U 1 1 5CEA1B05
+P 6550 3075
+AR Path="/5C3EC885/5CEA1B05" Ref="D?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B05" Ref="D?"  Part="1" 
+F 0 "D?" H 6300 3350 60  0000 L BNN
+F 1 "CM1293A-04SO" H 6200 2725 60  0000 L BNN
+F 2 "SOT-457" H 6300 2625 60  0001 L BNN
+F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 6300 2525 60  0001 L BNN
+	1    6550 3075
+	1    0    0    -1  
+$EndComp
+Text Notes 6225 4750 0    50   ~ 0
+PLACE CLOSE TO\nCONNECTOR
+$Comp
+L custom:CM1293A-04SO D?
+U 1 1 5CEA1B0D
+P 6550 4200
+AR Path="/5C3EC885/5CEA1B0D" Ref="D?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B0D" Ref="D?"  Part="1" 
+F 0 "D?" H 6300 4475 60  0000 L BNN
+F 1 "CM1293A-04SO" H 6200 3850 60  0000 L BNN
+F 2 "SOT-457" H 6300 3750 60  0001 L BNN
+F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 6300 3650 60  0001 L BNN
+	1    6550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:VDD_uC #PWR?
+U 1 1 5CEA1B14
+P 4200 3825
+AR Path="/5C3EC885/5CEA1B14" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B14" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4400 3875 50  0001 C CNN
+F 1 "VDD_uC" H 4050 3975 50  0000 L BNN
+F 2 "" H 4200 3825 50  0001 C CNN
+F 3 "" H 4200 3825 50  0001 C CNN
+	1    4200 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:VDD_uC #PWR?
+U 1 1 5CEA1B1A
+P 4200 2700
+AR Path="/5C3EC885/5CEA1B1A" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B1A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4400 2750 50  0001 C CNN
+F 1 "VDD_uC" H 4050 2850 50  0000 L BNN
+F 2 "" H 4200 2700 50  0001 C CNN
+F 3 "" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:VDD_uC #PWR?
+U 1 1 5CEA1B20
+P 6075 2775
+AR Path="/5C3EC885/5CEA1B20" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B20" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6275 2825 50  0001 C CNN
+F 1 "VDD_uC" H 5925 2925 50  0000 L BNN
+F 2 "" H 6075 2775 50  0001 C CNN
+F 3 "" H 6075 2775 50  0001 C CNN
+	1    6075 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:VDD_uC #PWR?
+U 1 1 5CEA1B26
+P 6075 3900
+AR Path="/5C3EC885/5CEA1B26" Ref="#PWR?"  Part="1" 
+AR Path="/5C3EC885/5CE91810/5CEA1B26" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6275 3950 50  0001 C CNN
+F 1 "VDD_uC" H 5925 4050 50  0000 L BNN
+F 2 "" H 6075 3900 50  0001 C CNN
+F 3 "" H 6075 3900 50  0001 C CNN
+	1    6075 3900
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
