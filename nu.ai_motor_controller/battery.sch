@@ -718,7 +718,7 @@ Connection ~ 2400 2350
 Connection ~ 5550 2350
 Wire Wire Line
 	4525 3400 4525 3350
-Text Notes 3675 3725 0    50   ~ 0
+Text Notes 3775 3700 0    50   ~ 0
 PLACE TVS NEAR\nBUTTON PINS
 Text Notes 3925 2525 0    50   ~ 0
 SILK: OFF

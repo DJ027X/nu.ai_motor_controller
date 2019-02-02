@@ -759,8 +759,6 @@ F 3 "" H 10000 2125 50  0001 C CNN
 	1    10000 2125
 	1    0    0    -1  
 $EndComp
-Text GLabel 9525 1475 2    50   Input ~ 0
-PWM_0A
 Text GLabel 9525 1575 2    50   Input ~ 0
 PWM_3A
 Text GLabel 8875 1375 0    50   Input ~ 0
@@ -789,8 +787,6 @@ Wire Wire Line
 	8875 1475 8950 1475
 Wire Wire Line
 	9525 1575 9450 1575
-Wire Wire Line
-	9450 1475 9525 1475
 Wire Wire Line
 	10000 1375 9450 1375
 Wire Wire Line
@@ -1524,4 +1520,65 @@ Wire Wire Line
 	1150 1325 1550 1325
 Text Label 10275 3175 2    50   ~ 0
 uC_RSTn
+$Comp
+L Device:Buzzer BZ?
+U 1 1 5C57289E
+P 7500 2950
+AR Path="/5C100B31/5C57289E" Ref="BZ?"  Part="1" 
+AR Path="/5C3EC885/5C57289E" Ref="BZ?"  Part="1" 
+F 0 "BZ?" H 7650 3000 50  0000 L CNN
+F 1 "Buzzer" H 7650 2900 50  0000 L CNN
+F 2 "" V 7475 3050 50  0001 C CNN
+F 3 "~" V 7475 3050 50  0001 C CNN
+	1    7500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:RC0603JR-071KL R?
+U 1 1 5C58FAC1
+P 7125 2950
+AR Path="/5C58FAC1" Ref="R?"  Part="1" 
+AR Path="/5C3EC885/5C58FAC1" Ref="R?"  Part="1" 
+F 0 "R?" H 7175 2975 50  0000 L BNN
+F 1 "RC0603JR-071KL" H 7200 2875 50  0001 L BNN
+F 2 "0603" H 7200 2950 50  0001 L BNN
+F 3 "~/datasheets/PYu-RC_Group_51_RoHS_L_10.pdf" H 7065 2960 50  0001 C CNN
+F 4 "1k0" V 7125 2950 50  0000 C CNN "Resistance"
+	1    7125 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2850 7350 2850
+Wire Wire Line
+	7350 2850 7350 2750
+Wire Wire Line
+	7350 2750 7125 2750
+Wire Wire Line
+	7125 2750 7125 2800
+Wire Wire Line
+	7125 3100 7125 3150
+Wire Wire Line
+	7125 3150 7350 3150
+Wire Wire Line
+	7350 3150 7350 3050
+Wire Wire Line
+	7350 3050 7400 3050
+$Comp
+L custom:VDD_BAT #PWR?
+U 1 1 5C5F90BF
+P 7125 2625
+F 0 "#PWR?" H 7325 2675 50  0001 C CNN
+F 1 "VDD_BAT" H 6975 2775 50  0000 L BNN
+F 2 "" H 7125 2625 50  0001 C CNN
+F 3 "" H 7125 2625 50  0001 C CNN
+	1    7125 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 2625 7125 2750
+Connection ~ 7125 2750
+Wire Wire Line
+	9450 1475 9525 1475
+Text GLabel 9525 1475 2    50   Input ~ 0
+PWM_0A
 $EndSCHEMATC
