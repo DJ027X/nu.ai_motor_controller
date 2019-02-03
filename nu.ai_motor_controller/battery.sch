@@ -737,7 +737,7 @@ F 3 "/home/dj/datasheets/irf9540n.pdf" H 5200 2250 50  0001 L BNN
 	1    5000 2450
 	0    -1   -1   0   
 $EndComp
-Text Notes 5750 2625 0    50   ~ 0
+Text Notes 6025 2600 0    50   ~ 0
 SILK: BAT
 Text GLabel 3300 4350 0    50   Input ~ 0
 RESETn
