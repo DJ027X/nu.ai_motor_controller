@@ -626,7 +626,7 @@ DEF ~custom_MF-MSMF050-2 F 0 0 N Y 1 F N
 F0 "F" 75 0 50 H V L BNN
 F1 "custom_MF-MSMF050-2" -100 -525 50 H I L BNN
 F2 "1812" -100 -450 50 H I L BNN
-F3 "~/datasheets/mfmsmf.pdf" -100 -625 50 H I L BNN
+F3 "/home/dj/datasheets/mfmsmf.pdf" -100 -625 50 H I L BNN
 F4 "0.5 A" 75 -75 50 H V L BNN "Rating"
 $FPLIST
  1812
@@ -793,7 +793,7 @@ ENDDEF
 DEF ~custom_RMCF0603FT22R0 R 0 0 N Y 1 F N
 F0 "R" -50 -50 50 V V L BNN
 F1 "custom_RMCF0603FT22R0" 75 -25 50 H I L BNN
-F2 "0603" 75 50 50 H I L BNN
+F2 "Resistor_SMD:R_0603_1608Metric" 75 50 50 H I L BNN
 F3 "~/datasheets/SEI-RMCF_RMCP.pdf" 75 -125 50 H I L BNN
 F4 "22R0" 0 0 50 V V C CNN "Resistance"
 $FPLIST
