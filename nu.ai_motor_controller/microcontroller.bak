@@ -1852,17 +1852,17 @@ Text GLabel 9800 6000 0    50   Input ~ 0
 PWM_4D
 Text GLabel 9800 5800 0    50   Input ~ 0
 PWM_4A
-Text GLabel 7925 5925 0    50   Input ~ 0
-I2C_SCL
 Text GLabel 7925 5725 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 7925 5925 0    50   Input ~ 0
 I2C_SDA
-Text GLabel 7925 4800 0    50   Input ~ 0
-SPI_MISO
-Text GLabel 7925 4600 0    50   Input ~ 0
-SPI_MOSI
-Text GLabel 8775 4600 2    50   Input ~ 0
-SPI_SCK
 Text GLabel 8775 4400 2    50   Input ~ 0
+SPI_MISO
+Text GLabel 8775 4600 2    50   Input ~ 0
+SPI_MOSI
+Text GLabel 7925 4800 0    50   Input ~ 0
+SPI_SCK
+Text GLabel 7925 4600 0    50   Input ~ 0
 SPI_SSn
 Wire Wire Line
 	7925 5925 8000 5925
@@ -1953,13 +1953,13 @@ Wire Wire Line
 	10650 4675 10575 4675
 Wire Wire Line
 	10650 4475 10575 4475
-Text GLabel 9800 4875 0    50   Input ~ 0
-JTAG_TDI
-Text GLabel 9800 4675 0    50   Input ~ 0
-JTAG_TDO
-Text GLabel 10650 4675 2    50   Input ~ 0
-JTAG_TCK
 Text GLabel 10650 4475 2    50   Input ~ 0
+JTAG_TDI
+Text GLabel 10650 4675 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 9800 4875 0    50   Input ~ 0
+JTAG_TCK
+Text GLabel 9800 4675 0    50   Input ~ 0
 JTAG_TMS
 Wire Wire Line
 	10700 4875 10575 4875
@@ -2041,17 +2041,7 @@ uC_AVCC
 Text Label 5775 800  0    50   ~ 0
 uC_AVCC
 Connection ~ 5150 1200
-$Comp
-L custom:MF-MSMF050-2 F1
-U 1 1 5C5A71F2
-P 1875 4725
-F 0 "F1" V 1825 4625 50  0000 L BNN
-F 1 "MF-MSMF050-2" H 1775 4200 50  0001 L BNN
-F 2 "custom:MF-MSMF050-2" H 1775 4275 50  0001 L BNN
-F 3 "/home/dj/datasheets/mfmsmf.pdf" H 1775 4100 50  0001 L BNN
-F 4 "0.5 A" V 2025 4625 50  0000 L BNN "Rating"
-	1    1875 4725
-	0    1    1    0   
-$EndComp
 NoConn ~ 10575 5600
+Text Notes 1575 4475 0    50   ~ 0
+find better fuse
 $EndSCHEMATC

@@ -1233,4 +1233,12 @@ $EndComp
 Connection ~ 3300 1775
 Text Notes 7825 4400 0    50   ~ 0
 MOTOR CONNECTIONS
+Text Notes 7650 2850 0    50   ~ 0
+FRONT RIGHT
+Text Notes 7600 3850 0    50   ~ 0
+REAR RIGHT
+Text Notes 7600 4950 0    50   ~ 0
+FRONT LEFT
+Text Notes 7600 5950 0    50   ~ 0
+REAR LEFT
 $EndSCHEMATC
