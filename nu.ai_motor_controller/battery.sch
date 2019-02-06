@@ -23,13 +23,13 @@ AR Path="/5C100B31/5C5B02EC" Ref="J?"  Part="1"
 AR Path="/5C5AE643/5C5B02EC" Ref="J16"  Part="1" 
 F 0 "J16" H 10225 4125 50  0000 L BNN
 F 1 "S4B-XH-A" H 10025 3625 50  0000 L BNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 10125 3525 50  0001 L BNN
+F 2 "custom:X4B-XH-A" H 10125 3525 50  0001 L BNN
 F 3 "eXH.pdf" H 10125 3425 50  0001 L BNN
 	1    10125 3925
 	-1   0    0    -1  
 $EndComp
 Text Notes 10200 4025 0    50   ~ 0
-BATTERY\nTAPS
+BATTERY\nTAP
 $Comp
 L custom:S4B-XH-A J?
 U 1 1 5C5B02F4
@@ -39,7 +39,7 @@ AR Path="/5C100B31/5C5B02F4" Ref="J?"  Part="1"
 AR Path="/5C5AE643/5C5B02F4" Ref="J17"  Part="1" 
 F 0 "J17" H 10225 4825 50  0000 L BNN
 F 1 "S4B-XH-A" H 10025 4325 50  0000 L BNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 10125 4225 50  0001 L BNN
+F 2 "custom:X4B-XH-A" H 10125 4225 50  0001 L BNN
 F 3 "eXH.pdf" H 10125 4125 50  0001 L BNN
 	1    10125 4625
 	-1   0    0    -1  
@@ -53,15 +53,11 @@ AR Path="/5C100B31/5C5B02FB" Ref="J?"  Part="1"
 AR Path="/5C5AE643/5C5B02FB" Ref="J13"  Part="1" 
 F 0 "J13" H 10225 3425 50  0000 L BNN
 F 1 "S4B-XH-A" H 10025 2925 50  0000 L BNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 10125 2825 50  0001 L BNN
+F 2 "custom:X4B-XH-A" H 10125 2825 50  0001 L BNN
 F 3 "eXH.pdf" H 10125 2725 50  0001 L BNN
 	1    10125 3225
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	9925 4525 9350 4525
-Wire Wire Line
-	9350 4525 9350 3825
 Wire Wire Line
 	9350 3125 9925 3125
 Wire Wire Line
@@ -74,18 +70,6 @@ Wire Wire Line
 	9925 3825 9350 3825
 Wire Wire Line
 	9350 3825 9350 3125
-Wire Wire Line
-	9925 4625 9450 4625
-Wire Wire Line
-	9450 4625 9450 3925
-Wire Wire Line
-	9925 4725 9550 4725
-Wire Wire Line
-	9550 4725 9550 4025
-Wire Wire Line
-	9925 4825 9650 4825
-Wire Wire Line
-	9650 4825 9650 4125
 Wire Wire Line
 	9925 3925 9450 3925
 Wire Wire Line
@@ -107,9 +91,7 @@ F 3 "" H 9650 4900 50  0001 C CNN
 	1    9650 4900
 	1    0    0    -1  
 $EndComp
-Connection ~ 9650 4825
 Connection ~ 9650 4125
-Connection ~ 9550 4025
 Connection ~ 9450 3925
 Connection ~ 9350 3825
 $Comp
@@ -121,7 +103,7 @@ AR Path="/5C100B31/5C5B0320" Ref="J?"  Part="1"
 AR Path="/5C5AE643/5C5B0320" Ref="J14"  Part="1" 
 F 0 "J14" H 7675 2325 50  0000 C CNN
 F 1 "NP_Screw_Terminal_01x02" H 8250 2175 50  0000 C CNN
-F 2 "" H 7675 2225 50  0001 C CNN
+F 2 "custom:TERMINAL_BLOCK_1x2" H 7675 2225 50  0001 C CNN
 F 3 "~" H 7675 2225 50  0001 C CNN
 	1    7675 2225
 	1    0    0    -1  
@@ -181,8 +163,6 @@ Wire Wire Line
 Connection ~ 9350 3125
 Connection ~ 9450 3225
 Connection ~ 9550 3325
-Wire Wire Line
-	9650 4825 9650 4900
 Connection ~ 9650 3425
 Wire Wire Line
 	9650 3425 9650 4125
@@ -217,16 +197,16 @@ Wire Wire Line
 $Comp
 L custom:VDD_BAT #PWR056
 U 1 1 5C5B04A6
-P 6975 2125
-F 0 "#PWR056" H 7175 2175 50  0001 C CNN
-F 1 "VDD_BAT" H 6825 2275 50  0000 L BNN
-F 2 "" H 6975 2125 50  0001 C CNN
-F 3 "" H 6975 2125 50  0001 C CNN
-	1    6975 2125
+P 7425 2125
+F 0 "#PWR056" H 7625 2175 50  0001 C CNN
+F 1 "VDD_BAT" H 7275 2275 50  0000 L BNN
+F 2 "" H 7425 2125 50  0001 C CNN
+F 3 "" H 7425 2125 50  0001 C CNN
+	1    7425 2125
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6975 2225 6975 2125
+	7425 2225 7425 2125
 Wire Wire Line
 	2025 2875 2400 2875
 Wire Wire Line
@@ -539,7 +519,7 @@ F 3 "~" H 7300 4300 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Text Label 9625 3125 0    50   ~ 0
-TAP_3
+TAP_2
 Text Label 9625 3325 0    50   ~ 0
 TAP_0
 Text Label 9625 3225 0    50   ~ 0
@@ -596,7 +576,7 @@ U 1 1 5C774ADE
 P 3250 4050
 F 0 "SW3" H 3075 4200 60  0000 L BNN
 F 1 "TACTILE_SWITCH" H 2900 3900 60  0001 L BNN
-F 2 "" H 3250 4200 60  0001 C CNN
+F 2 "custom:TACTILE_SWITCH" H 3250 4200 60  0001 C CNN
 F 3 "" H 3250 4200 60  0001 C CNN
 	1    3250 4050
 	1    0    0    -1  
@@ -659,7 +639,7 @@ U 1 1 5C8B31B9
 P 4100 2800
 F 0 "SW2" H 3925 2950 60  0000 L BNN
 F 1 "TACTILE_SWITCH" H 3750 2650 60  0001 L BNN
-F 2 "" H 4100 2950 60  0001 C CNN
+F 2 "custom:TACTILE_SWITCH" H 4100 2950 60  0001 C CNN
 F 3 "" H 4100 2950 60  0001 C CNN
 	1    4100 2800
 	1    0    0    -1  
@@ -732,7 +712,7 @@ U 1 1 5CA03FDD
 P 5000 2450
 F 0 "Q1" V 5225 2250 50  0000 L CNN
 F 1 "IRF9540N" V 5150 1975 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5200 2375 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 5200 2375 50  0001 L CIN
 F 3 "/home/dj/datasheets/irf9540n.pdf" H 5200 2250 50  0001 L BNN
 	1    5000 2450
 	0    -1   -1   0   
@@ -804,13 +784,7 @@ Wire Wire Line
 	4350 2800 4350 2750
 Connection ~ 4350 2800
 Wire Wire Line
-	4450 3250 4825 3250
-Text Label 4825 3250 2    50   ~ 0
-TERM_POS
-Text Label 7050 2225 0    50   ~ 0
-TERM_POS
-Wire Wire Line
-	6975 2225 7475 2225
+	7425 2225 7475 2225
 NoConn ~ 3750 3250
 Connection ~ 3500 4000
 Wire Wire Line
@@ -857,17 +831,17 @@ Wire Wire Line
 $Comp
 L custom:PTH_0.5_mm TP52
 U 1 1 5CB97973
-P 6850 2225
-F 0 "TP52" V 6800 2325 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6825 2400 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7050 2225 50  0001 L BNN
-F 3 "~" H 7050 2225 50  0001 C CNN
-	1    6850 2225
+P 7300 2225
+F 0 "TP52" V 7250 2325 50  0000 L BNN
+F 1 "PTH_0.5_mm" V 7275 2400 50  0001 L BNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7500 2225 50  0001 L BNN
+F 3 "~" H 7500 2225 50  0001 C CNN
+	1    7300 2225
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	6850 2225 6975 2225
-Connection ~ 6975 2225
+	7300 2225 7425 2225
+Connection ~ 7425 2225
 $Comp
 L custom:PTH_0.5_mm TP56
 U 1 1 5CBB0136
@@ -908,4 +882,29 @@ Text Notes 1125 2975 0    50   ~ 0
 BATTERY PORT
 Text Notes 1050 3475 0    50   ~ 0
 CHARGING PORT
+Text Notes 10200 3350 0    50   ~ 0
+BATTERY\nTAP
+Text Notes 10200 4750 0    50   ~ 0
+CHARGING\nTAP
+Wire Wire Line
+	9650 4125 9650 4525
+Wire Wire Line
+	9350 4825 9925 4825
+Wire Wire Line
+	9350 3825 9350 4825
+Wire Wire Line
+	9925 4525 9650 4525
+Connection ~ 9650 4525
+Wire Wire Line
+	9650 4525 9650 4900
+Wire Wire Line
+	9550 4025 9550 4625
+Wire Wire Line
+	9550 4625 9925 4625
+Connection ~ 9550 4025
+Wire Wire Line
+	9925 4725 9450 4725
+Wire Wire Line
+	9450 3925 9450 4725
+NoConn ~ 4450 3250
 $EndSCHEMATC
