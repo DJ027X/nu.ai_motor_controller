@@ -1162,19 +1162,6 @@ Wire Wire Line
 Text Label 10650 3400 2    50   ~ 0
 uC_RSTn
 $Comp
-L Device:Buzzer BZ?
-U 1 1 5C57289E
-P 7775 2875
-AR Path="/5C100B31/5C57289E" Ref="BZ?"  Part="1" 
-AR Path="/5C3EC885/5C57289E" Ref="BZ1"  Part="1" 
-F 0 "BZ1" H 7925 2925 50  0000 L CNN
-F 1 "Buzzer" H 7925 2825 50  0000 L CNN
-F 2 "custom:0.5_IN_BUZZER" V 7750 2975 50  0001 C CNN
-F 3 "~" V 7750 2975 50  0001 C CNN
-	1    7775 2875
-	1    0    0    -1  
-$EndComp
-$Comp
 L custom:RC0603JR-071KL R?
 U 1 1 5C58FAC1
 P 7400 2875
@@ -2044,4 +2031,15 @@ Connection ~ 5150 1200
 NoConn ~ 10575 5600
 Text Notes 1575 4475 0    50   ~ 0
 find better fuse
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5C5FF6E6
+P 7775 2875
+F 0 "BZ1" H 7925 2925 50  0000 L CNN
+F 1 "Buzzer" H 7925 2825 50  0000 L CNN
+F 2 "" V 7750 2975 50  0001 C CNN
+F 3 "~" V 7750 2975 50  0001 C CNN
+	1    7775 2875
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
