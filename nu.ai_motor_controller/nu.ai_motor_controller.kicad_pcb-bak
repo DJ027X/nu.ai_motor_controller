@@ -4430,7 +4430,7 @@
   )
 
   (module TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm (layer F.Cu) (tedit 5A0F774F) (tstamp 5C6FC498)
-    (at 105.718 83.164 270)
+    (at 104.702 82.656 270)
     (descr "THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm")
     (tags "test point THT pad")
     (path /5C5AE643/5C6EB20F)
