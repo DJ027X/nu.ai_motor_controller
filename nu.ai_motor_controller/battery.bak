@@ -518,8 +518,6 @@ F 3 "~" H 7300 4300 50  0001 C CNN
 	1    7100 4300
 	1    0    0    1   
 $EndComp
-Text Label 9625 3125 0    50   ~ 0
-TAP_2
 Text Label 9625 3325 0    50   ~ 0
 TAP_0
 Text Label 9625 3225 0    50   ~ 0
@@ -712,7 +710,7 @@ U 1 1 5CA03FDD
 P 5000 2450
 F 0 "Q1" V 5225 2250 50  0000 L CNN
 F 1 "IRF9540N" V 5150 1975 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 5200 2375 50  0001 L CIN
+F 2 "custom:TO-220-3_Horizontal_TabDown" H 5200 2375 50  0001 L CIN
 F 3 "/home/dj/datasheets/irf9540n.pdf" H 5200 2250 50  0001 L BNN
 	1    5000 2450
 	0    -1   -1   0   
@@ -909,4 +907,6 @@ Wire Wire Line
 	9650 4825 9650 4900
 Wire Wire Line
 	9550 4025 9550 4725
+Text Label 9625 3125 0    50   ~ 0
+TAP_2
 $EndSCHEMATC
