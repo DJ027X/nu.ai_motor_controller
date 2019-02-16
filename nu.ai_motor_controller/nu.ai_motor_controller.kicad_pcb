@@ -1625,7 +1625,7 @@
   )
 
   (module custom:SOT-457 (layer F.Cu) (tedit 5C58C8CE) (tstamp 5C6FBE55)
-    (at 158.042 54.716 270)
+    (at 160.582 36.682 270)
     (path /5C3EC885/5CBB1C06)
     (fp_text reference D1 (at 0.254 -2.54 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3748,7 +3748,7 @@
   )
 
   (module Resistor_SMD:R_0603_1608Metric (layer F.Cu) (tedit 5B301BBD) (tstamp 5C6FC353)
-    (at 153.724 53.446 180)
+    (at 156.264 35.793 180)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5C5AE643/5CB4E8C0)
@@ -5100,7 +5100,7 @@
   )
 
   (module TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm (layer F.Cu) (tedit 5A0F774F) (tstamp 5C6FC5F0)
-    (at 150.676 53.446 270)
+    (at 153.216 35.793 270)
     (descr "THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm")
     (tags "test point THT pad")
     (path /5C3EC885/5CE77A0F)
@@ -6496,7 +6496,7 @@
   (segment (start 45.2915 88.193) (end 45.266 88.2185) (width 0.25) (layer F.Cu) (net 82))
   (segment (start 45.2915 86.480501) (end 45.2915 88.193) (width 0.25) (layer F.Cu) (net 82))
   (segment (start 47.044 86.480501) (end 47.044 88.2185) (width 0.25) (layer F.Cu) (net 83))
-  (segment (start 152.9365 53.446) (end 150.676 53.446) (width 0.25) (layer F.Cu) (net 84))
+  (segment (start 155.4765 35.793) (end 153.216 35.793) (width 0.25) (layer F.Cu) (net 84))
   (segment (start 128.601 161.65) (end 129.467 161.65) (width 0.25) (layer F.Cu) (net 85))
   (segment (start 127.773 160.822) (end 128.601 161.65) (width 0.25) (layer F.Cu) (net 85))
   (segment (start 129.467 161.65) (end 129.467 163.936) (width 0.25) (layer F.Cu) (net 85))
