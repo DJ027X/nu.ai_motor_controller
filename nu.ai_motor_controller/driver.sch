@@ -288,8 +288,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 3025 2425 3025
 Wire Wire Line
-	1750 3125 2175 3125
-Wire Wire Line
 	2625 3225 2625 3125
 Wire Wire Line
 	2425 3025 2425 3225
@@ -357,9 +355,9 @@ Wire Wire Line
 	4225 4175 4225 3125
 Connection ~ 4225 3125
 Connection ~ 4425 2925
-Text GLabel 1750 3025 0    50   Input ~ 0
+Text GLabel 2150 3025 0    50   Input ~ 0
 R_MOTOR
-Text GLabel 1750 3125 0    50   Input ~ 0
+Text GLabel 2150 3125 0    50   Input ~ 0
 R_DIR
 $Comp
 L power:GND #PWR?
@@ -474,8 +472,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 5125 2425 5125
 Wire Wire Line
-	1750 5225 2175 5225
-Wire Wire Line
 	2625 5325 2625 5225
 Wire Wire Line
 	2425 5125 2425 5325
@@ -483,8 +479,6 @@ Connection ~ 2625 5225
 Wire Wire Line
 	2625 5225 2700 5225
 Connection ~ 2425 5125
-Wire Wire Line
-	2425 5125 1900 5125
 $Comp
 L custom:RC0603JR-071KL R?
 U 1 1 5CB049C8
@@ -514,19 +508,6 @@ F 4 "1k0" V 3975 5450 50  0000 C CNN "Resistance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:SGM3157YC6 U?
-U 1 1 5CB049D7
-P 3050 5175
-AR Path="/5CB049D7" Ref="U?"  Part="1" 
-AR Path="/5C10107F/5CB049D7" Ref="U4"  Part="1" 
-F 0 "U4" H 2800 5400 50  0000 L BNN
-F 1 "SGM3157YC6" H 2800 5000 50  0000 L BNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2800 4875 50  0001 L BNN
-F 3 "/home/dj/datasheets/SGM3157YC6.pdf" H 2800 4775 50  0001 L BNN
-	1    3050 5175
-	1    0    0    -1  
-$EndComp
-$Comp
 L custom:VDD_uC #PWR?
 U 1 1 5CB049DE
 P 2625 4875
@@ -541,9 +522,9 @@ F 3 "" H 2625 4875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3775 5025
-Text GLabel 1750 5125 0    50   Input ~ 0
+Text GLabel 2150 5125 0    50   Input ~ 0
 L_MOTOR
-Text GLabel 1750 5225 0    50   Input ~ 0
+Text GLabel 2150 5225 0    50   Input ~ 0
 L_DIR
 $Comp
 L power:GND #PWR?
@@ -744,160 +725,6 @@ Text Notes 5500 6075 0    50   ~ 0
 OUT_D2
 Connection ~ 4225 5225
 Connection ~ 4425 5025
-Wire Wire Line
-	1900 2975 1900 3025
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF3A85A
-P 1900 2975
-AR Path="/5C5AE643/5CF3A85A" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF3A85A" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF3A85A" Ref="TP22"  Part="1" 
-F 0 "TP22" H 1850 3175 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 1875 3150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2100 2975 50  0001 L BNN
-F 3 "~" H 2100 2975 50  0001 C CNN
-	1    1900 2975
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF46407
-P 2175 2975
-AR Path="/5C5AE643/5CF46407" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF46407" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF46407" Ref="TP23"  Part="1" 
-F 0 "TP23" H 2125 3175 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 2150 3150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2375 2975 50  0001 L BNN
-F 3 "~" H 2375 2975 50  0001 C CNN
-	1    2175 2975
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2175 2975 2175 3125
-Connection ~ 2175 3125
-Wire Wire Line
-	2175 3125 2625 3125
-Connection ~ 1900 3025
-Wire Wire Line
-	1900 3025 2425 3025
-Wire Wire Line
-	1750 3025 1900 3025
-Wire Wire Line
-	1900 5075 1900 5125
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF67601
-P 1900 5075
-AR Path="/5C5AE643/5CF67601" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF67601" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF67601" Ref="TP30"  Part="1" 
-F 0 "TP30" H 1850 5275 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 1875 5250 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2100 5075 50  0001 L BNN
-F 3 "~" H 2100 5075 50  0001 C CNN
-	1    1900 5075
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF67608
-P 2175 5075
-AR Path="/5C5AE643/5CF67608" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF67608" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF67608" Ref="TP31"  Part="1" 
-F 0 "TP31" H 2125 5275 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 2150 5250 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2375 5075 50  0001 L BNN
-F 3 "~" H 2375 5075 50  0001 C CNN
-	1    2175 5075
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2175 5075 2175 5225
-Connection ~ 2175 5225
-Wire Wire Line
-	2175 5225 2625 5225
-Connection ~ 1900 5125
-Wire Wire Line
-	1900 5125 1750 5125
-Wire Wire Line
-	3625 2875 3625 2925
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF6C119
-P 3625 2875
-AR Path="/5C5AE643/5CF6C119" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF6C119" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF6C119" Ref="TP20"  Part="1" 
-F 0 "TP20" H 3575 3075 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 3600 3050 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3825 2875 50  0001 L BNN
-F 3 "~" H 3825 2875 50  0001 C CNN
-	1    3625 2875
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF6C120
-P 3975 2875
-AR Path="/5C5AE643/5CF6C120" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF6C120" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF6C120" Ref="TP21"  Part="1" 
-F 0 "TP21" H 3925 3075 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 3950 3050 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4175 2875 50  0001 L BNN
-F 3 "~" H 4175 2875 50  0001 C CNN
-	1    3975 2875
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3975 2875 3975 3025
-Wire Wire Line
-	3625 4975 3625 5025
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF7075B
-P 3625 4975
-AR Path="/5C5AE643/5CF7075B" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF7075B" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF7075B" Ref="TP28"  Part="1" 
-F 0 "TP28" H 3575 5175 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 3600 5150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3825 4975 50  0001 L BNN
-F 3 "~" H 3825 4975 50  0001 C CNN
-	1    3625 4975
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CF70762
-P 3975 4975
-AR Path="/5C5AE643/5CF70762" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CF70762" Ref="TP?"  Part="1" 
-AR Path="/5C10107F/5CF70762" Ref="TP29"  Part="1" 
-F 0 "TP29" H 3925 5175 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 3950 5150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4175 4975 50  0001 L BNN
-F 3 "~" H 4175 4975 50  0001 C CNN
-	1    3975 4975
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3975 4975 3975 5125
-Connection ~ 3625 5025
-Wire Wire Line
-	3625 5025 3400 5025
-Wire Wire Line
-	3625 5025 3775 5025
-Connection ~ 3625 2925
-Wire Wire Line
-	3625 2925 3775 2925
-Wire Wire Line
-	3400 2925 3625 2925
-Connection ~ 3975 3025
-Connection ~ 3975 5125
 $Comp
 L custom:NPTH_2mm NPTH1
 U 1 1 5C58DD06
@@ -1089,4 +916,29 @@ Wire Wire Line
 	5375 5875 5900 5875
 Wire Wire Line
 	5375 6075 5900 6075
+Wire Wire Line
+	3400 2925 3775 2925
+$Comp
+L custom:SGM3157YC6 U?
+U 1 1 5CB049D7
+P 3050 5175
+AR Path="/5CB049D7" Ref="U?"  Part="1" 
+AR Path="/5C10107F/5CB049D7" Ref="U4"  Part="1" 
+F 0 "U4" H 2800 5400 50  0000 L BNN
+F 1 "SGM3157YC6" H 2800 5000 50  0000 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2800 4875 50  0001 L BNN
+F 3 "/home/dj/datasheets/SGM3157YC6.pdf" H 2800 4775 50  0001 L BNN
+	1    3050 5175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5025 3775 5025
+Wire Wire Line
+	2150 3025 2425 3025
+Wire Wire Line
+	2150 3125 2625 3125
+Wire Wire Line
+	2150 5125 2425 5125
+Wire Wire Line
+	2150 5225 2625 5225
 $EndSCHEMATC
