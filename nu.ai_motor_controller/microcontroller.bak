@@ -675,7 +675,7 @@ F 3 "" H 10775 2300 50  0001 C CNN
 	1    10775 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 9650 1650 0    50   Input ~ 0
+Text GLabel 10300 1750 2    50   Input ~ 0
 PWM_3A
 Text GLabel 10300 1650 2    50   Input ~ 0
 PWM_4A
@@ -683,7 +683,7 @@ Text GLabel 9650 2150 0    50   Input ~ 0
 I2C_SDA
 Text GLabel 9650 2250 0    50   Input ~ 0
 I2C_SCL
-Text GLabel 10300 1750 2    50   Input ~ 0
+Text GLabel 9650 1650 0    50   Input ~ 0
 PWM_4D
 Wire Wire Line
 	9650 2250 9725 2250
@@ -696,9 +696,9 @@ Wire Wire Line
 Wire Wire Line
 	10300 1650 10225 1650
 Wire Wire Line
-	10300 1750 10225 1750
-Wire Wire Line
 	9650 1650 9725 1650
+Wire Wire Line
+	10300 1750 10225 1750
 Wire Wire Line
 	10775 1550 10225 1550
 Wire Wire Line
@@ -1541,9 +1541,9 @@ F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 8100 5175 60  0001 L BNN
 $EndComp
 Text GLabel 10650 5800 2    50   Input ~ 0
 PWM_3A
-Text GLabel 9800 6000 0    50   Input ~ 0
-PWM_4D
 Text GLabel 9800 5800 0    50   Input ~ 0
+PWM_4D
+Text GLabel 9800 6000 0    50   Input ~ 0
 PWM_4A
 Text GLabel 7925 5725 0    50   Input ~ 0
 I2C_SCL
@@ -1587,9 +1587,9 @@ Wire Wire Line
 Wire Wire Line
 	8000 5525 7875 5525
 Wire Wire Line
-	9800 6000 9875 6000
-Wire Wire Line
 	9800 5800 9875 5800
+Wire Wire Line
+	9800 6000 9875 6000
 Wire Wire Line
 	10650 5800 10575 5800
 Wire Wire Line
@@ -1639,9 +1639,9 @@ Wire Wire Line
 Wire Wire Line
 	8000 4400 7875 4400
 Wire Wire Line
-	9800 4875 9875 4875
-Wire Wire Line
 	9800 4675 9875 4675
+Wire Wire Line
+	9800 4875 9875 4875
 Wire Wire Line
 	10650 4675 10575 4675
 Wire Wire Line
@@ -1650,9 +1650,9 @@ Text GLabel 10650 4475 2    50   Input ~ 0
 JTAG_TDI
 Text GLabel 10650 4675 2    50   Input ~ 0
 JTAG_TDO
-Text GLabel 9800 4875 0    50   Input ~ 0
-JTAG_TCK
 Text GLabel 9800 4675 0    50   Input ~ 0
+JTAG_TCK
+Text GLabel 9800 4875 0    50   Input ~ 0
 JTAG_TMS
 Wire Wire Line
 	10700 4875 10575 4875
@@ -1830,10 +1830,10 @@ Wire Wire Line
 Wire Wire Line
 	9425 1075 9425 1350
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0106
 U 1 1 5C84DAD8
 P 10350 1075
-F 0 "#PWR?" H 10350 925 50  0001 C CNN
+F 0 "#PWR0106" H 10350 925 50  0001 C CNN
 F 1 "+3V3" H 10325 1225 50  0000 C CNN
 F 2 "" H 10350 1075 50  0001 C CNN
 F 3 "" H 10350 1075 50  0001 C CNN
