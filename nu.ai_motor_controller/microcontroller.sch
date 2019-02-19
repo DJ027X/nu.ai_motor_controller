@@ -646,16 +646,16 @@ $EndComp
 $Comp
 L power:+5V #PWR021
 U 1 1 5C4B092D
-P 9450 1075
-F 0 "#PWR021" H 9450 925 50  0001 C CNN
-F 1 "+5V" H 9450 1215 50  0000 C CNN
-F 2 "" H 9450 1075 50  0001 C CNN
-F 3 "" H 9450 1075 50  0001 C CNN
-	1    9450 1075
+P 9650 1075
+F 0 "#PWR021" H 9650 925 50  0001 C CNN
+F 1 "+5V" H 9675 1225 50  0000 C CNN
+F 2 "" H 9650 1075 50  0001 C CNN
+F 3 "" H 9650 1075 50  0001 C CNN
+	1    9650 1075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9450 1075 9450 1150
+	9650 1075 9650 1150
 Wire Wire Line
 	10300 2950 10225 2950
 Wire Wire Line
@@ -702,22 +702,22 @@ Wire Wire Line
 Wire Wire Line
 	10775 1550 10225 1550
 Wire Wire Line
-	9725 1250 9450 1250
+	9725 1250 9650 1250
 Wire Wire Line
-	9725 1150 9450 1150
-Connection ~ 9450 1150
+	9725 1150 9650 1150
+Connection ~ 9650 1150
 Wire Wire Line
-	9450 1150 9450 1250
+	9650 1150 9650 1250
 $Comp
 L power:+3V3 #PWR022
 U 1 1 5C6C3602
-P 10500 1075
-F 0 "#PWR022" H 10500 925 50  0001 C CNN
-F 1 "+3V3" H 10500 1215 50  0000 C CNN
-F 2 "" H 10500 1075 50  0001 C CNN
-F 3 "" H 10500 1075 50  0001 C CNN
-	1    10500 1075
-	1    0    0    -1  
+P 9425 1075
+F 0 "#PWR022" H 9425 925 50  0001 C CNN
+F 1 "+3V3" H 9425 1225 50  0000 C CNN
+F 2 "" H 9425 1075 50  0001 C CNN
+F 3 "" H 9425 1075 50  0001 C CNN
+	1    9425 1075
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J10
@@ -774,11 +774,7 @@ Wire Wire Line
 	10775 1550 10775 1850
 Wire Wire Line
 	9175 1750 9175 1550
-Wire Wire Line
-	9175 1350 9725 1350
 Connection ~ 9175 1750
-Wire Wire Line
-	10225 1350 10775 1350
 Connection ~ 10775 1550
 Wire Wire Line
 	9175 2050 9175 2300
@@ -1023,42 +1019,33 @@ $EndComp
 $Comp
 L power:+1V8 #PWR020
 U 1 1 5C5376B3
-P 9300 900
-F 0 "#PWR020" H 9300 750 50  0001 C CNN
-F 1 "+1V8" H 9300 1040 50  0000 C CNN
-F 2 "" H 9300 900 50  0001 C CNN
-F 3 "" H 9300 900 50  0001 C CNN
-	1    9300 900 
+P 9175 1075
+F 0 "#PWR020" H 9175 925 50  0001 C CNN
+F 1 "+1V8" H 9150 1225 50  0000 C CNN
+F 2 "" H 9175 1075 50  0001 C CNN
+F 3 "" H 9175 1075 50  0001 C CNN
+	1    9175 1075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 900  9300 1450
+	9175 1075 9175 1450
 Wire Wire Line
-	9300 1450 9725 1450
+	9175 1450 9725 1450
 $Comp
 L power:+1V8 #PWR023
 U 1 1 5C554ED0
-P 10700 900
-F 0 "#PWR023" H 10700 750 50  0001 C CNN
-F 1 "+1V8" H 10700 1040 50  0000 C CNN
-F 2 "" H 10700 900 50  0001 C CNN
-F 3 "" H 10700 900 50  0001 C CNN
-	1    10700 900 
+P 10600 1075
+F 0 "#PWR023" H 10600 925 50  0001 C CNN
+F 1 "+1V8" H 10600 1225 50  0000 C CNN
+F 2 "" H 10600 1075 50  0001 C CNN
+F 3 "" H 10600 1075 50  0001 C CNN
+	1    10600 1075
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10700 900  10700 1450
+	10600 1075 10600 1450
 Wire Wire Line
-	10700 1450 10225 1450
-Wire Wire Line
-	10500 1075 10500 1150
-Wire Wire Line
-	10225 1250 10500 1250
-Wire Wire Line
-	10225 1150 10500 1150
-Connection ~ 10500 1150
-Wire Wire Line
-	10500 1150 10500 1250
+	9725 1350 9425 1350
 $Comp
 L custom:CM1293A-04SO D6
 U 1 1 5C64FA77
@@ -1262,11 +1249,6 @@ Wire Wire Line
 Connection ~ 7050 3325
 Wire Wire Line
 	9725 1550 9175 1550
-Connection ~ 9175 1550
-Wire Wire Line
-	10775 1350 10775 1550
-Wire Wire Line
-	9175 1350 9175 1550
 $Comp
 L custom:VDD_uC #PWR068
 U 1 1 5C89D8AB
@@ -1463,278 +1445,6 @@ Text GLabel 6375 2625 2    50   Input ~ 0
 SPI_SSn
 Text GLabel 6375 4525 2    50   Input ~ 0
 PWM_4D
-Wire Wire Line
-	6400 7525 6350 7525
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A4F
-P 6400 7525
-AR Path="/5C5AE643/5CE77A4F" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A4F" Ref="TP51"  Part="1" 
-F 0 "TP51" V 6425 7700 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7700 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7525 50  0001 L BNN
-F 3 "~" H 6600 7525 50  0001 C CNN
-	1    6400 7525
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 7425 6350 7425
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A47
-P 6400 7425
-AR Path="/5C5AE643/5CE77A47" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A47" Ref="TP49"  Part="1" 
-F 0 "TP49" V 6425 7600 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7600 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7425 50  0001 L BNN
-F 3 "~" H 6600 7425 50  0001 C CNN
-	1    6400 7425
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 7325 6350 7325
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A3F
-P 6400 7325
-AR Path="/5C5AE643/5CE77A3F" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A3F" Ref="TP47"  Part="1" 
-F 0 "TP47" V 6425 7500 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7500 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7325 50  0001 L BNN
-F 3 "~" H 6600 7325 50  0001 C CNN
-	1    6400 7325
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 7225 6350 7225
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A37
-P 6400 7225
-AR Path="/5C5AE643/5CE77A37" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A37" Ref="TP45"  Part="1" 
-F 0 "TP45" V 6425 7400 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7400 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7225 50  0001 L BNN
-F 3 "~" H 6600 7225 50  0001 C CNN
-	1    6400 7225
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 7125 6350 7125
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A2F
-P 6400 7125
-AR Path="/5C5AE643/5CE77A2F" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A2F" Ref="TP43"  Part="1" 
-F 0 "TP43" V 6425 7300 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7300 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7125 50  0001 L BNN
-F 3 "~" H 6600 7125 50  0001 C CNN
-	1    6400 7125
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 7025 6350 7025
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A27
-P 6400 7025
-AR Path="/5C5AE643/5CE77A27" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A27" Ref="TP41"  Part="1" 
-F 0 "TP41" V 6425 7200 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7200 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 7025 50  0001 L BNN
-F 3 "~" H 6600 7025 50  0001 C CNN
-	1    6400 7025
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 6925 6350 6925
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A1F
-P 6400 6925
-AR Path="/5C5AE643/5CE77A1F" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A1F" Ref="TP39"  Part="1" 
-F 0 "TP39" V 6425 7100 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7100 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 6925 50  0001 L BNN
-F 3 "~" H 6600 6925 50  0001 C CNN
-	1    6400 6925
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6400 6825 6350 6825
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A17
-P 6400 6825
-AR Path="/5C5AE643/5CE77A17" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A17" Ref="TP37"  Part="1" 
-F 0 "TP37" V 6425 7000 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6375 7000 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6600 6825 50  0001 L BNN
-F 3 "~" H 6600 6825 50  0001 C CNN
-	1    6400 6825
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7525 5425 7525
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A0F
-P 5475 7525
-AR Path="/5C5AE643/5CE77A0F" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A0F" Ref="TP50"  Part="1" 
-F 0 "TP50" V 5500 7700 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7700 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7525 50  0001 L BNN
-F 3 "~" H 5675 7525 50  0001 C CNN
-	1    5475 7525
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7425 5425 7425
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE77A07
-P 5475 7425
-AR Path="/5C5AE643/5CE77A07" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE77A07" Ref="TP48"  Part="1" 
-F 0 "TP48" V 5500 7600 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7600 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7425 50  0001 L BNN
-F 3 "~" H 5675 7425 50  0001 C CNN
-	1    5475 7425
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7325 5425 7325
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779FF
-P 5475 7325
-AR Path="/5C5AE643/5CE779FF" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779FF" Ref="TP46"  Part="1" 
-F 0 "TP46" V 5500 7500 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7500 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7325 50  0001 L BNN
-F 3 "~" H 5675 7325 50  0001 C CNN
-	1    5475 7325
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7225 5425 7225
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779F7
-P 5475 7225
-AR Path="/5C5AE643/5CE779F7" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779F7" Ref="TP44"  Part="1" 
-F 0 "TP44" V 5500 7400 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7400 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7225 50  0001 L BNN
-F 3 "~" H 5675 7225 50  0001 C CNN
-	1    5475 7225
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7125 5425 7125
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779EF
-P 5475 7125
-AR Path="/5C5AE643/5CE779EF" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779EF" Ref="TP42"  Part="1" 
-F 0 "TP42" V 5500 7300 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7300 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7125 50  0001 L BNN
-F 3 "~" H 5675 7125 50  0001 C CNN
-	1    5475 7125
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 7025 5425 7025
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779E7
-P 5475 7025
-AR Path="/5C5AE643/5CE779E7" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779E7" Ref="TP40"  Part="1" 
-F 0 "TP40" V 5500 7200 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7200 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 7025 50  0001 L BNN
-F 3 "~" H 5675 7025 50  0001 C CNN
-	1    5475 7025
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 6925 5425 6925
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779DF
-P 5475 6925
-AR Path="/5C5AE643/5CE779DF" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779DF" Ref="TP38"  Part="1" 
-F 0 "TP38" V 5500 7100 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7100 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 6925 50  0001 L BNN
-F 3 "~" H 5675 6925 50  0001 C CNN
-	1    5475 6925
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5475 6825 5425 6825
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CE779D7
-P 5475 6825
-AR Path="/5C5AE643/5CE779D7" Ref="TP?"  Part="1" 
-AR Path="/5C3EC885/5CE779D7" Ref="TP36"  Part="1" 
-F 0 "TP36" V 5500 7000 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 5450 7000 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5675 6825 50  0001 L BNN
-F 3 "~" H 5675 6825 50  0001 C CNN
-	1    5475 6825
-	0    1    1    0   
-$EndComp
-Text GLabel 5425 7425 0    50   Input ~ 0
-PWM_4D
-Text GLabel 6350 7525 0    50   Input ~ 0
-USART_TX
-Text GLabel 6350 7425 0    50   Input ~ 0
-USART_RX
-Text GLabel 6350 7325 0    50   Input ~ 0
-I2C_SDA
-Text GLabel 6350 7225 0    50   Input ~ 0
-I2C_SCL
-Text GLabel 5425 7325 0    50   Input ~ 0
-PWM_4A
-Text GLabel 5425 7225 0    50   Input ~ 0
-PWM_3A
-Text GLabel 5425 7125 0    50   Input ~ 0
-SPI_MISO
-Text GLabel 5425 7025 0    50   Input ~ 0
-SPI_MOSI
-Text GLabel 5425 6925 0    50   Input ~ 0
-SPI_SCK
-Text GLabel 5425 6825 0    50   Input ~ 0
-SPI_SSn
-Text GLabel 6350 7125 0    50   Input ~ 0
-JTAG_TCK
-Text GLabel 6350 7025 0    50   Input ~ 0
-JTAG_TMS
-Text GLabel 6350 6925 0    50   Input ~ 0
-JTAG_TDO
-Text GLabel 6350 6825 0    50   Input ~ 0
-JTAG_TDI
-Text GLabel 5425 7525 0    50   Input ~ 0
-RESETn
 $Comp
 L custom:VDD_uC #PWR077
 U 1 1 5C932795
@@ -1929,9 +1639,9 @@ Wire Wire Line
 Wire Wire Line
 	8000 4400 7875 4400
 Wire Wire Line
-	9800 4875 9875 4875
-Wire Wire Line
 	9800 4675 9875 4675
+Wire Wire Line
+	9800 4875 9875 4875
 Wire Wire Line
 	10650 4675 10575 4675
 Wire Wire Line
@@ -1940,9 +1650,9 @@ Text GLabel 10650 4475 2    50   Input ~ 0
 JTAG_TDI
 Text GLabel 10650 4675 2    50   Input ~ 0
 JTAG_TDO
-Text GLabel 9800 4875 0    50   Input ~ 0
-JTAG_TCK
 Text GLabel 9800 4675 0    50   Input ~ 0
+JTAG_TCK
+Text GLabel 9800 4875 0    50   Input ~ 0
 JTAG_TMS
 Wire Wire Line
 	10700 4875 10575 4875
@@ -2117,4 +1827,32 @@ F 3 "" H 8575 1425 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8575 1425 8575 1350
+Wire Wire Line
+	9425 1075 9425 1350
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5C84DAD8
+P 10350 1075
+F 0 "#PWR0106" H 10350 925 50  0001 C CNN
+F 1 "+3V3" H 10325 1225 50  0000 C CNN
+F 2 "" H 10350 1075 50  0001 C CNN
+F 3 "" H 10350 1075 50  0001 C CNN
+	1    10350 1075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10225 1350 10350 1350
+Wire Wire Line
+	10350 1075 10350 1350
+Wire Wire Line
+	10775 1150 10225 1150
+Wire Wire Line
+	10225 1250 10775 1250
+Wire Wire Line
+	10775 1150 10775 1250
+Connection ~ 10775 1250
+Wire Wire Line
+	10775 1250 10775 1550
+Wire Wire Line
+	10600 1450 10225 1450
 $EndSCHEMATC
