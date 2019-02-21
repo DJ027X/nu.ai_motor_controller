@@ -120,7 +120,7 @@ U 1 1 5C5B0339
 P 9275 3125
 F 0 "TP1" V 9300 3375 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 9250 3300 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3125 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3125 50  0001 L BNN
 F 3 "~" H 9475 3125 50  0001 C CNN
 	1    9275 3125
 	0    -1   -1   0   
@@ -131,7 +131,7 @@ U 1 1 5C5B0340
 P 9275 3225
 F 0 "TP2" V 9300 3475 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 9250 3400 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3225 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3225 50  0001 L BNN
 F 3 "~" H 9475 3225 50  0001 C CNN
 	1    9275 3225
 	0    -1   -1   0   
@@ -142,7 +142,7 @@ U 1 1 5C5B0347
 P 9275 3325
 F 0 "TP3" V 9300 3575 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 9250 3500 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3325 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3325 50  0001 L BNN
 F 3 "~" H 9475 3325 50  0001 C CNN
 	1    9275 3325
 	0    -1   -1   0   
@@ -153,7 +153,7 @@ U 1 1 5C5B0352
 P 9275 3425
 F 0 "TP4" V 9300 3675 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 9250 3600 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3425 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9475 3425 50  0001 L BNN
 F 3 "~" H 9475 3425 50  0001 C CNN
 	1    9275 3425
 	0    -1   -1   0   
@@ -468,7 +468,7 @@ U 1 1 5C67FA66
 P 6900 4300
 F 0 "TP5" V 6875 4250 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 6875 4475 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7100 4300 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7100 4300 50  0001 L BNN
 F 3 "~" H 7100 4300 50  0001 C CNN
 	1    6900 4300
 	1    0    0    1   
@@ -501,7 +501,7 @@ U 1 1 5C6EB1B7
 P 7000 4300
 F 0 "TP6" V 6975 4250 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 6975 4475 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7200 4300 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7200 4300 50  0001 L BNN
 F 3 "~" H 7200 4300 50  0001 C CNN
 	1    7000 4300
 	1    0    0    1   
@@ -512,7 +512,7 @@ U 1 1 5C6EB20F
 P 7100 4300
 F 0 "TP7" V 7075 4250 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 7075 4475 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7300 4300 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7300 4300 50  0001 L BNN
 F 3 "~" H 7300 4300 50  0001 C CNN
 	1    7100 4300
 	1    0    0    1   
@@ -799,7 +799,7 @@ U 1 1 5CB7D9CA
 P 2300 2250
 F 0 "TP53" H 2225 2425 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 2275 2425 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2500 2250 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2500 2250 50  0001 L BNN
 F 3 "~" H 2500 2250 50  0001 C CNN
 	1    2300 2250
 	-1   0    0    -1  
@@ -810,7 +810,7 @@ U 1 1 5CB8BAE5
 P 3100 2250
 F 0 "TP54" H 3025 2425 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 3075 2425 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3300 2250 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3300 2250 50  0001 L BNN
 F 3 "~" H 3300 2250 50  0001 C CNN
 	1    3100 2250
 	-1   0    0    -1  
@@ -831,7 +831,7 @@ U 1 1 5CB97973
 P 7300 2225
 F 0 "TP52" V 7250 2325 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 7275 2400 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7500 2225 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7500 2225 50  0001 L BNN
 F 3 "~" H 7500 2225 50  0001 C CNN
 	1    7300 2225
 	0    -1   1    0   
@@ -845,7 +845,7 @@ U 1 1 5CBB0136
 P 4500 4050
 F 0 "TP56" H 4425 4225 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 4475 4225 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4700 4050 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4700 4050 50  0001 L BNN
 F 3 "~" H 4700 4050 50  0001 C CNN
 	1    4500 4050
 	-1   0    0    -1  
@@ -861,7 +861,7 @@ U 1 1 5CBC3AC1
 P 5050 2700
 F 0 "TP55" V 4975 2800 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 5025 2875 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5250 2700 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5250 2700 50  0001 L BNN
 F 3 "~" H 5250 2700 50  0001 C CNN
 	1    5050 2700
 	0    1    -1   0   

@@ -1409,7 +1409,7 @@ AR Path="/5C5AE643/5CC44B7B" Ref="TP?"  Part="1"
 AR Path="/5C3EC885/5CC44B7B" Ref="TP35"  Part="1" 
 F 0 "TP35" V 3950 3500 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 3825 3600 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4050 3425 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4050 3425 50  0001 L BNN
 F 3 "~" H 4050 3425 50  0001 C CNN
 	1    3850 3425
 	0    -1   -1   0   
@@ -1425,7 +1425,7 @@ AR Path="/5C5AE643/5CC79EEB" Ref="TP?"  Part="1"
 AR Path="/5C3EC885/5CC79EEB" Ref="TP34"  Part="1" 
 F 0 "TP34" V 8000 1200 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 7875 1300 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8100 1125 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8100 1125 50  0001 L BNN
 F 3 "~" H 8100 1125 50  0001 C CNN
 	1    7900 1125
 	0    -1   -1   0   

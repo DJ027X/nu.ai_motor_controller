@@ -536,8 +536,6 @@ $EndComp
 Wire Wire Line
 	7050 4825 7050 4750
 Wire Wire Line
-	7050 4450 7050 4400
-Wire Wire Line
 	7050 4300 7325 4300
 Wire Wire Line
 	8225 4300 8300 4300
@@ -709,7 +707,7 @@ AR Path="/5C5AE643/5CBF4C10" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CBF4C10" Ref="TP12"  Part="1" 
 F 0 "TP12" V 4950 4475 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 4825 4550 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5050 4375 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 5050 4375 50  0001 L BNN
 F 3 "~" H 5050 4375 50  0001 C CNN
 	1    4850 4375
 	0    1    -1   0   
@@ -724,7 +722,7 @@ AR Path="/5C5AE643/5CBF678E" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CBF678E" Ref="TP13"  Part="1" 
 F 0 "TP13" V 8875 4475 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 8750 4550 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8975 4375 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8975 4375 50  0001 L BNN
 F 3 "~" H 8975 4375 50  0001 C CNN
 	1    8775 4375
 	0    1    -1   0   
@@ -745,7 +743,7 @@ AR Path="/5C5AE643/5CBFFA55" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CBFFA55" Ref="TP16"  Part="1" 
 F 0 "TP16" V 3750 5075 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 3775 5150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4000 4975 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 4000 4975 50  0001 L BNN
 F 3 "~" H 4000 4975 50  0001 C CNN
 	1    3800 4975
 	0    -1   1    0   
@@ -760,7 +758,7 @@ AR Path="/5C5AE643/5CC017FF" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC017FF" Ref="TP17"  Part="1" 
 F 0 "TP17" V 7675 5075 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 7700 5150 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7925 4975 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7925 4975 50  0001 L BNN
 F 3 "~" H 7925 4975 50  0001 C CNN
 	1    7725 4975
 	0    -1   1    0   
@@ -777,34 +775,16 @@ AR Path="/5C5AE643/5CC036FB" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC036FB" Ref="TP14"  Part="1" 
 F 0 "TP14" V 3025 4500 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 3050 4575 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3275 4400 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3275 4400 50  0001 L BNN
 F 3 "~" H 3275 4400 50  0001 C CNN
 	1    3075 4400
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3075 4400 3125 4400
-$Comp
-L custom:PTH_0.5_mm TP?
-U 1 1 5CC056A4
-P 7000 4400
-AR Path="/5C5AE643/5CC056A4" Ref="TP?"  Part="1" 
-AR Path="/5C100B31/5CC056A4" Ref="TP15"  Part="1" 
-F 0 "TP15" V 6950 4500 50  0000 L BNN
-F 1 "PTH_0.5_mm" V 6975 4575 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7200 4400 50  0001 L BNN
-F 3 "~" H 7200 4400 50  0001 C CNN
-	1    7000 4400
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	7000 4400 7050 4400
 Connection ~ 3125 4400
 Wire Wire Line
 	3125 4300 3125 4400
-Connection ~ 7050 4400
-Wire Wire Line
-	7050 4300 7050 4400
 $Comp
 L custom:PTH_0.5_mm TP?
 U 1 1 5CC141B7
@@ -813,7 +793,7 @@ AR Path="/5C5AE643/5CC141B7" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC141B7" Ref="TP8"  Part="1" 
 F 0 "TP8" V 3200 1450 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 3225 1525 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3450 1350 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3450 1350 50  0001 L BNN
 F 3 "~" H 3450 1350 50  0001 C CNN
 	1    3250 1350
 	0    -1   1    0   
@@ -831,7 +811,7 @@ AR Path="/5C5AE643/5CC1D710" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC1D710" Ref="TP11"  Part="1" 
 F 0 "TP11" H 7125 2500 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 7150 2475 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7375 2300 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 7375 2300 50  0001 L BNN
 F 3 "~" H 7375 2300 50  0001 C CNN
 	1    7175 2300
 	1    0    0    1   
@@ -846,7 +826,7 @@ AR Path="/5C5AE643/5CC1FBDE" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC1FBDE" Ref="TP10"  Part="1" 
 F 0 "TP10" H 6000 2000 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 6025 1975 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6250 1800 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 6250 1800 50  0001 L BNN
 F 3 "~" H 6250 1800 50  0001 C CNN
 	1    6050 1800
 	1    0    0    -1  
@@ -869,7 +849,7 @@ AR Path="/5C5AE643/5CC339D7" Ref="TP?"  Part="1"
 AR Path="/5C100B31/5CC339D7" Ref="TP9"  Part="1" 
 F 0 "TP9" V 8125 1825 50  0000 L BNN
 F 1 "PTH_0.5_mm" V 8150 1900 50  0001 L BNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8375 1725 50  0001 L BNN
+F 2 "custom:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 8375 1725 50  0001 L BNN
 F 3 "~" H 8375 1725 50  0001 C CNN
 	1    8175 1725
 	0    1    1    0   
@@ -879,4 +859,6 @@ Wire Wire Line
 Connection ~ 8125 1725
 Wire Wire Line
 	8125 1725 8125 1850
+Wire Wire Line
+	7050 4300 7050 4450
 $EndSCHEMATC
