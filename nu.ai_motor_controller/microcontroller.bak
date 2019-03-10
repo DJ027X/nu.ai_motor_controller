@@ -608,22 +608,22 @@ Text Notes 6275 5425 2    50   ~ 0
 ADC_6
 Text Notes 6275 5525 2    50   ~ 0
 ADC_7
-Text GLabel 10300 1950 2    50   Input ~ 0
+Text GLabel 10300 1850 2    50   Input ~ 0
 SPI_SSn
-Text GLabel 10300 2050 2    50   Input ~ 0
+Text GLabel 10300 1950 2    50   Input ~ 0
 SPI_SCK
-Text GLabel 10300 2150 2    50   Input ~ 0
+Text GLabel 10300 2050 2    50   Input ~ 0
 SPI_MOSI
-Text GLabel 10300 2250 2    50   Input ~ 0
+Text GLabel 10300 2150 2    50   Input ~ 0
 SPI_MISO
 Wire Wire Line
-	10300 2250 10225 2250
-Wire Wire Line
-	10225 2150 10300 2150
-Wire Wire Line
-	10300 1950 10225 1950
+	10300 2150 10225 2150
 Wire Wire Line
 	10225 2050 10300 2050
+Wire Wire Line
+	10300 1850 10225 1850
+Wire Wire Line
+	10225 1950 10300 1950
 Text GLabel 10300 2950 2    50   Input ~ 0
 JTAG_TMS
 Text GLabel 10300 3050 2    50   Input ~ 0
@@ -675,8 +675,6 @@ F 3 "" H 10775 2300 50  0001 C CNN
 	1    10775 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 10300 1750 2    50   Input ~ 0
-PWM_3A
 Text GLabel 10300 1650 2    50   Input ~ 0
 PWM_4A
 Text GLabel 9650 2150 0    50   Input ~ 0
@@ -697,8 +695,6 @@ Wire Wire Line
 	10300 1650 10225 1650
 Wire Wire Line
 	9650 1650 9725 1650
-Wire Wire Line
-	10300 1750 10225 1750
 Wire Wire Line
 	10775 1550 10225 1550
 Wire Wire Line
@@ -764,22 +760,15 @@ Wire Wire Line
 	9725 2050 9175 2050
 Connection ~ 9175 2050
 Wire Wire Line
-	10225 1850 10775 1850
-Connection ~ 10775 1850
-Wire Wire Line
 	9725 1750 9175 1750
 Wire Wire Line
 	9175 1750 9175 2050
-Wire Wire Line
-	10775 1550 10775 1850
 Wire Wire Line
 	9175 1750 9175 1550
 Connection ~ 9175 1750
 Connection ~ 10775 1550
 Wire Wire Line
 	9175 2050 9175 2300
-Wire Wire Line
-	10775 1850 10775 2300
 $Comp
 L Connector_Generic:Conn_02x12_Odd_Even J9
 U 1 1 5C895731
@@ -1855,4 +1844,16 @@ Wire Wire Line
 	10775 1250 10775 1550
 Wire Wire Line
 	10600 1450 10225 1450
+Wire Wire Line
+	10775 1550 10775 1750
+Wire Wire Line
+	10225 2250 10775 2250
+Connection ~ 10775 2250
+Wire Wire Line
+	10775 2250 10775 2300
+Wire Wire Line
+	10225 1750 10775 1750
+Connection ~ 10775 1750
+Wire Wire Line
+	10775 1750 10775 2250
 $EndSCHEMATC
