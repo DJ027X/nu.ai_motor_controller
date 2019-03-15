@@ -588,7 +588,7 @@ $EndComp
 Wire Wire Line
 	8300 5400 8300 5325
 Text Notes 7800 3825 0    50   ~ 0
-1.8 V @ 0.3 A\n(SUPPLIED FROM +5V)
+1.8 V @ 0.3 A\n(WHEN SUPPLIED FROM +5V)
 $Comp
 L power:+5V #PWR08
 U 1 1 5C6B7FD8
@@ -666,8 +666,6 @@ F 3 "/home/dj/datasheets/AZ2117.pdf" H 7525 3400 60  0001 L BNN
 	1    7775 4350
 	1    0    0    -1  
 $EndComp
-Text Notes 6800 1750 0    50   ~ 0
-USED RECOMMENDED VALUES\nIN DATASHEET APPNOTE
 $Comp
 L Jumper:Jumper_3_Bridged12 JP1
 U 1 1 5C6C425D
