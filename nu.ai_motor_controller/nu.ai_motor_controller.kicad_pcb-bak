@@ -1309,7 +1309,7 @@
   )
 
   (module custom:Symbol_HighVoltage_SilkTop_Small (layer F.Cu) (tedit 5C8BFE54) (tstamp 5C8C04CA)
-    (at 145.542 57.3024 180)
+    (at 143.51 56.388 180)
     (descr "Symbol, High Voltage, Type 2, Copper Top, Very Small,")
     (tags "Symbol, High Voltage, Type 2, Copper Top, Very Small,")
     (attr virtual)
@@ -7510,7 +7510,7 @@
   )
 
   (module custom:Symbol_HighVoltage_SilkTop_Small (layer B.Cu) (tedit 5C8BFE54) (tstamp 5C8C032A)
-    (at 145.542 57.3024)
+    (at 143.51 56.388)
     (descr "Symbol, High Voltage, Type 2, Copper Top, Very Small,")
     (tags "Symbol, High Voltage, Type 2, Copper Top, Very Small,")
     (attr virtual)
