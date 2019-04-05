@@ -2,32 +2,32 @@
 #include <util/delay.h>
 
 /*
-PIN8  PORTB0
-PIN9  PORTB1
-PIN10 PORTB2
-PIN11 PORTB3
-PIN28 PORTB4
-PIN29 PORTB5
-PIN30 PORTB6
-PIN12 PORTB7
-PIN31 PORTC6
-PIN32 PORTC7
-PIN18 PORTD0
-PIN19 PORTD1
-PIN20 PORTD2
-PIN21 PORTD3
-PIN25 PORTD4
-PIN22 PORTD5
-PIN26 PORTD6
-PIN27 PORTD7
-PIN33 PORTE2
-PIN1  PORTE6
-PIN41 PORTF0
-PIN40 PORTF1
-PIN39 PORTF4
-PIN38 PORTF5
-PIN37 PORTF6
-PIN36 PORTF7
+PIN8  PORTB0 SPI_SSn
+PIN9  PORTB1 SPI_SCK
+PIN10 PORTB2 SPI_MOSI
+PIN11 PORTB3 SPI_MISO
+PIN28 PORTB4 SNS_2
+PIN29 PORTB5 R_MOTOR
+PIN30 PORTB6 L_MOTOR
+PIN12 PORTB7 BUZZER
+PIN31 PORTC6 SNS_EN
+PIN32 PORTC7 PWM_4A
+PIN18 PORTD0 I2C_SCL
+PIN19 PORTD1 I2C_SDA
+PIN20 PORTD2 USART_RX
+PIN21 PORTD3 USART_TX
+PIN25 PORTD4 SNS_0
+PIN22 PORTD5 L_DIR
+PIN26 PORTD6 SNS_1
+PIN27 PORTD7 PWM_4D
+PIN33 PORTE2 HWBn
+PIN1  PORTE6 NC
+PIN41 PORTF0 R_DIR
+PIN40 PORTF1 RESETn
+PIN39 PORTF4 JTAG_TDI
+PIN38 PORTF5 JTAG_TDO
+PIN37 PORTF6 JTAG_TMS
+PIN36 PORTF7 JTAG_TCK
 */
 
 #define BUZZER PORTB7
@@ -49,7 +49,10 @@ void init_adc(){
 	// register to get ADC results with a resolution of 256 steps.
 	ADMUX |= (1 << ADLAR);
 
-TODO: set ADTS and ADATE to make conversion happen periodically
+TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
+	      if there aren't enough timers, just leave in free-running mode.\
+		      Note however that there's a SNS_EN pin that should take care of power saving\
+			      so it's probably fine free-running the ADCs.
 
 TODO: remember later on to make code to switch which adc port is being read by changing MUX5..0
 
