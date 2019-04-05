@@ -30,10 +30,19 @@ PIN37 PORTF6 JTAG_TMS
 PIN36 PORTF7 JTAG_TCK
 */
 
-#define BUZZER_OFFSET PORTB7
-#define RESETn_OFFSET PORTF1
-#define L_DIR_OFFSET PORTD5
-#define R_DIR_OFFSET PORTF0
+#define BUZZER_OFFSET  PORTB7
+#define RESETn_OFFSET  PORTF1
+#define L_DIR_OFFSET   PORTD5
+#define R_DIR_OFFSET   PORTF0
+#define L_MOTOR_OFFSET PORTB6
+#define R_MOTOR_OFFSET PORTB5
+
+#define BUZZER_MASK  0x80
+#define RESETn_MASK  0x01
+#define L_DIR_MASK   
+#define R_DIR_MASK   
+#define L_MOTOR_MASK 
+#define R_MOTOR_MASK 
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -85,4 +94,7 @@ int main(void){
 	// Init for motor control (PWM1).
 	DDRD |= (1 << L_DIR_OFFSET);
 	DDRF |= (1 << R_DIR_OFFSET);
+	DDRB |= (1 << L_MOTOR_OFFSET);
+	DDRB |= (1 << R_MOTOR_OFFSET);
+
 }
