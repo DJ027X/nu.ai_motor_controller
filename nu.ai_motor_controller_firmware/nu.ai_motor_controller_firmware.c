@@ -30,12 +30,10 @@ PIN37 PORTF6 JTAG_TMS
 PIN36 PORTF7 JTAG_TCK
 */
 
-#define BUZZER PORTB7
-#define RESETn PORTF1
-#define L_DIR PORTD5
-#define R_DIR PORTF0
-
-
+#define BUZZER_OFFSET PORTB7
+#define RESETn_OFFSET PORTF1
+#define L_DIR_OFFSET PORTD5
+#define R_DIR_OFFSET PORTF0
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -46,15 +44,15 @@ void init_adc(){
 	ADCSRA |= 0x03;
 
 	// Left align ADC results. This allows us to just read the 8-bit upper
-	// register to get ADC results with a resolution of 256 steps.
+	// register to get ADC results with a resolution of 256 steps (0 = 0V, 255 = Vref (2.56V in this case)).
 	ADMUX |= (1 << ADLAR);
 
 TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
 	      if there aren't enough timers, just leave in free-running mode.\
-		      Note however that there's a SNS_EN pin that should take care of power saving\
-			      so it's probably fine free-running the ADCs.
+	      Note however that there's a SNS_EN pin that should take care of power saving\
+	      so it's probably fine free-running the ADCs.
 
-TODO: remember later on to make code to switch which adc port is being read by changing MUX5..0
+TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0
 
 	// Enable the ADC
 	ADCSRA |= (1 << ADEN);
@@ -70,21 +68,21 @@ int main(void){
 	// Init the microcontroller.
 	
 	// Set the RESETn pin as an output.
-	DDRF |= (1 << RESETn);
+	DDRF |= (1 << RESETn_OFFSET);
 	
 	// Set the RESETn pin high. This will keep the board powered on until
 	// a user presses the off button, or this pin goes low or high-z.
-	PORTF |= (1 << RESETn);
+	PORTF |= (1 << RESETn_OFFSET);
 
 	init_adc();
 	
-	// Make a short beep to let the user know they can release the power button.
-	
 	// Init for piezo buzzer.
 	
-	// Periodically check battery cell levels. Shutdown if any cells are low.
+	// Make a short beep to let the user know they can release the power button.
+	
+	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
 	
 	// Init for motor control (PWM1).
-	DDRD |= (1 << L_DIR);
-	DDRF |= (1 << R_DIR);
+	DDRD |= (1 << L_DIR_OFFSET);
+	DDRF |= (1 << R_DIR_OFFSET);
 }
