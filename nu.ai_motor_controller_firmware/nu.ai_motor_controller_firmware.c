@@ -38,11 +38,11 @@ PIN36 PORTF7 JTAG_TCK
 #define R_MOTOR_OFFSET PORTB5
 
 #define BUZZER_MASK  0x80
-#define RESETn_MASK  0x01
-#define L_DIR_MASK   
-#define R_DIR_MASK   
-#define L_MOTOR_MASK 
-#define R_MOTOR_MASK 
+#define RESETn_MASK  0x02
+#define L_DIR_MASK   0x20
+#define R_DIR_MASK   0x01
+#define L_MOTOR_MASK 0x40
+#define R_MOTOR_MASK 0x20
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
