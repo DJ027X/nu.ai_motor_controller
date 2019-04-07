@@ -85,8 +85,20 @@ void init_motors(){
 	DDRB |= (1 << L_MOTOR_OFFSET);
 	DDRB |= (1 << R_MOTOR_OFFSET);
 
-	// Setup PWM to controll motor speed
-	//
+	// Setup PWM to controll motor speed.
+	
+	// Set waveform generation mode to 8-bit fast PWM.
+	TCCR1A |= 0x01;
+	TCCR1B |= 0x08;
+
+	// Set input clock to 1 prescaler. 16 MHz / 1 = 16 MHz.
+	TCCR1B |= 0x01;
+
+	// Clear OC1A on match, set OC1A at top.
+	TCCR1A |= 0x80;
+
+	// Clear OC1B on match, set OC1B at top.
+	TCCR1A |= 0x20;
 	
 	// PRTIM in PRR0 must be set to 0 for the timer/counter1 module to run.
 	// It is set to 0 by default.
