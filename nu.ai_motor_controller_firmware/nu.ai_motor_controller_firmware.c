@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include <avr/interrupt.h>
 #include <util/delay.h>
 
 /*
@@ -72,6 +73,25 @@ TODO: remember later on to make code to switch which ADC port is being read by c
 
 }
 
+void init_buzzer(){
+	
+}
+
+void init_motors(){
+
+	// Setup direction pins
+	DDRD |= (1 << L_DIR_OFFSET);
+	DDRF |= (1 << R_DIR_OFFSET);
+	DDRB |= (1 << L_MOTOR_OFFSET);
+	DDRB |= (1 << R_MOTOR_OFFSET);
+
+	// Setup PWM to controll motor speed
+	//
+	
+	// PRTIM in PRR0 must be set to 0 for the timer/counter1 module to run.
+	// It is set to 0 by default.
+}
+
 int main(void){
 	
 	// Init the microcontroller.
@@ -86,15 +106,12 @@ int main(void){
 	init_adc();
 	
 	// Init for piezo buzzer.
-	
+	init_buzzer();
+
 	// Make a short beep to let the user know they can release the power button.
 	
 	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
 	
 	// Init for motor control (PWM1).
-	DDRD |= (1 << L_DIR_OFFSET);
-	DDRF |= (1 << R_DIR_OFFSET);
-	DDRB |= (1 << L_MOTOR_OFFSET);
-	DDRB |= (1 << R_MOTOR_OFFSET);
-
+	init_motors();
 }
