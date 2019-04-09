@@ -57,13 +57,13 @@ void init_adc(){
 	// register to get ADC results with a resolution of 256 steps (0 = 0V, 255 = Vref (2.56V in this case)).
 	ADMUX |= (1 << ADLAR);
 
-TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
+/*TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
 	      if there aren't enough timers, just leave in free-running mode.\
 	      Note however that there's a SNS_EN pin that should take care of power saving\
 	      so it's probably fine free-running the ADCs.
 
 TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0
-
+*/
 	// Enable the ADC
 	ADCSRA |= (1 << ADEN);
 
@@ -81,18 +81,25 @@ void init_motors(){
 
 	// Setup direction pins
 	DDRD |= (1 << L_DIR_OFFSET);
+	PORTD &= ~(1 << L_DIR_OFFSET);
 	DDRF |= (1 << R_DIR_OFFSET);
+	PORTF &= ~(1 << L_DIR_OFFSET);
 	DDRB |= (1 << L_MOTOR_OFFSET);
 	DDRB |= (1 << R_MOTOR_OFFSET);
 
 	// Setup PWM to controll motor speed.
 	
 	// Set waveform generation mode to 8-bit fast PWM.
+	// This automatically sets the value of TOP to 0xFF.
+	// Motor speed is therefore set by writing 0x00-0xFF to OCR1xL.
 	TCCR1A |= 0x01;
 	TCCR1B |= 0x08;
 
-	// Set input clock to 1 prescaler. 16 MHz / 1 = 16 MHz.
-	TCCR1B |= 0x01;
+	// Set input clock to 64 prescaler. 16 MHz / 64 = 0.25 MHz.
+	// 0.25 [MHz] / 256 [counts per overflow] = 0.9765625 kHz (overflows per sec).
+	// This can be used with the 3rd compare register for (innacurate) delays of x milliseconds.
+	// Note that driving the motors via PWM @ ~1kHz may cause annoying audible whine.
+	TCCR1B |= 0x03;
 
 	// Clear OC1A on match, set OC1A at top.
 	TCCR1A |= 0x80;
@@ -102,10 +109,14 @@ void init_motors(){
 	
 	// PRTIM in PRR0 must be set to 0 for the timer/counter1 module to run.
 	// It is set to 0 by default.
+	
 }
 
 int main(void){
 	
+	// This is to prevent a false startup due to the motors generating power.
+	_delay_ms(2000);
+
 	// Init the microcontroller.
 	
 	// Set the RESETn pin as an output.
@@ -126,4 +137,33 @@ int main(void){
 	
 	// Init for motor control (PWM1).
 	init_motors();
+
+	// test code
+	_delay_ms(5000);
+	PORTD |= (1 << L_DIR_OFFSET);
+	PORTF |= (1 << R_DIR_OFFSET);
+	OCR1AL |= 0xFF;
+	OCR1BL |= 0xFF;
+	_delay_ms(1000);
+	OCR1AL &= 0x00;
+	OCR1BL &= 0x00;
+	_delay_ms(1000);
+	//PORTD &= ~(1 << L_DIR_OFFSET);
+	PORTF &= ~ (1 << R_DIR_OFFSET);
+	OCR1AL |= 0xFF;
+	OCR1BL |= 0xFF;
+	_delay_ms(1000);
+	OCR1AL &= 0x00;
+	OCR1BL &= 0x00;
+	_delay_ms(1000);
+	PORTF |= (1 << R_DIR_OFFSET);
+	OCR1AL |= 0xFF;
+	OCR1BL |= 0xFF;
+	_delay_ms(1000);
+	OCR1AL &= 0x00;
+	OCR1BL &= 0x00;
+	_delay_ms(1000);
+
+	PORTF &= ~(1 << RESETn_OFFSET);
+
 }
