@@ -74,7 +74,17 @@ TODO: remember later on to make code to switch which ADC port is being read by c
 }
 
 void init_buzzer(){
-	
+
+	// Set mode to CTC (Clear Timer on Compare Match)
+	TCCR0A |= 0x02;
+
+	// Clear OC0A on compare match
+	TCCR0A |= 0x80;
+
+	// Set prescalar to 1024 (61 Hz to 15625 Hz)
+	// Do this when you want to turn the beeping on
+	// TCCR0B |= 0x05;
+
 }
 
 void init_motors(){
