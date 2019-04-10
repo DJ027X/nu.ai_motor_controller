@@ -2,8 +2,62 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-int scale[53] = {12,13,14,15,16,17,18,19,20,21,22,23,25,26,28,30,31,33,35,37,40,42,44,47,50,53,56,59,63,66,70,75,79,84,89,94,100,106,112,118,125,133,141,149,158,167,177,188,199,211,224,237,251};
-int arpeggio[16] = {26,23,21,19,14,21,16,23,19,26,23,28,31,28,33,28};
+int scale[52] = {253,239,225,213,201,190,179,169,159,150,142,134,127,119,113,106,100,95,89,84,80,75,71,67,63,60,56,53,50,47,45,42,40,38,35,33,32,30,28,27,25,24,22,21,20,19,18,17,16,15,14,13};
+
+#define GS2  0
+#define C3   1
+#define CS3  2
+#define D3   3
+#define DS3  4
+#define E3   5
+#define F3   6
+#define FS3  7
+#define G3   8
+#define GS3  9
+#define A3  10
+#define AS3 11
+#define B3  12
+#define C4  13
+#define CS4 14
+#define D4  15
+#define DS4 16
+#define E4  17
+#define F4  18
+#define FS4 19
+#define G4  20
+#define GS4 21
+#define A4  22
+#define AS4 23
+#define B4  24
+#define C5  25
+#define CS5 26
+#define D5  27
+#define DS5 28
+#define E5  29
+#define F5  30
+#define FS5 31
+#define G5  32
+#define GS5 33
+#define A5  34
+#define AS5 35
+#define B5  36
+#define C6  37
+#define CS6 38
+#define D6  39
+#define DS6 40
+#define E6  41
+#define F6  42
+#define FS6 43
+#define G6  44
+#define GS6 45
+#define A6  46
+#define AS6 47
+#define B6  48
+#define C7  49
+#define CS7 50
+#define D7  51
+
+int arpeggio[16] = {28,31,33,35,40,33,38,31,35,28,31,26,23,26,21,26};
 int counter = 0;
 /*
 PIN8  PORTB0 SPI_SSn
