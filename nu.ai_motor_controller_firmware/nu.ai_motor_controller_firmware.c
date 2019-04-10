@@ -1,6 +1,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <stdlib.h>
 
 int scale[52] = {253,239,225,213,201,190,179,169,159,150,142,134,127,119,113,106,100,95,89,84,80,75,71,67,63,60,56,53,50,47,45,42,40,38,35,33,32,30,28,27,25,24,22,21,20,19,18,17,16,15,14,13};
 
@@ -59,6 +60,7 @@ int scale[52] = {253,239,225,213,201,190,179,169,159,150,142,134,127,119,113,106
 
 int arpeggio[16] = {28,31,33,35,40,33,38,31,35,28,31,26,23,26,21,26};
 int counter = 0;
+
 /*
 PIN8  PORTB0 SPI_SSn
 PIN9  PORTB1 SPI_SCK
@@ -90,7 +92,6 @@ PIN36 PORTF7 JTAG_TCK
 
 #define TRUE 1
 #define FALSE 0
-#define NULL 0
 
 #define BUZZER_OFFSET  PORTB7
 #define RESETn_OFFSET  PORTF1
@@ -110,7 +111,7 @@ PIN36 PORTF7 JTAG_TCK
 
 #define INIT_TUNE(X) tune X = {.play = &play_tune}
 
-int * tune_to_play = NULL;
+int * tune_to_play = 0;
 int current_tune_length = 0;
 
 void play_tune(int* notes, int length){
@@ -202,8 +203,9 @@ void init_sns_en(){
 
 ISR(TIMER3_CAPT_vect){
 
-	OCR0A = scale[arpeggio[counter++]];
-	if (counter == 16) counter = 0;
+	OCR0A = scale[rand()%53];
+	//OCR0A = scale[arpeggio[counter++]];
+	//if (counter == 16) counter = 0;
 }
 
 void init_motors(){
