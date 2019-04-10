@@ -2,62 +2,9 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-/*
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-25
-26
-28
-30
-31
-33
-35
-37
-40
-42
-44
-47 - 440 Hz
-50
-53
-56
-59
-63
-66
-70
-75
-79
-84
-89
-94
-100
-106
-112
-118
-125
-133
-141
-149
-158
-167
-177
-188
-199
-211
-224
-237
-251
-*/
-
+int scale[53] = {12,13,14,15,16,17,18,19,20,21,22,23,25,26,28,30,31,33,35,37,40,42,44,47,50,53,56,59,63,66,70,75,79,84,89,94,100,106,112,118,125,133,141,149,158,167,177,188,199,211,224,237,251};
+int arpeggio[16] = {26,23,21,19,14,21,16,23,19,26,23,28,31,28,33,28};
+int counter = 0;
 /*
 PIN8  PORTB0 SPI_SSn
 PIN9  PORTB1 SPI_SCK
@@ -87,6 +34,10 @@ PIN37 PORTF6 JTAG_TMS
 PIN36 PORTF7 JTAG_TCK
 */
 
+#define TRUE 1
+#define FALSE 0
+#define NULL 0
+
 #define BUZZER_OFFSET  PORTB7
 #define RESETn_OFFSET  PORTF1
 #define L_DIR_OFFSET   PORTD5
@@ -102,6 +53,22 @@ PIN36 PORTF7 JTAG_TCK
 #define L_MOTOR_MASK 0x40
 #define R_MOTOR_MASK 0x20
 #define SNS_EN_MASK  0x40
+
+int * tune_to_play = NULL;
+int current_tune_length = 0;
+
+typedef struct{
+
+	int * notes;
+	int length;
+	void (*play)(int* notes, int length);
+
+} tune;
+
+void play_tune(int* notes, int length){
+	tune_to_play = notes;
+	current_tune_length = length;
+}
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -161,7 +128,7 @@ void init_sns_en(){
 	OCR3A = 0x00ff;
 
 	// Set counter 3 to CTC (clear timer on ICR3 compare match) mode.
-	TCCR3B |= 0x08;
+	TCCR3B |= 0x18;
 
 	// Set ICR3 to get ~8 Hz overflow
 	ICR3 = 0x07A1;
@@ -170,8 +137,17 @@ void init_sns_en(){
 	TCCR3B |= 0x05;
 
 	// Set the SNS_EN pin as an output.
-	PORTC |= SNS_EN_MASK;
+	DDRC |= SNS_EN_MASK;
 
+	// Unmask (allow) the interrupt.
+	TIMSK3 |= 0x20;
+
+}
+
+ISR(TIMER3_CAPT_vect){
+
+	OCR0A = scale[arpeggio[counter++]];
+	if (counter == 16) counter = 0;
 }
 
 void init_motors(){
@@ -222,19 +198,10 @@ int main(void){
 	PORTF |= (1 << RESETn_OFFSET);
 
 	init_buzzer();
+
+	init_sns_en();
 	
-	OCR0A = 0xff;
 	DDRB |= BUZZER_MASK;
-	_delay_ms(1000);
-	//OCR0A = 0x7f;
-	//_delay_ms(1000);
-	//OCR0A = 0x3f;
-	//_delay_ms(1000);
-	//OCR0A = 0x1f;
-	//_delay_ms(1000);
-	//OCR0A = 0x0f;
-	//_delay_ms(1000);
-	DDRB &= ~BUZZER_MASK;
 
 	init_adc();
 
@@ -242,6 +209,9 @@ int main(void){
 	
 	// Init for motor control (PWM1).
 	init_motors();
+
+	// Globally enable interrupts.
+	sei();
 
 	// test code
 	_delay_ms(5000);
