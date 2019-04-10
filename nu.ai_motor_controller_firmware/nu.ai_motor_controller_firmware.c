@@ -75,15 +75,22 @@ TODO: remember later on to make code to switch which ADC port is being read by c
 
 void init_buzzer(){
 
+	// 1 / Frequency / 0.000128 = OCR0A
+	// For ~440 Hz:
+	// OCR0A = 18; (0x12)
+
 	// Set mode to CTC (Clear Timer on Compare Match)
 	TCCR0A |= 0x02;
 
-	// Clear OC0A on compare match
-	TCCR0A |= 0x80;
+	// Toggle OC0A on compare match
+	TCCR0A |= 0x40;
 
-	// Set prescalar to 1024 (61 Hz to 15625 Hz)
-	// Do this when you want to turn the beeping on
-	// TCCR0B |= 0x05;
+	// Set prescalar to 1024 (~30 Hz to ~78125 Hz)
+	TCCR0B |= 0x05;
+
+	// Set the port as an output to turn the beeping on.
+	// Set as input to turn off beeping
+	
 
 }
 
@@ -124,11 +131,9 @@ void init_motors(){
 
 int main(void){
 	
-	// This is to prevent a false startup due to the motors generating power.
+	// This is to prevent a false startup due to back EMF from the motors.
 	_delay_ms(2000);
 
-	// Init the microcontroller.
-	
 	// Set the RESETn pin as an output.
 	DDRF |= (1 << RESETn_OFFSET);
 	
@@ -136,13 +141,10 @@ int main(void){
 	// a user presses the off button, or this pin goes low or high-z.
 	PORTF |= (1 << RESETn_OFFSET);
 
-	init_adc();
-	
-	// Init for piezo buzzer.
 	init_buzzer();
-
-	// Make a short beep to let the user know they can release the power button.
 	
+	init_adc();
+
 	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
 	
 	// Init for motor control (PWM1).
