@@ -54,8 +54,15 @@ PIN36 PORTF7 JTAG_TCK
 #define R_MOTOR_MASK 0x20
 #define SNS_EN_MASK  0x40
 
+#define INIT_TUNE(X) tune X = {.play = &play_tune}
+
 int * tune_to_play = NULL;
 int current_tune_length = 0;
+
+void play_tune(int* notes, int length){
+	tune_to_play = notes;
+	current_tune_length = length;
+}
 
 typedef struct{
 
@@ -64,11 +71,6 @@ typedef struct{
 	void (*play)(int* notes, int length);
 
 } tune;
-
-void play_tune(int* notes, int length){
-	tune_to_play = notes;
-	current_tune_length = length;
-}
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -212,6 +214,10 @@ int main(void){
 
 	// Globally enable interrupts.
 	sei();
+
+	INIT_TUNE(new_tune);
+
+	new_tune.length = new_tune.notes[0];
 
 	// test code
 	_delay_ms(5000);
