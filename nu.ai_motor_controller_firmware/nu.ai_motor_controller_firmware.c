@@ -37,6 +37,7 @@ PIN36 PORTF7 JTAG_TCK
 #define R_DIR_OFFSET   PORTF0
 #define L_MOTOR_OFFSET PORTB6
 #define R_MOTOR_OFFSET PORTB5
+#define SNS_EN_OFFSET  PORTC6
 
 #define BUZZER_MASK  0x80
 #define RESETn_MASK  0x02
@@ -44,6 +45,7 @@ PIN36 PORTF7 JTAG_TCK
 #define R_DIR_MASK   0x01
 #define L_MOTOR_MASK 0x40
 #define R_MOTOR_MASK 0x20
+#define SNS_EN_MASK  0x40
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -75,11 +77,11 @@ TODO: remember later on to make code to switch which ADC port is being read by c
 
 void init_buzzer(){
 
-	// 1 / Frequency / 0.000128 = OCR0A
+	// 1 / (Frequency * 0.000128) = OCR0A
 	// For ~440 Hz:
 	// OCR0A = 18; (0x12)
 
-	// Set mode to CTC (Clear Timer on Compare Match)
+	// Set mode to CTC (Clear Timer on OCR0A Compare Match)
 	TCCR0A |= 0x02;
 
 	// Toggle OC0A on compare match
@@ -89,20 +91,41 @@ void init_buzzer(){
 	TCCR0B |= 0x05;
 
 	// Set the port as an output to turn the beeping on.
-	// Set as input to turn off beeping
+	// Set as input to turn off beeping.
 	
+
+}
+
+void init_sns_en(){
+
+	// Clear OC3A on OCR3A match, set on overflow.
+	TCCR3A |= 0x80;
+
+	// Set counter 3 to CTC (clear timer on ICR3 compare match) mode.
+	TCCR3B |= 0x08;
+
+	// Set ICR3 to get ~8 Hz overflow
+	ICR3 |= 0x07A1;
+
+	// Set prescalar to 1024.
+	TCCR3B |= 0x05;
+
+	// Set OCR3 to 2048 (overflow will occur @ ~8 Hz)
+
+	// Set the pin as an output.
+	PORTC |= SNS_EN_MASK;
 
 }
 
 void init_motors(){
 
 	// Setup direction pins
-	DDRD |= (1 << L_DIR_OFFSET);
-	PORTD &= ~(1 << L_DIR_OFFSET);
-	DDRF |= (1 << R_DIR_OFFSET);
-	PORTF &= ~(1 << L_DIR_OFFSET);
-	DDRB |= (1 << L_MOTOR_OFFSET);
-	DDRB |= (1 << R_MOTOR_OFFSET);
+	DDRD |= L_DIR_MASK;
+	PORTD &= ~L_DIR_MASK;
+	DDRF |= R_DIR_MASK;
+	PORTF &= ~L_DIR_MASK;
+	DDRB |= L_MOTOR_MASK;
+	DDRB |= R_MOTOR_MASK;
 
 	// Setup PWM to controll motor speed.
 	
