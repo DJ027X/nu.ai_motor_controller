@@ -3,6 +3,62 @@
 #include <util/delay.h>
 
 /*
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+25
+26
+28
+30
+31
+33
+35
+37
+40
+42
+44
+47 - 440 Hz
+50
+53
+56
+59
+63
+66
+70
+75
+79
+84
+89
+94
+100
+106
+112
+118
+125
+133
+141
+149
+158
+167
+177
+188
+199
+211
+224
+237
+251
+*/
+
+/*
 PIN8  PORTB0 SPI_SSn
 PIN9  PORTB1 SPI_SCK
 PIN10 PORTB2 SPI_MOSI
@@ -77,9 +133,9 @@ TODO: remember later on to make code to switch which ADC port is being read by c
 
 void init_buzzer(){
 
-	// 1 / (Frequency * 0.000128) = OCR0A
+	// 31250 / Frequency  = OCR0A
 	// For ~440 Hz:
-	// OCR0A = 18; (0x12)
+	// OCR0A = 71; (0x47)
 
 	// Set mode to CTC (Clear Timer on OCR0A Compare Match)
 	TCCR0A |= 0x02;
@@ -87,8 +143,8 @@ void init_buzzer(){
 	// Toggle OC0A on compare match
 	TCCR0A |= 0x40;
 
-	// Set prescalar to 1024 (~30 Hz to ~78125 Hz)
-	TCCR0B |= 0x05;
+	// Set prescalar to 256 (~122 Hz to  31250 Hz)
+	TCCR0B |= 0x04;
 
 	// Set the port as an output to turn the beeping on.
 	// Set as input to turn off beeping.
@@ -98,21 +154,22 @@ void init_buzzer(){
 
 void init_sns_en(){
 
-	// Clear OC3A on OCR3A match, set on overflow.
+	// Clear OC3A on match, set on overflow.
 	TCCR3A |= 0x80;
+
+	// Set OCR3A to keep SNS_EN on for ~1 ms to allow readings.
+	OCR3A = 0x00ff;
 
 	// Set counter 3 to CTC (clear timer on ICR3 compare match) mode.
 	TCCR3B |= 0x08;
 
 	// Set ICR3 to get ~8 Hz overflow
-	ICR3 |= 0x07A1;
+	ICR3 = 0x07A1;
 
 	// Set prescalar to 1024.
 	TCCR3B |= 0x05;
 
-	// Set OCR3 to 2048 (overflow will occur @ ~8 Hz)
-
-	// Set the pin as an output.
+	// Set the SNS_EN pin as an output.
 	PORTC |= SNS_EN_MASK;
 
 }
@@ -166,6 +223,19 @@ int main(void){
 
 	init_buzzer();
 	
+	OCR0A = 0xff;
+	DDRB |= BUZZER_MASK;
+	_delay_ms(1000);
+	//OCR0A = 0x7f;
+	//_delay_ms(1000);
+	//OCR0A = 0x3f;
+	//_delay_ms(1000);
+	//OCR0A = 0x1f;
+	//_delay_ms(1000);
+	//OCR0A = 0x0f;
+	//_delay_ms(1000);
+	DDRB &= ~BUZZER_MASK;
+
 	init_adc();
 
 	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
