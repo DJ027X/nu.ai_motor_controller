@@ -251,12 +251,12 @@ void init_motors(){
 // If the result is equal to or less than zero, add 256 to it. The resulting number informs the motor control scheme.
 
 uint8_t ch2_tmp, ch3_tmp;
-uint8_t ch2, ch3;
+int left_pwr, right_pwr;
 
 void enable_rc_control(){
 
-	ch2_tmp = 0;
-	ch3_tmp = 0;
+	ch2_tmp = 94;
+	ch3_tmp = 94;
 	
 	// Set direction of interrupt pins to input
 	DDRD &= ~0x0C;
@@ -271,7 +271,8 @@ void enable_rc_control(){
 
 void rc_control(){
 
-	
+	left_pwr = ch3_tmp + ch2_tmp; // midpoint of 188, min 124, max 250
+	right_pwr = ch3_tmp + 94 + (ch2_tmp-94)*(-1); // midpoint of 188, min 124, max 250
 
 }
 
