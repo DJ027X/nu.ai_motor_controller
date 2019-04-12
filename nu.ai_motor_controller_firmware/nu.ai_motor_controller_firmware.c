@@ -271,81 +271,45 @@ void enable_rc_control(){
 
 void rc_control(){
 
-/*	static uint8_t left_pwr = 0x80;
-	static uint8_t right_pwr = 0x80;
+	
 
-//	left_pwr = 0x80 - 23 + ch2;
-//	right_pwr = 0x80 - 23 + ch2;
-
-	left_pwr = left_pwr - 23 + ch3;
-	right_pwr = left_pwr + 23 - ch3;
-
-	if(left_pwr < 0x80){
-		left_pwr = 0xFF - left_pwr;
-		PORTD &= ~L_DIR_MASK;
-	}else{
-		PORTD |= L_DIR_MASK;
-	}
-
-	if(right_pwr < 0x80){
-		right_pwr = 0xFF - right_pwr;
-		PORTF &= ~R_DIR_MASK;
-	}else{
-		PORTF |= R_DIR_MASK;
-	}
-
-	left_pwr = left_pwr << 3;
-	right_pwr = right_pwr << 3;
-
-	OCR1AL = right_pwr;
-	OCR1BL = left_pwr;
-*/
 }
 
 ISR(INT3_vect){
 	
-//	DDRB |= BUZZER_MASK;
-
-	// If the tmp variable already has a value, do falling edge calculations,
-	// esle, take current value and return
-	if(ch3_tmp){
-		ch3_tmp = TCNT1L - ch3_tmp;
+	// If falling edge, do calculations. If rising edge, get timer value.
+	if(PIND & 0x08){
+		ch3_tmp = TCNT1L;
+	}else{
+		ch3 = TCNT1L - ch3_tmp;
+		/*ch3_tmp = TCNT1L - ch3_tmp;
 		if(ch3_tmp > 64){
-			ch3_tmp -= 64;
+			ch3_tmp = ch3_tmp - 64;
 		}else{
 	 		ch3_tmp = 0;
 		}
 
-		//ch3_tmp <<= 1;
+		ch3_tmp = ch3_tmp << 2;
 
 		OCR1AL = ch3_tmp;
 		OCR1BL = ch3_tmp;
-		ch3_tmp = 0;
-	}else{
-		ch3_tmp = TCNT1L;
-		return;
+		ch3_tmp = 0;*/
 	}
 
-	//rc_control();
+	rc_control();
 
 }
 
 ISR(INT2_vect){
-	//DDRB &= ~BUZZER_MASK;
-
-	// If the tmp variable already has a value, do falling edge calculations,
-	// esle, take current value and return
-	/*if(PORTD & PORTD2_MASK){
-		ch2 = TCNT3 - ch2_tmp;
-		ch2_tmp = 0;
-		if(ch2 <= 0) ch2 += 0x07A1;
+	
+	// If falling edge, do calculations. If rising edge, get timer value.
+	if(PIND & 0x04){
+		ch2_tmp = TCNT1L;
 	}else{
-		ch2_tmp = TCNT3;
-		return;
+		ch2 = TCNT1L - ch2_tmp;
 	}
 
 	rc_control();
-*/
 }
 
 int main(void){
@@ -361,6 +325,14 @@ int main(void){
 	PORTF |= (1 << RESETn_OFFSET);
 
 	init_buzzer();
+
+	OCR0A = 71;
+
+	DDRB |= BUZZER_MASK;
+
+	_delay_ms(500);
+
+	DDRB &= ~BUZZER_MASK;
 
 	init_sns_en();
 	
@@ -382,9 +354,13 @@ int main(void){
 
 	//new_tune.length = new_tune.notes[0];
 
-	OCR0A = scale[30];
-
 	while(TRUE){
+	/*	if( (uint8_t) ((uint8_t) 0x00 - (uint8_t) 0x01) == (uint8_t) 0xff){
+		       DDRB |= BUZZER_MASK;
+		}
+		_delay_ms(100);
+		DDRB &= ~BUZZER_MASK;
+		*/
 	}
 
 	// test code
