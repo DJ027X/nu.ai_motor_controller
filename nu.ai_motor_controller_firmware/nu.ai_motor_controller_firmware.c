@@ -228,11 +228,10 @@ void init_motors(){
 	TCCR1A |= 0x01;
 	TCCR1B |= 0x08;
 
-	// Set input clock to 64 prescaler. 16 MHz / 64 = 0.25 MHz.
-	// 0.25 [MHz] / 256 [counts per overflow] = 0.9765625 kHz (~1k overflows per sec).
-	// This can be used with the 3rd compare register for (innacurate) delays of x milliseconds.
-	// Note that driving the motors via PWM @ ~1kHz may cause annoying audible whine.
-	TCCR1B |= 0x03;
+	// Set input clock to 256 prescaler. 16 MHz / 256 = 62.5 kHz.
+	// 62.5 [kHz] / 256 [counts per overflow] = 244.140625 Hz.
+	// Note that driving the motors @ this frequency may cause audible hum/whine.
+	TCCR1B |= 0x04;
 
 	// Clear OC1A on match, set OC1A at top.
 	TCCR1A |= 0x80;
@@ -251,8 +250,8 @@ void init_motors(){
 // At a falling edge, the last value of counter 1 is subtracted from the new value of counter 1
 // If the result is equal to or less than zero, add 256 to it. The resulting number informs the motor control scheme.
 
-int ch2_tmp, ch3_tmp;
-uint8_t ch2, ch3; // 15 to 31. 23 is middle. ch2 if fwd/bckwd. ch3 is left/right.
+uint8_t ch2_tmp, ch3_tmp;
+uint8_t ch2, ch3;
 
 void enable_rc_control(){
 
@@ -310,16 +309,24 @@ ISR(INT3_vect){
 	// If the tmp variable already has a value, do falling edge calculations,
 	// esle, take current value and return
 	if(ch3_tmp){
-		ch3 = (uint8_t) (TCNT3 - ch3_tmp);
+		ch3_tmp = TCNT1L - ch3_tmp;
+		if(ch3_tmp > 64){
+			ch3_tmp -= 64;
+		}else{
+	 		ch3_tmp = 0;
+		}
+
+		//ch3_tmp <<= 1;
+
+		OCR1AL = ch3_tmp;
+		OCR1BL = ch3_tmp;
 		ch3_tmp = 0;
-		//if(ch3 <= 0) ch3 += 0x07A1;
-		OCR1AL = ch3 << 4;
 	}else{
-		ch3_tmp = TCNT3;
+		ch3_tmp = TCNT1L;
 		return;
 	}
 
-	rc_control();
+	//rc_control();
 
 }
 
