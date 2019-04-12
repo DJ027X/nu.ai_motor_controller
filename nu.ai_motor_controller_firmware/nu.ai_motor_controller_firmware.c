@@ -296,11 +296,11 @@ void rc_control(){
 	if(left_pwr < 0) left_pwr *= -1;
 	if(right_pwr < 0) right_pwr *= -1;
 
-	if(right_pwr < 0x08) right_pwr = 0;
-	if(left_pwr < 0x08) left_pwr = 0;
+	//if(right_pwr < 0x08) right_pwr = 0;
+	//if(left_pwr < 0x08) left_pwr = 0;
 
-	OCR1AL = ((uint8_t) right_pwr) << 3;
-	OCR1BL = ((uint8_t) left_pwr) << 3;
+	OCR1AL = (((uint8_t) right_pwr) << 3) & 0xF0;
+	OCR1BL = (((uint8_t) left_pwr) << 3); & 0xF0
 
 }
 
