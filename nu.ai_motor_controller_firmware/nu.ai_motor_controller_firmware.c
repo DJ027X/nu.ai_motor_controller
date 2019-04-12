@@ -271,8 +271,36 @@ void enable_rc_control(){
 
 void rc_control(){
 
-	left_pwr = ch3_tmp + ch2_tmp; // midpoint of 188, min 124, max 250
-	right_pwr = ch3_tmp + 94 + (ch2_tmp-94)*(-1); // midpoint of 188, min 124, max 250
+	left_pwr = ch3_tmp + ch2_tmp; // midpoint of 188, min 124, max 250.
+	if (left_pwr > 219) left_pwr = 219;
+	if (left_pwr < 157) left_pwr = 157;
+	right_pwr = ch3_tmp + 188 - ch2_tmp; // midpoint of 188, min 124, max 250.
+	if (right_pwr > 219) right_pwr = 219;
+	if (right_pwr < 157) right_pwr = 157;
+
+	if(left_pwr > 188){
+		PORTD |= L_DIR_MASK;
+	}else{
+		PORTD &= ~L_DIR_MASK;
+	}
+
+	if(right_pwr > 188){
+		PORTF |= R_DIR_MASK;
+	}else{
+		PORTF &= ~R_DIR_MASK;
+	}
+
+	left_pwr -= 188;
+	right_pwr -= 188;
+
+	if(left_pwr < 0) left_pwr *= -1;
+	if(right_pwr < 0) right_pwr *= -1;
+
+	if(right_pwr < 0x08) right_pwr = 0;
+	if(left_pwr < 0x08) left_pwr = 0;
+
+	OCR1AL = ((uint8_t) right_pwr) << 3;
+	OCR1BL = ((uint8_t) left_pwr) << 3;
 
 }
 
@@ -282,19 +310,7 @@ ISR(INT3_vect){
 	if(PIND & 0x08){
 		ch3_tmp = TCNT1L;
 	}else{
-		ch3 = TCNT1L - ch3_tmp;
-		/*ch3_tmp = TCNT1L - ch3_tmp;
-		if(ch3_tmp > 64){
-			ch3_tmp = ch3_tmp - 64;
-		}else{
-	 		ch3_tmp = 0;
-		}
-
-		ch3_tmp = ch3_tmp << 2;
-
-		OCR1AL = ch3_tmp;
-		OCR1BL = ch3_tmp;
-		ch3_tmp = 0;*/
+		ch3_tmp = TCNT1L - ch3_tmp;
 	}
 
 	rc_control();
@@ -307,7 +323,7 @@ ISR(INT2_vect){
 	if(PIND & 0x04){
 		ch2_tmp = TCNT1L;
 	}else{
-		ch2 = TCNT1L - ch2_tmp;
+		ch2_tmp = TCNT1L - ch2_tmp;
 	}
 
 	rc_control();
