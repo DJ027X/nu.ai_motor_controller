@@ -108,6 +108,8 @@ PIN36 PORTF7 JTAG_TCK
 #define L_MOTOR_MASK 0x40
 #define R_MOTOR_MASK 0x20
 #define SNS_EN_MASK  0x40
+#define PORTD2_MASK  0x04
+#define PORTD3_MASK  0x08
 
 #define INIT_TUNE(X) tune X = {.play = &play_tune}
 
@@ -203,7 +205,7 @@ void init_sns_en(){
 
 ISR(TIMER3_CAPT_vect){
 
-	OCR0A = scale[rand()%53];
+	//OCR0A = scale[rand()%53];
 	//OCR0A = scale[arpeggio[counter++]];
 	//if (counter == 16) counter = 0;
 }
@@ -227,7 +229,7 @@ void init_motors(){
 	TCCR1B |= 0x08;
 
 	// Set input clock to 64 prescaler. 16 MHz / 64 = 0.25 MHz.
-	// 0.25 [MHz] / 256 [counts per overflow] = 0.9765625 kHz (overflows per sec).
+	// 0.25 [MHz] / 256 [counts per overflow] = 0.9765625 kHz (~1k overflows per sec).
 	// This can be used with the 3rd compare register for (innacurate) delays of x milliseconds.
 	// Note that driving the motors via PWM @ ~1kHz may cause annoying audible whine.
 	TCCR1B |= 0x03;
@@ -241,6 +243,102 @@ void init_motors(){
 	// PRTIM in PRR0 must be set to 0 for the timer/counter1 module to run.
 	// It is set to 0 by default.
 	
+}
+
+// Sacrifice UART port for PPM functionality
+// This works by using external interrupts to trigger interrupt vectors for each RC channel.
+// At a rising edge, the current value of counter 1 is saved. (this assumes counter 1 is running at roughly 1kHz).
+// At a falling edge, the last value of counter 1 is subtracted from the new value of counter 1
+// If the result is equal to or less than zero, add 256 to it. The resulting number informs the motor control scheme.
+
+int ch2_tmp, ch3_tmp;
+uint8_t ch2, ch3; // 15 to 31. 23 is middle. ch2 if fwd/bckwd. ch3 is left/right.
+
+void enable_rc_control(){
+
+	ch2_tmp = 0;
+	ch3_tmp = 0;
+	
+	// Set direction of interrupt pins to input
+	DDRD &= ~0x0C;
+
+	// Set interrupts to trigger on any edge
+	EICRA = 0x50;
+
+	// Unmask external interrupt functionality
+	EIMSK = 0x0C;
+
+}
+
+void rc_control(){
+
+/*	static uint8_t left_pwr = 0x80;
+	static uint8_t right_pwr = 0x80;
+
+//	left_pwr = 0x80 - 23 + ch2;
+//	right_pwr = 0x80 - 23 + ch2;
+
+	left_pwr = left_pwr - 23 + ch3;
+	right_pwr = left_pwr + 23 - ch3;
+
+	if(left_pwr < 0x80){
+		left_pwr = 0xFF - left_pwr;
+		PORTD &= ~L_DIR_MASK;
+	}else{
+		PORTD |= L_DIR_MASK;
+	}
+
+	if(right_pwr < 0x80){
+		right_pwr = 0xFF - right_pwr;
+		PORTF &= ~R_DIR_MASK;
+	}else{
+		PORTF |= R_DIR_MASK;
+	}
+
+	left_pwr = left_pwr << 3;
+	right_pwr = right_pwr << 3;
+
+	OCR1AL = right_pwr;
+	OCR1BL = left_pwr;
+*/
+}
+
+ISR(INT3_vect){
+	
+//	DDRB |= BUZZER_MASK;
+
+	// If the tmp variable already has a value, do falling edge calculations,
+	// esle, take current value and return
+	if(ch3_tmp){
+		ch3 = (uint8_t) (TCNT3 - ch3_tmp);
+		ch3_tmp = 0;
+		//if(ch3 <= 0) ch3 += 0x07A1;
+		OCR1AL = ch3 << 4;
+	}else{
+		ch3_tmp = TCNT3;
+		return;
+	}
+
+	rc_control();
+
+}
+
+ISR(INT2_vect){
+	//DDRB &= ~BUZZER_MASK;
+
+	// If the tmp variable already has a value, do falling edge calculations,
+	// esle, take current value and return
+	/*if(PORTD & PORTD2_MASK){
+		ch2 = TCNT3 - ch2_tmp;
+		ch2_tmp = 0;
+		if(ch2 <= 0) ch2 += 0x07A1;
+	}else{
+		ch2_tmp = TCNT3;
+		return;
+	}
+
+	rc_control();
+*/
 }
 
 int main(void){
@@ -259,10 +357,12 @@ int main(void){
 
 	init_sns_en();
 	
-	DDRB |= BUZZER_MASK;
+	//DDRB |= BUZZER_MASK;
 
 	init_adc();
 
+	enable_rc_control();
+	
 	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
 	
 	// Init for motor control (PWM1).
@@ -271,11 +371,17 @@ int main(void){
 	// Globally enable interrupts.
 	sei();
 
-	INIT_TUNE(new_tune);
+	//INIT_TUNE(new_tune);
 
-	new_tune.length = new_tune.notes[0];
+	//new_tune.length = new_tune.notes[0];
+
+	OCR0A = scale[30];
+
+	while(TRUE){
+	}
 
 	// test code
+	/*
 	_delay_ms(5000);
 	PORTD |= (1 << L_DIR_OFFSET);
 	PORTF |= (1 << R_DIR_OFFSET);
@@ -302,5 +408,6 @@ int main(void){
 	_delay_ms(1000);
 
 	PORTF &= ~(1 << RESETn_OFFSET);
+	*/
 
 }
