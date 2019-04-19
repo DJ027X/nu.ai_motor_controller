@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:nu.ai_motor_controller-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -97,16 +97,16 @@ Connection ~ 2925 5850
 $Comp
 L Connector:Screw_Terminal_01x02 J?
 U 1 1 5C5B0320
-P 8625 2125
+P 8625 2225
 AR Path="/5C5B0320" Ref="J?"  Part="1" 
 AR Path="/5C100B31/5C5B0320" Ref="J?"  Part="1" 
 AR Path="/5C5AE643/5C5B0320" Ref="J14"  Part="1" 
-F 0 "J14" H 8625 2225 50  0000 C CNN
-F 1 "NP_Screw_Terminal_01x02" H 9200 2075 50  0000 C CNN
-F 2 "custom:TERMINAL_BLOCK_1x2" H 8625 2125 50  0001 C CNN
-F 3 "~" H 8625 2125 50  0001 C CNN
-	1    8625 2125
-	1    0    0    -1  
+F 0 "J14" H 8625 2325 50  0000 C CNN
+F 1 "NP_Screw_Terminal_01x02" H 9200 2175 50  0000 C CNN
+F 2 "custom:TERMINAL_BLOCK_1x2" H 8625 2225 50  0001 C CNN
+F 3 "~" H 8625 2225 50  0001 C CNN
+	1    8625 2225
+	1    0    0    1   
 $EndComp
 Text Notes 8700 2500 0    50   ~ 0
 INDICATE POS AND NEG\nON SILKSCREEN

@@ -1528,8 +1528,6 @@ F 3 "~/datasheets/CM1293A-04SO-D.PDF" H 8100 5175 60  0001 L BNN
 	1    8350 5725
 	1    0    0    -1  
 $EndComp
-Text GLabel 9800 6000 0    50   Input ~ 0
-PWM_3A
 Text GLabel 10650 5800 2    50   Input ~ 0
 PWM_4D
 Text GLabel 9800 5800 0    50   Input ~ 0
@@ -1579,8 +1577,6 @@ Wire Wire Line
 	10650 5800 10575 5800
 Wire Wire Line
 	9800 5800 9875 5800
-Wire Wire Line
-	9800 6000 9875 6000
 Wire Wire Line
 	10700 6000 10575 6000
 Wire Wire Line
@@ -1890,4 +1886,5 @@ Wire Wire Line
 Connection ~ 7000 3525
 Wire Wire Line
 	7000 3525 7125 3525
+NoConn ~ 9875 6000
 $EndSCHEMATC
