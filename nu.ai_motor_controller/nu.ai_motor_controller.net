@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/dj/nu.ai_motor_controller/nu.ai_motor_controller/nu.ai_motor_controller.sch)
-    (date "Fri Apr 19 01:09:38 2019")
+    (date "Sat Apr 20 01:40:43 2019")
     (tool "Eeschema 5.1.0")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -491,8 +491,8 @@
       (tstamp 5C9FEFCC))
     (comp (ref U3)
       (value SGM3157YC6)
-      (footprint Package_TO_SOT_SMD:SOT-23-6)
-      (datasheet /home/dj/datasheets/SGM3157YC6.pdf)
+      (footprint Package_TO_SOT_SMD:SOT-363_SC-70-6)
+      (datasheet /home/dj/datasheets/SGM00371010.pdf)
       (libsource (lib custom) (part SGM3157YC6) (description "4.5 Ohm Low Voltage SPDT Analog Switch"))
       (sheetpath (names /driver/) (tstamps /5C10107F/))
       (tstamp 5C9FEFE3))
@@ -684,8 +684,8 @@
       (tstamp 5C5BBC51))
     (comp (ref U4)
       (value SGM3157YC6)
-      (footprint Package_TO_SOT_SMD:SOT-23-6)
-      (datasheet /home/dj/datasheets/SGM3157YC6.pdf)
+      (footprint Package_TO_SOT_SMD:SOT-363_SC-70-6)
+      (datasheet /home/dj/datasheets/SGM00371010.pdf)
       (libsource (lib custom) (part SGM3157YC6) (description "4.5 Ohm Low Voltage SPDT Analog Switch"))
       (sheetpath (names /driver/) (tstamps /5C10107F/))
       (tstamp 5CB049D7))
@@ -2069,8 +2069,7 @@
       (fields
         (field (name Reference) U)
         (field (name Value) SGM3157YC6)
-        (field (name Footprint) Package_TO_SOT_SMD:SOT-23-6)
-        (field (name Datasheet) /home/dj/datasheets/SGM3157YC6.pdf))
+        (field (name Footprint) Package_TO_SOT_SMD:SOT-363_SC-70-6))
       (pins
         (pin (num 1) (name N_CL) (type BiDi))
         (pin (num 2) (name GND) (type power_in))
