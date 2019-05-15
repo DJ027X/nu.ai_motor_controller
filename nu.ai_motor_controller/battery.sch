@@ -1174,4 +1174,16 @@ Text Notes 8050 3750 0    50   ~ 0
 INDICATE TP VOLTAGES\nON SILKSCREEN
 Wire Wire Line
 	3125 6050 3125 6750
+Text Notes 6675 5800 0    50   ~ 0
+100
+Text Notes 6625 5150 0    50   ~ 0
+470
+Text Notes 10525 5175 0    50   ~ 0
+100
+Text Notes 10500 5775 0    50   ~ 0
+100
+Text Notes 8575 5175 0    50   ~ 0
+330
+Text Notes 8575 5800 0    50   ~ 0
+100
 $EndSCHEMATC

@@ -1,10 +1,20 @@
+// File: nu.ai_motor_controller_firmware.c
+// Author: Dylan Dailey (djd9617@rit.edu)
+// Date: May 15 2019
+// Version: 1.0
+// Description: This firmware is intended to run on the nu.ai motor controller board, Rev 1.0. The target device is an Atmel 32u4 microcontroller (ATmega32U4-AU). This firmware acts to initialize the basic systems needed to run the controller board effectively, efficiently, and safely. There is space in the main loop for user code.
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include <stdlib.h>
 
+// Here we define the values required to create a traditional musical scale with our buzzer (accuracy isn't the best but it works)
+// Having the values in an array instead of defining them helps with algorithmically generating music.
 int scale[52] = {253,239,225,213,201,190,179,169,159,150,142,134,127,119,113,106,100,95,89,84,80,75,71,67,63,60,56,53,50,47,45,42,40,38,35,33,32,30,28,27,25,24,22,21,20,19,18,17,16,15,14,13};
 
+// Defines to make it easier for humans to write music.
+// For example, scale[AS3] corresponds to the value that will make our buzzer play an A sharp 3 note.
 #define GS2  0
 #define C3   1
 #define CS3  2
@@ -58,9 +68,11 @@ int scale[52] = {253,239,225,213,201,190,179,169,159,150,142,134,127,119,113,106
 #define CS7 50
 #define D7  51
 
+// A little sample song. The counter keeps track of which note we're on
 int arpeggio[16] = {28,31,33,35,40,33,38,31,35,28,31,26,23,26,21,26};
 int counter = 0;
 
+// Just some pin name mapping for your own reference
 /*
 PIN8  PORTB0 SPI_SSn
 PIN9  PORTB1 SPI_SCK
@@ -90,6 +102,7 @@ PIN37 PORTF6 JTAG_TMS
 PIN36 PORTF7 JTAG_TCK
 */
 
+// Some handy defines
 #define TRUE 1
 #define FALSE 0
 
@@ -111,6 +124,9 @@ PIN36 PORTF7 JTAG_TCK
 #define PORTD2_MASK  0x04
 #define PORTD3_MASK  0x08
 
+// *************************************************
+// You can use this structure to make your own songs
+
 #define INIT_TUNE(X) tune X = {.play = &play_tune}
 
 int * tune_to_play = 0;
@@ -128,6 +144,7 @@ typedef struct{
 	void (*play)(int* notes, int length);
 
 } tune;
+// *************************************************
 
 void init_adc(){
 	// Set the ADC reference voltage to the internal 2.56 V reference.
@@ -141,12 +158,12 @@ void init_adc(){
 	// register to get ADC results with a resolution of 256 steps (0 = 0V, 255 = Vref (2.56V in this case)).
 	ADMUX |= (1 << ADLAR);
 
-/*TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
+	/*TODO: maybe set ADTS and ADATE to make conversion happen periodically. This is a power saving measure.\
 	      if there aren't enough timers, just leave in free-running mode.\
 	      Note however that there's a SNS_EN pin that should take care of power saving\
 	      so it's probably fine free-running the ADCs.
 
-TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0
+	TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0
 */
 	// Enable the ADC
 	ADCSRA |= (1 << ADEN);
@@ -172,7 +189,7 @@ void init_buzzer(){
 	// Set prescalar to 256 (~122 Hz to  31250 Hz)
 	TCCR0B |= 0x04;
 
-	// Set the port as an output to turn the beeping on.
+	// Set PB7 as an output to turn the beeping on.
 	// Set as input to turn off beeping.
 	
 
@@ -203,9 +220,12 @@ void init_sns_en(){
 
 }
 
+// ISR for SNS_EN waveform (also good for making music)
 ISR(TIMER3_CAPT_vect){
-
+	// Fun robot beep boop sound
 	//OCR0A = scale[rand()%53];
+	
+	// Arpegio sound
 	//OCR0A = scale[arpeggio[counter++]];
 	//if (counter == 16) counter = 0;
 }
@@ -217,6 +237,8 @@ void init_motors(){
 	PORTD &= ~L_DIR_MASK;
 	DDRF |= R_DIR_MASK;
 	PORTF &= ~L_DIR_MASK;
+
+	// Setup duty cycle pins
 	DDRB |= L_MOTOR_MASK;
 	DDRB |= R_MOTOR_MASK;
 
@@ -244,12 +266,15 @@ void init_motors(){
 	
 }
 
-// Sacrifice UART port for PPM functionality
+// If RC control is enabled (by calling enable_rc_control()) we sacrifice the UART port for PPM functionality.
 // This works by using external interrupts to trigger interrupt vectors for each RC channel.
 // At a rising edge, the current value of counter 1 is saved. (this assumes counter 1 is running at roughly 1kHz).
 // At a falling edge, the last value of counter 1 is subtracted from the new value of counter 1
 // If the result is equal to or less than zero, add 256 to it. The resulting number informs the motor control scheme.
+// Note that there appears to be a bug in here that causes the motors to pulsate a litte.
+// The code works in general, but is commented out here to free up the 2 ISRs.
 
+/*
 uint8_t ch2_tmp, ch3_tmp;
 int left_pwr, right_pwr;
 
@@ -328,6 +353,7 @@ ISR(INT2_vect){
 
 	rc_control();
 }
+*/
 
 int main(void){
 	
@@ -339,75 +365,34 @@ int main(void){
 	
 	// Set the RESETn pin high. This will keep the board powered on until
 	// a user presses the off button, or this pin goes low or high-z.
+	// This allows the system to turn itself off in the case of LiPo undervoltage.
 	PORTF |= (1 << RESETn_OFFSET);
 
 	init_buzzer();
 
-	OCR0A = 71;
-
-	DDRB |= BUZZER_MASK;
-
-	_delay_ms(500);
-
-	DDRB &= ~BUZZER_MASK;
-
 	init_sns_en();
 	
-	//DDRB |= BUZZER_MASK;
-
 	init_adc();
 
-	enable_rc_control();
+	// Beep to let the user know the system is on
+	OCR0A = 71;
+	DDRB |= BUZZER_MASK;
+	_delay_ms(500);
+	DDRB &= ~BUZZER_MASK;
+
+	//enable_rc_control();
 	
-	// Periodically check battery cell levels. Shutdown if any cells are low. (probably use an interrupt)
-	
-	// Init for motor control (PWM1).
 	init_motors();
 
 	// Globally enable interrupts.
 	sei();
 
-	//INIT_TUNE(new_tune);
-
-	//new_tune.length = new_tune.notes[0];
-
 	while(TRUE){
-	/*	if( (uint8_t) ((uint8_t) 0x00 - (uint8_t) 0x01) == (uint8_t) 0xff){
-		       DDRB |= BUZZER_MASK;
-		}
-		_delay_ms(100);
-		DDRB &= ~BUZZER_MASK;
-		*/
+
+		// ***********************************
+		// ******* YOUR CODE GOES HERE *******
+		// ***********************************
+
 	}
-
-	// test code
-	/*
-	_delay_ms(5000);
-	PORTD |= (1 << L_DIR_OFFSET);
-	PORTF |= (1 << R_DIR_OFFSET);
-	OCR1AL |= 0xFF;
-	OCR1BL |= 0xFF;
-	_delay_ms(1000);
-	OCR1AL &= 0x00;
-	OCR1BL &= 0x00;
-	_delay_ms(1000);
-	//PORTD &= ~(1 << L_DIR_OFFSET);
-	PORTF &= ~ (1 << R_DIR_OFFSET);
-	OCR1AL |= 0xFF;
-	OCR1BL |= 0xFF;
-	_delay_ms(1000);
-	OCR1AL &= 0x00;
-	OCR1BL &= 0x00;
-	_delay_ms(1000);
-	PORTF |= (1 << R_DIR_OFFSET);
-	OCR1AL |= 0xFF;
-	OCR1BL |= 0xFF;
-	_delay_ms(1000);
-	OCR1AL &= 0x00;
-	OCR1BL &= 0x00;
-	_delay_ms(1000);
-
-	PORTF &= ~(1 << RESETn_OFFSET);
-	*/
 
 }
