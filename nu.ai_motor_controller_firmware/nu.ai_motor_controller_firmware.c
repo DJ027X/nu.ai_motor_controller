@@ -151,6 +151,10 @@ void init_adc(){
 	// This is likely higher accuracy than AVcc.
 	ADMUX |= 0xC0;
 
+	// Left adjust ADC result.
+	// Result is read from ADCH
+	ADMUX |= 0x20;
+
 	// Set ADC prescalar to 128. This sets the input clock to the ADC to 125 kHz.
 	ADCSRA |= 0x03;
 
@@ -222,6 +226,49 @@ void init_sns_en(){
 
 // ISR for SNS_EN waveform (also good for making music)
 ISR(TIMER3_CAPT_vect){
+	static char sequencer = 0;
+	static uint8_t result = 0;
+	// Only go if ADC is ready
+	if(ADCSRA & (1 << ADSC)){
+		// sequencer will wrap around to achieve about 1 Hz measurements
+		switch(sequencer++){
+			case 0:
+				// Set mux to read SNS_0 (ADC_8)
+				ADMUX &= 0xE0;
+				ADCSRB |= 0x20;
+
+				ADCSRA |= (1 << ADSC);
+				while( !(ADCSRA & (1 << ADIF)) );
+				ADCSRA |= (1 << ADIF);
+				result = ADCH;
+				break;
+			case 1:
+				// Set mux to read SNS_1 (ADC_9)
+				ADMUX &= 0xE0;
+				ADMUX |= 0x01;
+				ADCSRB |= 0x20;
+
+				ADCSRA |= (1 << ADSC);
+				while( !(ADCSRA & (1 << ADIF)) );
+				ADCSRA |= (1 << ADIF);
+				result = ADCH;
+				break;
+			case 2:
+				// Set mux to read SNS_2 (ADC_11)
+				ADMUX &= 0xE0;
+				ADMUX |= 0x03;
+				ADCSRB |= 0x20;
+
+				ADCSRA |= (1 << ADSC);
+				while( !(ADCSRA & (1 << ADIF)) );
+				ADCSRA |= (1 << ADIF);
+				result = ADCH;
+				break;
+		}
+	}
+
+
+			
 	// Fun robot beep boop sound
 	//OCR0A = scale[rand()%53];
 	
