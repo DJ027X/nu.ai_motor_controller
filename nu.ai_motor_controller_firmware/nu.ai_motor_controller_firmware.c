@@ -146,7 +146,12 @@ typedef struct{
 } tune;
 // *************************************************
 
+// This keeps track of which cell we are sensing the voltage of on the ADC.
+// It is also used to slow down the poll rate (see the TIMER3_CAPT_vect ISR)
+static char sequencer = 0;
+
 void init_adc(){
+	
 	// Set the ADC reference voltage to the internal 2.56 V reference.
 	// This is likely higher accuracy than AVcc.
 	ADMUX |= 0xC0;
@@ -167,8 +172,7 @@ void init_adc(){
 	      Note however that there's a SNS_EN pin that should take care of power saving\
 	      so it's probably fine free-running the ADCs.
 
-	TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0
-*/
+	TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0*/
 	// Enable the ADC
 	ADCSRA |= (1 << ADEN);
 
@@ -224,9 +228,16 @@ void init_sns_en(){
 
 }
 
+ISR(ADC_vect){
+
+	
+
+}
+
 // ISR for SNS_EN waveform (also good for making music)
+// This ISR only initiates ADC reads. When the reads are complete,
+// the ADC Conversion Complete ISR (ADC_vect) handles reading the result
 ISR(TIMER3_CAPT_vect){
-	static char sequencer = 0;
 	static uint8_t result = 0;
 	// Only go if ADC is ready
 	if(ADCSRA & (1 << ADSC)){
