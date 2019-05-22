@@ -148,17 +148,13 @@ typedef struct{
 
 // This keeps track of which cell we are sensing the voltage of on the ADC.
 // It is also used to slow down the poll rate (see the TIMER3_CAPT_vect ISR)
-static char sequencer = 0;
+static uint8_t sequencer = 3;
 
 void init_adc(){
 	
 	// Set the ADC reference voltage to the internal 2.56 V reference.
 	// This is likely higher accuracy than AVcc.
 	ADMUX |= 0xC0;
-
-	// Left adjust ADC result.
-	// Result is read from ADCH
-	ADMUX |= 0x20;
 
 	// Set ADC prescalar to 128. This sets the input clock to the ADC to 125 kHz.
 	ADCSRA |= 0x03;
@@ -173,6 +169,10 @@ void init_adc(){
 	      so it's probably fine free-running the ADCs.
 
 	TODO: remember later on to make code to switch which ADC port is being read by changing MUX5..0*/
+	
+	// Enable conversion complete interrupts
+	ADCSRA |= (1 << ADIE);
+	
 	// Enable the ADC
 	ADCSRA |= (1 << ADEN);
 
@@ -206,10 +206,10 @@ void init_buzzer(){
 void init_sns_en(){
 
 	// Clear OC3A on match, set on overflow.
-	TCCR3A |= 0x80;
+	//TCCR3A |= 0x80;
 
 	// Set OCR3A to keep SNS_EN on for ~1 ms to allow readings.
-	OCR3A = 0x00ff;
+	//OCR3A = 0x00ff;
 
 	// Set counter 3 to CTC (clear timer on ICR3 compare match) mode.
 	TCCR3B |= 0x18;
@@ -229,8 +229,39 @@ void init_sns_en(){
 }
 
 ISR(ADC_vect){
-
 	
+	static float tap0, tap1, tap2;
+	static uint8_t ready0, ready1, ready2 = 0;
+
+	// Assign result to correct variable
+	switch(sequencer){
+		case 0:
+			tap0 = (float) ADCH * 2.56 * 2;
+			ready0 = 1;
+			break;
+		case 1:
+			tap1 = (float) ADCH * 2.56 * 3.35;
+			ready1 = 1;
+			break;
+		case 2:
+			tap2 = ADCH * 2.56 * 6;
+			ready2 = 1;
+			break;
+
+	}
+
+	// Make sure the values are initialized
+	if(ready0 && ready1 && ready2){
+		// Buzz if any values are out of limits
+		if(tap0 < 3.3 || tap1 - tap0 < 3.3 || tap2 - tap1 < 3.3 ){
+			DDRB |= BUZZER_MASK;
+			// Turn system off to prevent LiPo undervoltage
+			PORTF &= ~(1 << RESETn_OFFSET);
+		}
+
+	}
+
+	ADCSRA |= 1 << ADIF;
 
 }
 
@@ -238,44 +269,34 @@ ISR(ADC_vect){
 // This ISR only initiates ADC reads. When the reads are complete,
 // the ADC Conversion Complete ISR (ADC_vect) handles reading the result
 ISR(TIMER3_CAPT_vect){
-	static uint8_t result = 0;
+	
 	// Only go if ADC is ready
-	if(ADCSRA & (1 << ADSC)){
+	if(~ (ADCSRA & (1 << ADSC))){
 		// sequencer will wrap around to achieve about 1 Hz measurements
-		switch(sequencer++){
+		if(++sequencer == 8) sequencer = 0;
+		switch(sequencer){
 			case 0:
 				// Set mux to read SNS_0 (ADC_8)
 				ADMUX &= 0xE0;
 				ADCSRB |= 0x20;
-
 				ADCSRA |= (1 << ADSC);
-				while( !(ADCSRA & (1 << ADIF)) );
-				ADCSRA |= (1 << ADIF);
-				result = ADCH;
 				break;
 			case 1:
 				// Set mux to read SNS_1 (ADC_9)
 				ADMUX &= 0xE0;
 				ADMUX |= 0x01;
 				ADCSRB |= 0x20;
-
 				ADCSRA |= (1 << ADSC);
-				while( !(ADCSRA & (1 << ADIF)) );
-				ADCSRA |= (1 << ADIF);
-				result = ADCH;
 				break;
 			case 2:
 				// Set mux to read SNS_2 (ADC_11)
 				ADMUX &= 0xE0;
 				ADMUX |= 0x03;
 				ADCSRB |= 0x20;
-
 				ADCSRA |= (1 << ADSC);
-				while( !(ADCSRA & (1 << ADIF)) );
-				ADCSRA |= (1 << ADIF);
-				result = ADCH;
 				break;
 		}
+
 	}
 
 
@@ -429,6 +450,8 @@ int main(void){
 	init_buzzer();
 
 	init_sns_en();
+	DDRC |= (1 << SNS_EN_OFFSET);
+	PORTC |= (1 << SNS_EN_OFFSET);
 	
 	init_adc();
 
