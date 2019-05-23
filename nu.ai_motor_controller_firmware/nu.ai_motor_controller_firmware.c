@@ -255,6 +255,13 @@ ISR(ADC_vect){
 		// Buzz if any values are out of limits
 		if(tap0 < 3.3 || tap1 - tap0 < 3.3 || tap2 - tap1 < 3.3 ){
 			DDRB |= BUZZER_MASK;
+			OCR0A = E4;
+			_delay_ms(200);
+			OCR0A = C5;
+			_delay_ms(200);
+			OCR0A = A5;
+			_delay_ms(200);
+
 			// Turn system off to prevent LiPo undervoltage
 			PORTF &= ~(1 << RESETn_OFFSET);
 		}
